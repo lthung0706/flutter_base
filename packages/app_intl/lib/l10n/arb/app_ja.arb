@@ -1,0 +1,3047 @@
+{
+  "storeName": "店舗名",
+  "@storeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "address": "住所",
+  "@address": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phone": "電話番号",
+  "@phone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unknown": "不明",
+  "@unknown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "systemManagement": "システム管理",
+  "@systemManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employees": "従業員",
+  "@employees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appSettings": "アプリ設定",
+  "@appSettings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reportIssue": "問題を報告",
+  "@reportIssue": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "regulationsAndPolicies": "規約とポリシー",
+  "@regulationsAndPolicies": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditions": "利用規約",
+  "@termsConditions": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicy": "プライバシーポリシー",
+  "@privacyPolicy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditionsMarkdown": "## 利用規約\n\n### 1. 規約の承諾\nSStripアプリケーションにアカウントを登録し使用することにより、ユーザー（店舗オーナー、倉庫スタッフ、配送スタッフを含む）は、以下のすべての規約を遵守することに同意するものとします。同意いただけない場合は、直ちにサービスの利用を中止してください。\n\n### 2. サービスの説明\nSStripはサプライチェーンおよび物流管理のプラットフォームです。本アプリケーションは以下のツールを提供します：\n* 倉庫、店舗、サプライヤーの管理。\n* 配送注文の作成と追跡。\n* 地図上でのリアルタイムの配送ルート監視。\n* QRコードをスキャンして商品や注文を検索。\n* 注文ステータスに関するプッシュ通知の受信。\n\n### 3. ユーザーアカウント\n* **登録：** ユーザーはメールアドレスまたは電話番号で登録します。従業員アカウントは店舗オーナーによって作成され、権限が付与されます。\n* **セキュリティ：** ユーザーは自身のログイン認証情報およびアカウント下で行われるすべての活動に対して責任を負います。\n* **認可：** 機能（注文やデータの作成、編集、削除）へのアクセスは、店舗オーナーが付与する役割システムによって管理されます。\n\n### 4. ユーザーの責任\n* 商品に関する正確かつ真実の情報（名称、価格、単位、画像）を提供すること。\n* 禁止物品、爆発物、密輸品、またはベトナムの法律に違反するいかなる物品の輸送も行わないこと。\n* アプリを詐欺的、破壊的、または違法な目的で使用しないこと。\n* アップロードされた画像が第三者の知的財産権を侵害しないことを確認すること。\n\n### 5. サービス料金および支払い\n* 関連する費用は、ユーザーが注文を確定する前にアプリ内で公開表示されます。\n* 商品価格はVNDで計算され、各商品ごとに明確に表示されます。\n\n### 6. 責任の制限\n* SStripは技術ソリューションを提供しており、商品の品質や第三者の行為により生じた事故について直接の責任を負いません。\n* 損傷した商品に関するいかなるクレームも、アプリに記録された証拠（画像、配送記録）に基づいて解決されます。\n* ネットワーク障害、自然災害、または不可抗力によるサービス中断について、当社は責任を負いません。\n\n### 7. サービスの終了\n* これらの規約への違反が確認された場合、当社はユーザーアカウントを停止または終了する権利を留保します。\n* ユーザーはいつでもアカウントの削除を申請できます。\n\n---\n*最終更新：2026年3月5日*",
+  "@termsConditionsMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicyMarkdown": "## プライバシーポリシー\n\n> 本ポリシーは、ベトナムの個人データ保護に関する第13/2023/ND-CP号決議に準拠して策定されています。\n\n### 1. 収集するデータ\n\n**a) アカウント情報：**\n* 氏名、メールアドレス、電話番号（登録時）。\n* パスワード（暗号化され、平文では保存されません）。\n* システム内の役割と権限（店舗オーナー、倉庫スタッフ、配送スタッフ）。\n\n**b) 位置情報（GPS）：**\n* 配送スタッフの位置情報は、アプリがバックグラウンドで動作している場合を含め、リアルタイムで収集され、関係各所の配送ルートを更新するために使用されます。\n* 倉庫、店舗、サプライヤーの位置情報は、地図表示の目的で保存されます。\n\n**c) 画像およびファイル：**\n* ユーザーがアップロードした商品、倉庫、店舗の画像。\n* 商品管理の目的でカメラで撮影、またはフォトライブラリから選択された写真。\n\n**d) デバイス情報：**\n* 通知配信のためのデバイス種別、OS、デバイス識別子。\n* ソフトウェア品質向上のために自動収集されるアプリケーションのエラー情報。\n\n**e) ビジネスデータ：**\n* 注文情報：作成者、商品、数量、価格、ステータス、備考。\n* サプライヤー情報：名称、住所、電話番号、商品カタログ。\n* 倉庫および店舗情報：名称、住所、座標、説明。\n\n### 2. データ利用の目的\n\n* **運用：** 倉庫、店舗、注文を管理し、適切なスタッフへ配送をつなぎます。\n* **追跡：** 地図上でリアルタイムの配送位置を表示し、貨物の安全を確保します。\n* **通知：** 注文ステータスやシステム更新に関するプッシュ通知を送信します。\n* **サポート：** 保存された取引データに基づき、紛争や苦情を解決します。\n* **改善：** エラーを分析し、利用状況に基づいて機能を改善します。\n\n### 3. デバイス権限\n\nアプリはデバイスに対して以下の権限を要求します：\n\n| 権限 | 目的 |\n|------------|---------|\n| 位置情報（使用中） | 地図上に位置を表示し、最寄りのサプライヤーを検索 |\n| 位置情報（バックグラウンド） | 配送ルートを継続的に追跡（配送スタッフのみ） |\n| カメラ | 商品の写真撮影、QRコードのスキャン |\n| フォトライブラリ | デバイスから商品および倉庫の画像を選択 |\n| 通知 | 注文ステータスおよびシステム更新の通知を受信 |\n| ストレージ | ローカルデータを保存し、パフォーマンスを向上 |\n\nスマートフォンの**設定**からいつでも権限を無効にできます。ただし、一部の権限を無効にするとアプリの機能に影響を与える可能性があります。\n\n### 4. 情報共有\n\n当社は個人データを第三者に**販売しない**ことをお約束します。データの共有は以下の場合に限定されます：\n* **システム内：** 配送スタッフは注文情報（配送先住所、商品）を閲覧可能。オーナーは配送スタッフの位置を閲覧可能。\n* **地図サービス提供元：** 地図の表示とルート計算のため、地図パートナーは位置情報を受け取ります。\n* **通知サービス：** プッシュ通知サービス提供元は、通知配信のためデバイス識別子を受け取ります。\n* **管轄当局：** ベトナムの法律に基づく書面による請求がある場合。\n\n### 5. あなたの権利（第13/2023/ND-CP号決議に基づく）\n\nあなたには以下の権利があります：\n1. **閲覧・編集：** アカウント画面でいつでも個人情報（氏名、電話番号）を更新。\n2. **データの削除：** サポートに連絡することで、アカウント削除および関連データの消去を申請。\n3. **権限の撤回：** スマートフォンの設定から位置情報、カメラ、通知へのアクセスを無効化。\n4. **処理への異議：** 法律で定める一定の場合、個人データの処理に異議を申し立て。\n\n### 6. 保管およびセキュリティ\n\n* データは安全な暗号化プロトコルを介して送信されます。\n* 機密データ（パスワード）は保存前に暗号化されます。\n* デバイス上のローカルデータは暗号化データベースで保存されます。\n* システムはリアルタイム配送追跡に安全な接続を使用します。\n\n### 7. データ保存期間\n\n* アカウントデータ：ユーザーが削除を申請するまで保存。\n\n---\n*最終更新：2026年3月5日*",
+  "@privacyPolicyMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dangerZone": "危険ゾーン",
+  "@dangerZone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccount": "アカウント削除",
+  "@deleteAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccountConfirm": "このアカウントを削除してもよろしいですか？",
+  "@deleteAccountConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "ログアウト",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logoutConfirm": "ログアウトしてもよろしいですか？",
+  "@logoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeLogoutConfirm": "従業員アカウントからログアウトしてもよろしいですか？",
+  "@employeeLogoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appVersion": "アプリバージョン",
+  "@appVersion": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "言語",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectLanguage": "言語を選択",
+  "@selectLanguage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeList": "従業員リスト",
+  "@employeeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "キャンセル",
+  "@cancel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "save": "保存",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupPoints": "入荷",
+  "@pickupPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouses": "倉庫一覧",
+  "@warehouses": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "importGoods": "仕入れ",
+  "@importGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "stores": "店舗一覧",
+  "@stores": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createPickupPoint": "集荷ポイント作成",
+  "@createPickupPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createProduct": "商品作成",
+  "@createProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createWarehouse": "倉庫作成",
+  "@createWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createStore": "店舗作成",
+  "@createStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appName": "SStrip",
+  "@appName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findAddress": "住所を検索",
+  "@findAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchAddress": "住所を検索",
+  "@searchAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectThisLocation": "この場所を選択",
+  "@selectThisLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderFromWarehouse": "倉庫から注文",
+  "@orderFromWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderSuccessfully": "注文が完了しました",
+  "@orderSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectProduct": "商品を選択してください",
+  "@pleaseSelectProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectDeliveryPoint": "配送先を選択してください",
+  "@pleaseSelectDeliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "placeOrder": "注文する",
+  "@placeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pending": "保留中",
+  "@pending": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "processing": "処理中",
+  "@processing": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completed": "完了",
+  "@completed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivered": "配達済み",
+  "@delivered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelled": "キャンセル済み",
+  "@cancelled": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failed": "失敗",
+  "@failed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryPoint": "配送先",
+  "@deliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdDate": "作成日",
+  "@createdDate": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notes": "メモ",
+  "@notes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customer": "顧客",
+  "@customer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "location": "場所",
+  "@location": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "time": "時間",
+  "@time": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirm": "確認",
+  "@confirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "合計",
+  "@total": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalAmount": "合計金額",
+  "@totalAmount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noOrdersYet": "注文はまだありません",
+  "@noOrdersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noOrders": "注文なし",
+  "@noOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "turnOnLocation": "位置情報をオンにする",
+  "@turnOnLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locationPermissionDescription": "配送ルートの追跡と最適な配送サービスのために位置情報へのアクセスが必要です。",
+  "@locationPermissionDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCompletedWithId": "注文{id}が正常に完了しました",
+  "@orderCompletedWithId": {
+    "type": "text",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmCancelOrderTitle": "注文キャンセル",
+  "@confirmCancelOrderTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmCancelOrderMessage": "この注文をキャンセルしてもよろしいですか？",
+  "@confirmCancelOrderMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noProductsSelected": "商品が選択されていません",
+  "@noProductsSelected": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromWarehouseToStart": "倉庫から商品を選択して開始",
+  "@selectProductsFromWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromSupplierToStart": "サプライヤーから商品を選択して開始",
+  "@selectProductsFromSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderNumberTitle": "注文 #{shortId}",
+  "@orderNumberTitle": {
+    "type": "text",
+    "placeholders": {
+      "shortId": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveringOrders": "配送中の注文",
+  "@deliveringOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveredOrders": "配達済み注文",
+  "@deliveredOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedOrders": "受領済み注文",
+  "@receivedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchasedOrders": "集荷済み注文",
+  "@purchasedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelledOrders": "キャンセル済み注文",
+  "@cancelledOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completedOrders": "完了済み注文",
+  "@completedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplier": "サプライヤー",
+  "@supplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noSuppliersYet": "サプライヤーはまだありません",
+  "@noSuppliersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addSupplierToStart": "サプライヤーを追加して商品の取得を開始",
+  "@addSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noWarehousesYet": "倉庫はまだありません",
+  "@noWarehousesYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addWarehouseToStart": "倉庫を設定して管理を開始",
+  "@addWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noStoresYet": "店舗はまだありません",
+  "@noStoresYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addStoreToStart": "店舗を設定して販売を開始",
+  "@addStoreToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouse": "倉庫",
+  "@warehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "product": "商品",
+  "@product": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierCount": "{count}社のサプライヤー",
+  "@supplierCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemCount": "{count}件",
+  "@itemCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quantityCount": "数量{count}",
+  "@quantityCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedQuantityLabel": "受領: {received}/{quantity}",
+  "@receivedQuantityLabel": {
+    "type": "text",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedEnough": "充足",
+  "@receivedEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedShort": "不足",
+  "@receivedShort": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderedQuantity": "発注数: x{count}",
+  "@orderedQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "productsAndQuantitySummary": "{productCount}件 • 数量{totalQuantity}",
+  "@productsAndQuantitySummary": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "totalProducts": "合計{totalQuantity}商品",
+  "@totalProducts": {
+    "type": "text",
+    "placeholders": {
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "createOrder": "注文作成",
+  "@createOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createImportOrder": "仕入れ発注の作成",
+  "@createImportOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createTransferOrder": "移動伝票の作成",
+  "@createTransferOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequestOrder": "依頼の作成",
+  "@createRequestOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueDelivery": "配送を続ける",
+  "@continueDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverTo": "配送先: ",
+  "@deliverTo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "price": "価格",
+  "@price": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseName": "倉庫名",
+  "@warehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierName": "サプライヤー名",
+  "@supplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productCode": "商品コード",
+  "@productCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductCode": "商品コードを入力",
+  "@enterProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanCode": "コードをスキャン",
+  "@scanCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warrantyPeriod": "保証期間",
+  "@warrantyPeriod": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateProductCode": "商品コードを更新",
+  "@updateProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateSuccessfully": "更新が完了しました",
+  "@updateSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "months": "{value}ヶ月",
+  "@months": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "years": "{value}年",
+  "@years": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "home": "ホーム",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "order": "注文",
+  "@order": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeInfo": "店舗情報",
+  "@storeInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "guide": "ガイド",
+  "@guide": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewStore": "新しい店舗を設定",
+  "@setupNewStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "close": "閉じる",
+  "@close": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleStoreName": "例: 第1地区店舗",
+  "@exampleStoreName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "description": "説明",
+  "@description": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "additionalInfo": "追加情報...",
+  "@additionalInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveStore": "店舗を保存",
+  "@saveStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierInfo": "サプライヤー情報",
+  "@supplierInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewSupplier": "新しいサプライヤーを追加",
+  "@setupNewSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleSupplierName": "例: 成功エージェンシー",
+  "@exampleSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phoneNumber": "電話番号",
+  "@phoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "examplePhoneNumber": "0123 456 789",
+  "@examplePhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addressHint": "番地、通り、地区...",
+  "@addressHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveSupplier": "サプライヤーを保存",
+  "@saveSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectAddressBeforeSaving": "保存する前に住所を選択してください",
+  "@pleaseSelectAddressBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterSupplierName": "サプライヤー名を入力してください",
+  "@pleaseEnterSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseInfo": "倉庫情報",
+  "@warehouseInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewWarehouse": "新しい倉庫を設定",
+  "@setupNewWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createSupplierShowcaseDescription": "ここをタップして最初の倉庫を作成し、サプライヤーと商品管理を開始します。",
+  "@createSupplierShowcaseDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleWarehouseName": "例: 倉庫A",
+  "@exampleWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveWarehouse": "倉庫を保存",
+  "@saveWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productInfo": "商品情報",
+  "@productInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProduct": "商品を追加",
+  "@addProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productName": "商品名",
+  "@productName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductName": "商品名を入力",
+  "@enterProductName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPrice": "価格を入力",
+  "@enterPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveProduct": "商品を保存",
+  "@saveProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "editProduct": "商品を編集",
+  "@editProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteProduct": "商品を削除",
+  "@deleteProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warrantyProduct": "保証商品",
+  "@warrantyProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createNewEmployee": "新しい従業員を作成",
+  "@createNewEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeName": "従業員名",
+  "@employeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmployeeName": "従業員名を入力",
+  "@enterEmployeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "パスワード",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPassword": "パスワードを入力",
+  "@enterPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "role": "役割",
+  "@role": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "inventoryManagement": "在庫管理",
+  "@inventoryManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivery": "配送",
+  "@delivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sales": "販売",
+  "@sales": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryVehicle": "配送車両",
+  "@deliveryVehicle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "motorcycle": "バイク",
+  "@motorcycle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "truck": "トラック",
+  "@truck": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "create": "作成",
+  "@create": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatPage": "チャットページ",
+  "@chatPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionality": "チャット機能はこちらに表示されます",
+  "@chatFunctionality": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "プロフィール",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings": "設定",
+  "@settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "store": "店舗",
+  "@store": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGps": "GPSを有効にする",
+  "@enableGps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "trackingInfoUpdated": "追跡情報が更新されました: {data}",
+  "@trackingInfoUpdated": {
+    "type": "text",
+    "placeholders": {
+      "data": {
+        "type": "String"
+      }
+    }
+  },
+  "reject": "拒否",
+  "@reject": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "acceptOrder": "注文を受ける",
+  "@acceptOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "declineOrder": "注文を断る",
+  "@declineOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailsTitle": "詳細 {index}",
+  "@detailsTitle": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "orderInformation": "注文情報",
+  "@orderInformation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailedViewForOrder": "注文 #{index} の詳細ビュー",
+  "@detailedViewForOrder": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "demoCustomerName": "田中太郎",
+  "@demoCustomerName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderLocation": "東京都渋谷区1-2-3",
+  "@demoOrderLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderTime": "午前10:30 - 本日",
+  "@demoOrderTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderNotes": "お客様から丁寧な配送と到着前の電話連絡を依頼されています。",
+  "@demoOrderNotes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsMapRemovedDescription": "マップ機能は設定から削除されました。MapLibreに移行してください。",
+  "@settingsMapRemovedDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noProducts": "商品なし",
+  "@noProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProductsToCategory": "このカテゴリに商品を追加してください。",
+  "@addProductsToCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeOrder": "注文を完了",
+  "@completeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receiveOrder": "注文を受領",
+  "@receiveOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupCompleted": "集荷完了",
+  "@pickupCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "refreshList": "リストを更新",
+  "@refreshList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGPS": "GPSを有効にする",
+  "@enableGPS": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "start": "開始",
+  "@start": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "back": "戻る",
+  "@back": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanQRReceiveNotification": "QRをスキャンし、通知を受け取り\nすぐに始めましょう",
+  "@scanQRReceiveNotification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manageWarehouseStore": "倉庫、店舗、\nサプライヤーを管理",
+  "@manageWarehouseStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createOrderTrackShipment": "注文を作成し、配送を\nリアルタイムで追跡",
+  "@createOrderTrackShipment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sstripPlatform": "SStrip - サプライチェーン\n運営プラットフォーム",
+  "@sstripPlatform": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "検索",
+  "@search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "anErrorOccurred": "エラーが発生しました",
+  "@anErrorOccurred": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "error": "エラー: {message}",
+  "@error": {
+    "type": "text",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "noName": "名前なし",
+  "@noName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPhoneNumber": "電話番号なし",
+  "@noPhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noEmployees": "従業員なし",
+  "@noEmployees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pressButtonToAddEmployee": "下のボタンを押して新しい従業員を追加",
+  "@pressButtonToAddEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loading": "読み込み中...",
+  "@loading": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeList": "店舗リスト",
+  "@storeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productsAtCounter": "カウンターの商品",
+  "@productsAtCounter": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "salesHistory": "販売履歴",
+  "@salesHistory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "windbreakerJacket": "ウィンドブレーカー",
+  "@windbreakerJacket": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sportSneakers": "スポーツスニーカー",
+  "@sportSneakers": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "meshCap": "メッシュキャップ",
+  "@meshCap": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "khakiPants": "カーキパンツ",
+  "@khakiPants": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeProductInfoInOneGo": "サプライヤーを選択し、各商品の情報を入力して、カタログを一括更新しましょう。",
+  "@completeProductInfoInOneGo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locked": "ロック済み",
+  "@locked": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeSupplier": "サプライヤーを変更",
+  "@changeSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectSupplier": "サプライヤーを選択",
+  "@selectSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tapToChooseSupplierBeforeAddingProducts": "商品を追加する前にサプライヤーを選択してください。",
+  "@tapToChooseSupplierBeforeAddingProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNumber": "商品 {number}",
+  "@productNumber": {
+    "type": "text",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newestItem": "最新アイテム",
+  "@newestItem": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "uploadImage": "画像をアップロード",
+  "@uploadImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeImage": "画像を変更",
+  "@changeImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectSupplierBeforeSaving": "保存する前にサプライヤーを選択してください。",
+  "@pleaseSelectSupplierBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectImagesBeforeSaving": "保存する前にすべての商品の画像を選択してください。",
+  "@pleaseSelectImagesBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productType": "商品タイプ",
+  "@productType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectType": "-- タイプを選択 --",
+  "@selectType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vnd": "VND",
+  "@vnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialPieceType": "素材（個）",
+  "@materialPieceType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialKilogramType": "素材（kg）",
+  "@materialKilogramType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialBoxType": "素材（箱）",
+  "@materialBoxType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieceUnit": "個",
+  "@pieceUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "kilogramUnit": "kg",
+  "@kilogramUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "boxUnit": "箱",
+  "@boxUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "active": "アクティブ",
+  "@active": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noData": "データがありません",
+  "@noData": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chat": "チャット",
+  "@chat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionalityComingSoon": "チャット機能はこちらに表示されます",
+  "@chatFunctionalityComingSoon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "owner": "店舗オーナー",
+  "@owner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employee": "従業員",
+  "@employee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "welcomeBack": "おかえりなさい",
+  "@welcomeBack": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginToContinueManagingStore": "店舗管理を続けるにはログインしてください",
+  "@loginToContinueManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "メール",
+  "@email": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmail": "メールアドレスを入力",
+  "@enterEmail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPhone": "電話番号を入力",
+  "@enterPhone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginFailed": "ログイン失敗",
+  "@loginFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "ログイン",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dontHaveAccountRegisterNow": "アカウントをお持ちでないですか？無料で作成",
+  "@dontHaveAccountRegisterNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createAccount": "無料アカウントを作成",
+  "@createAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerToStartManagingStore": "無料のSStripアカウントを作成して始めましょう",
+  "@registerToStartManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userName": "ユーザー名",
+  "@userName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterName": "名前を入力",
+  "@enterName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmPassword": "パスワード確認",
+  "@confirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterConfirmPassword": "パスワードを再入力",
+  "@enterConfirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsMatch": "パスワードが一致しています",
+  "@passwordsMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsDoNotMatch": "パスワードが一致しません",
+  "@passwordsDoNotMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerFailed": "登録に失敗しました",
+  "@registerFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "登録",
+  "@register": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alreadyHaveAccountLogin": "すでにアカウントをお持ちですか？ログイン",
+  "@alreadyHaveAccountLogin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewTitle": "SStrip - サプライチェーン\n運営プラットフォーム",
+  "@onboardingOverviewTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewDescription": "倉庫管理、物流、流通ネットワークを1つのアプリで一元管理。",
+  "@onboardingOverviewDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHeadline": "1画面で複数のワークフロー",
+  "@onboardingOverviewHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight1": "サプライチェーン",
+  "@onboardingOverviewHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight2": "物流",
+  "@onboardingOverviewHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight3": "データ一元化",
+  "@onboardingOverviewHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat1": "倉庫",
+  "@onboardingOverviewStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat2": "店舗",
+  "@onboardingOverviewStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat3": "サプライヤー",
+  "@onboardingOverviewStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsTitle": "倉庫、店舗、\nサプライヤーを管理",
+  "@onboardingLocationsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsDescription": "主要な拠点を設定・監視し、在庫、供給源、流通ネットワークをより正確に管理。",
+  "@onboardingLocationsDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHeadline": "明確な販売拠点エコシステム",
+  "@onboardingLocationsHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight1": "倉庫",
+  "@onboardingLocationsHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight2": "店舗",
+  "@onboardingLocationsHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight3": "サプライヤー",
+  "@onboardingLocationsHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat1": "拠点追跡",
+  "@onboardingLocationsStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat2": "情報同期",
+  "@onboardingLocationsStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat3": "システム拡張",
+  "@onboardingLocationsStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryTitle": "注文を作成し、\nリアルタイムで配送を追跡",
+  "@onboardingDeliveryTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryDescription": "配送注文を素早く作成し、地図上で配送ルートを監視し、配送全過程でステータスを即座に更新。",
+  "@onboardingDeliveryDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHeadline": "リアルタイムの透明な物流",
+  "@onboardingDeliveryHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight1": "迅速な注文作成",
+  "@onboardingDeliveryHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight2": "ルート追跡",
+  "@onboardingDeliveryHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight3": "ステータス更新",
+  "@onboardingDeliveryHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat1": "ビジュアルマップ",
+  "@onboardingDeliveryStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat2": "配送進捗",
+  "@onboardingDeliveryStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat3": "先手対応",
+  "@onboardingDeliveryStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitle": "接続 & ",
+  "@onboardingReadyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDescription": "QRコードで商品や注文を検索し、プッシュ通知で最新の運営状況を常に把握。",
+  "@onboardingReadyDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHeadline": "アプリに入る準備完了",
+  "@onboardingReadyHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight1": "QRスキャン",
+  "@onboardingReadyHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight2": "注文検索",
+  "@onboardingReadyHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight3": "プッシュ通知",
+  "@onboardingReadyHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat1": "正確",
+  "@onboardingReadyStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat2": "高速",
+  "@onboardingReadyStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat3": "常に最新",
+  "@onboardingReadyStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseCompleted": "購入完了",
+  "@purchaseCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverToWarehouse": "倉庫に配送",
+  "@deliverToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "startDelivery": "配送を開始",
+  "@startDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "complete": "完了",
+  "@complete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "isEnd": "リストの最後",
+  "@isEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "shippingTab": "配送",
+  "@shippingTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "switchWarehouseTab": "倉庫切替",
+  "@switchWarehouseTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestTab": "リクエスト",
+  "@requestTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterWarehouseName": "倉庫名を入力してください",
+  "@pleaseEnterWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transferToWarehouse": "倉庫に転送",
+  "@transferToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nearlyOutOfStock": "在庫切れ間近",
+  "@nearlyOutOfStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateMinimumQuantity": "最小数量を更新",
+  "@updateMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minimumQuantity": "最小数量",
+  "@minimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterMinimumQuantity": "最小数量を入力",
+  "@enterMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterValidMinimumQuantity": "有効な最小数量を入力してください",
+  "@pleaseEnterValidMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minCount": "最小: {count}",
+  "@minCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingSstripTag": "SSTRIP",
+  "@onboardingSstripTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitle": "スマート物流 ",
+  "@onboardingSstripTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitleEm": "サプライチェーンを簡素化",
+  "@onboardingSstripTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripDesc": "倉庫、サプライヤー、ドライバーを1つのプラットフォームで接続。",
+  "@onboardingSstripDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTag": "機能",
+  "@onboardingFeatureTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitle": "次世代の ",
+  "@onboardingFeatureTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitleEm": "管理",
+  "@onboardingFeatureTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureDesc": "日々の物流業務を最適化する強力なツール。",
+  "@onboardingFeatureDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTag": "始めましょう",
+  "@onboardingStartTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitle": "数分で ",
+  "@onboardingStartTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitleEm": "セットアップ",
+  "@onboardingStartTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartDesc": "物流システムを素早く簡単にセットアップ。",
+  "@onboardingStartDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTag": "準備完了",
+  "@onboardingReadyTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitleEm": "今日から始めよう",
+  "@onboardingReadyTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDesc": "SStripで商品と注文の管理を始めましょう。",
+  "@onboardingReadyDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWelcome": "🎉 SStripへようこそ！",
+  "@onboardingWelcome": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSkip": "スキップ",
+  "@onboardingSkip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartNow": "今すぐ開始",
+  "@onboardingStartNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingNext": "次へ",
+  "@onboardingNext": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderTitle": "注文管理",
+  "@onboardingFeatOrderTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderDesc": "倉庫から受取人まで作成・追跡",
+  "@onboardingFeatOrderDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapTitle": "マップ追跡",
+  "@onboardingFeatMapTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapDesc": "リアルタイムのドライバー位置とルート",
+  "@onboardingFeatMapDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportTitle": "倉庫レポート",
+  "@onboardingFeatReportTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportDesc": "在庫統計と履歴",
+  "@onboardingFeatReportDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Title": "無料アカウントを作成",
+  "@onboardingStep1Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Desc": "数秒で登録してSStripを始めましょう",
+  "@onboardingStep1Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Title": "倉庫と商品を設定",
+  "@onboardingStep2Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Desc": "倉庫、サプライヤー、カテゴリを追加",
+  "@onboardingStep2Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Title": "作成と割当",
+  "@onboardingStep3Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Desc": "自動注文作成と割当",
+  "@onboardingStep3Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Title": "追跡と確認",
+  "@onboardingStep4Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Desc": "リアルタイム追跡と配達確認",
+  "@onboardingStep4Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOwner": "オーナー",
+  "@onboardingOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDriver": "ドライバー",
+  "@onboardingDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWarehouse": "倉庫",
+  "@onboardingWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleOwner": "送り主",
+  "@onboardingBubbleOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleDriver": "ドライバー",
+  "@onboardingBubbleDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleWarehouse": "倉庫",
+  "@onboardingBubbleWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleSupply": "サプライヤー",
+  "@onboardingBubbleSupply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "interfaceTitle": "インターフェース",
+  "@interfaceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeTitle": "テーマ",
+  "@themeTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeAuto": "システム",
+  "@themeAuto": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeLight": "ライト",
+  "@themeLight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeDark": "ダーク",
+  "@themeDark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTheme": "テーマを選択",
+  "@selectTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "paymentSection": "支払い",
+  "@paymentSection": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "currencyTitle": "通貨",
+  "@currencyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cash": "現金",
+  "@cash": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bankTransfer": "銀行振込",
+  "@bankTransfer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nodeColor": "ノードの色",
+  "@nodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectNodeColor": "色を選択",
+  "@selectNodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderUpdateCompletedSuccess": "注文が正常に完了しました",
+  "@orderUpdateCompletedSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderUpdateCancelledSuccess": "注文が正常にキャンセルされました",
+  "@orderUpdateCancelledSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "priceNotUpdated": "価格未更新",
+  "@priceNotUpdated": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidPriceTitle": "無効な価格",
+  "@invalidPriceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "invalidPriceMessage": "一部の商品の価格が無効または未設定です。確認してください。",
+  "@invalidPriceMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nameNotUpdated": "（名前未更新）",
+  "@nameNotUpdated": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unitPrice": "単価",
+  "@unitPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "select": "選択",
+  "@select": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "clearAll": "すべてクリア",
+  "@clearAll": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "recent": "最近",
+  "@recent": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanInstruction": "バーコードをフレーム内に配置してスキャン",
+  "@scanInstruction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateProductCodeHelper": "保証情報は商品コードと一緒に保存されます。",
+  "@updateProductCodeHelper": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "monthsTitle": "ヶ月",
+  "@monthsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "yearsTitle": "年",
+  "@yearsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterProductCode": "商品コードを入力してください",
+  "@pleaseEnterProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addPhotos": "写真を{count}枚追加",
+  "@addPhotos": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearSelectedProducts": "選択した商品をクリア",
+  "@clearSelectedProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmClearSelectedProducts": "選択したすべての商品をクリアしますか？",
+  "@confirmClearSelectedProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "movingTo": "移動中",
+  "@movingTo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverySuccess": "配達が完了しました",
+  "@deliverySuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "products": "商品",
+  "@products": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryToWarehouseCompleted": "倉庫{name}への配達が完了しました",
+  "@deliveryToWarehouseCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryToStoreCompleted": "店舗{name}への配達が完了しました",
+  "@deliveryToStoreCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectProductFromStoreToStart": "店舗から商品を選択して開始",
+  "@selectProductFromStoreToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sold": "販売済み",
+  "@sold": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minStock": "最小在庫",
+  "@minStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updatePrice": "販売価格を更新",
+  "@updatePrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sellingPrice": "販売価格",
+  "@sellingPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchasePrice": "仕入価格",
+  "@purchasePrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateProduct": "商品を更新",
+  "@updateProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delete": "削除",
+  "@delete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmDeleteProduct": "この商品を削除してもよろしいですか？",
+  "@confirmDeleteProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmDeleteRole": "役割 {roleName} を削除してもよろしいですか？",
+  "@confirmDeleteRole": {
+    "type": "text",
+    "placeholders": {
+      "roleName": {
+        "type": "String"
+      }
+    }
+  },
+  "receiptSuccessFully": "受領に成功しました",
+  "@receiptSuccessFully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteCategory": "カテゴリーを削除",
+  "@deleteCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteCategoryConfirmation": "このカテゴリーを削除してもよろしいですか？",
+  "@deleteCategoryConfirmation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createCategory": "カテゴリーを作成",
+  "@createCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryName": "カテゴリー名",
+  "@categoryName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unit": "単位",
+  "@unit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteSuccess": "正常に削除されました",
+  "@deleteSuccess": {
+    "type": "text"
+  },
+  "confirmDeleteEmployee": "この従業員を削除してもよろしいですか？",
+  "@confirmDeleteEmployee": {
+    "type": "text"
+  },
+  "addRole": "ロールを追加",
+  "@addRole": {
+    "type": "text"
+  },
+  "currentQuantity": "現在の数量: {quantity}",
+  "@currentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "remainingQuantity": "残り: {count}",
+  "@remainingQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "enterSplitQuantity": "分割する数量を入力",
+  "@enterSplitQuantity": {
+    "type": "text"
+  },
+  "splitQuantityHint": "数量（例: 10）",
+  "@splitQuantityHint": {
+    "type": "text"
+  },
+  "splitQuantityInvalid": "数量は 0 より大きく {quantity} 未満で入力してください",
+  "@splitQuantityInvalid": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "splitProduct": "商品を分割",
+  "@splitProduct": {
+    "type": "text"
+  },
+  "productCannotBeSplit": "この商品は分割できません。",
+  "@productCannotBeSplit": {
+    "type": "text"
+  },
+  "mergeProduct": "商品を統合",
+  "@mergeProduct": {
+    "type": "text"
+  },
+  "selectProductsToMerge": "統合する商品を選択してください",
+  "@selectProductsToMerge": {
+    "type": "text"
+  },
+  "noProductsToMerge": "統合可能な商品がありません",
+  "@noProductsToMerge": {
+    "type": "text"
+  },
+  "mergeProductConfirm": "{count}件の商品を統合しますか？",
+  "@mergeProductConfirm": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "allowImportGoods": "入荷を許可する",
+  "@allowImportGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequest": "リクエスト注文を作成",
+  "@createRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPurchasedMaterials": "注文作成回数パックはまだありません",
+  "@noPurchasedMaterials": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "newPurchasedMaterialsWillAppearHere": "App Storeで購入したパックがここに表示されます",
+  "@newPurchasedMaterialsWillAppearHere": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityUsedUpdated": "注文作成回数を追加しました",
+  "@quantityUsedUpdated": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityMustBeBetween": "1～{count}パックを選択してください",
+  "@quantityMustBeBetween": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterial": "注文作成回数を追加",
+  "@useMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useQuantity": "使用するパック数",
+  "@useQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "残りのパック",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "remainingMaterial": "残りのパック: ",
+  "@remainingMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedCountRemaining": "残りの注文作成回数",
+  "@usedCountRemaining": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedQuantityOfTotal": "使用済み: {used}/{total}",
+  "@usedQuantityOfTotal": {
+    "type": "text",
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterialAction": "回数を追加",
+  "@useMaterialAction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStore": "注文作成回数を購入",
+  "@orderCreditsStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStoreSubtitle": "App Storeで注文作成回数パックを購入",
+  "@orderCreditsStoreSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundles": "購入済みの注文作成回数パック",
+  "@orderCreditBundles": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundleHint": "各パックで注文作成回数が35回追加されます",
+  "@orderCreditBundleHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notAvailable": "N/A",
+  "note": "備考",
+  "enterNote": "備考を入力",
+  "sessionExpiredTitle": "セッションの有効期限切れ",
+  "sessionExpiredMessage": "セッションの有効期限が切れました。再度ログインしてください。",
+  "quantity": "数量",
+  "edit": "編集",
+  "information": "情報",
+  "noInformation": "情報がありません",
+  "confirmDeleteSupplier": "このサプライヤーを削除してもよろしいですか？",
+  "confirmDeleteWarehouse": "この倉庫を削除してもよろしいですか？",
+  "confirmDeleteStore": "この店舗を削除してもよろしいですか？",
+  "deleteActionCannotBeUndone": "この操作は取り消せません。",
+  "cannotMergeDifferentCode": "コードが異なる商品は統合できません",
+  "@cannotMergeDifferentCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cannotMergeDifferentExpiry": "賞味期限が異なるため統合できません",
+  "@cannotMergeDifferentExpiry": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manufacturingDate": "製造日",
+  "expirationDate": "賞味期限（推定）",
+  "outOfStock": "在庫切れ",
+  "confirmDeleteItem": "「{name}」を削除してもよろしいですか？",
+  "billFromStore": "店舗からの請求書",
+  "orderFromStore": "店舗からの注文",
+  "viewLocation": "場所を表示",
+  "defaultCurrency": "デフォルト通貨",
+  "selectCurrency": "通貨を選択",
+  "productCodeNotUpdated": "商品コードは未更新",
+  "mfgDateNotUpdated": "製造日は未更新",
+  "expired": "期限切れ",
+  "expiresInDays": "{days}日後に期限切れ",
+  "longPressToSelectProduct": "商品を長押しして選択",
+  "deleteItemConfirmation": "「{name}」を削除してもよろしいですか？",
+  "pickingUpGoods": "集荷中",
+  "deliveringGoods": "配送中",
+  "selectDeliveryPoint": "- 配送先を選択 -",
+  "storeDescriptionHint": "店舗をシステム内で分かりやすく表示するために、識別情報と場所を完備してください。",
+  "supplierDescriptionHint": "サプライヤー情報と住所を明確に整理し、サプライチェーンでの荷物の追跡を容易にします。",
+  "warehouseDescriptionHint": "識別情報、場所、備考を追加することで、倉庫管理チームの作業を効率化します。",
+  "selectCurrencyToStart": "開始するには通貨を選択してください",
+  "quantityWithCount": "数量 {count}",
+  "updateSupplierImage": "サプライヤーの画像を更新",
+  "currentImage": "現在の画像",
+  "selectImage": "画像を選択",
+  "selectFromDevice": "デバイスから選択",
+  "updateWarehouseImage": "倉庫の画像を更新",
+  "noProductData": "商品データがありません",
+  "totalQuantityWithCount": "合計数量: {count} {unit}",
+  "somethingWentWrongTryAgain": "エラーが発生しました。後でもう一度お試しください。",
+  "requestCancelled": "サーバーへのリクエストがキャンセルされました",
+  "sendTimeout": "送信タイムアウト",
+  "receiveTimeout": "受信タイムアウト",
+  "connectionTimeout": "接続タイムアウト",
+  "serverStatusCode": "サーバーステータスコード: {code}",
+  "connectionFailed": "サーバーへの接続に失敗しました",
+  "pleaseSelectCurrencyToStart": "開始するには通貨を選択してください",
+  "organizeSupplierInfoDescription": "サプライヤー情報と住所を明確に整理し、サプライチェーンでの荷物の追跡を容易にします。",
+  "addWarehouseInfoDescription": "識別情報、場所、備考を追加することで、運用チームの倉庫管理を効率化します。",
+  "createdBy": "作成者",
+  "@createdBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedBy": "受取人",
+  "@receivedBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vehicleType": "輸送手段",
+  "@vehicleType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityEnough": "十分",
+  "@quantityEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityNotEnough": "不十分",
+  "@quantityNotEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ordered": "注文",
+  "@ordered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "received": "受取",
+  "@received": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "checkWarehouseStock": "在庫確認",
+  "@checkWarehouseStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sufficient": "十分",
+  "@sufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "insufficient": "不足",
+  "@insufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createQuickOrder": "クイックオーダー",
+  "@createQuickOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allProductsSufficient": "全商品在庫あり",
+  "@allProductsSufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestedQuantity": "要求数",
+  "@requestedQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "在庫数",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNotInWarehouse": "倉庫にない",
+  "@productNotInWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseBadge": "保留中の取引",
+  "@pendingPurchaseBadge": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseTitle": "購入 / 復元",
+  "@pendingPurchaseTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productId": "商品ID",
+  "@productId": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completePendingTransaction": "この取引を完了",
+  "@completePendingTransaction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyMoreCredits": "さらに購入",
+  "@buyMoreCredits": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyCreditsSuccess": "購入完了",
+  "@buyCreditsSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditsNowMessage": "注文枠を更新しました。今すぐ1枠を使用しますか？",
+  "@useCreditsNowMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useNow": "今すぐ使用",
+  "@useNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditSuccess": "注文枠を1つ使用しました！",
+  "@useCreditSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseFailed": "購入失敗！",
+  "@purchaseFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationError": "認証エラー: {error}",
+  "@verificationError": {
+    "type": "text",
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "buyPackageWithPrice": "パッケージを{price}で購入",
+  "@buyPackageWithPrice": {
+    "type": "text",
+    "placeholders": {
+      "price": {}
+    }
+  },
+  "selectOrderPackage": "注文パッケージを選択",
+  "@selectOrderPackage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupConversion": "換算の設定",
+  "@setupConversion": {
+    "type": "text"
+  },
+  "setupConversionSuccess": "換算の設定が完了しました",
+  "@setupConversionSuccess": {
+    "type": "text"
+  },
+  "conversionProductName": "換算用商品名",
+  "@conversionProductName": {
+    "type": "text"
+  },
+  "conversionProductNameHint": "例：小箱、パック",
+  "@conversionProductNameHint": {
+    "type": "text"
+  },
+  "tapToSelectProductImage": "画像をタップして商品写真を選択",
+  "@tapToSelectProductImage": {
+    "type": "text"
+  },
+  "productImageSelected": "商品写真が選択されました",
+  "@productImageSelected": {
+    "type": "text"
+  },
+  "conversionQuantity": "換算数量",
+  "@conversionQuantity": {
+    "type": "text"
+  },
+  "conversionQuantityHint": "例：10",
+  "@conversionQuantityHint": {
+    "type": "text"
+  },
+  "saveConversion": "換算を保存",
+  "@saveConversion": {
+    "type": "text"
+  },
+  "originalUnit": "元の単位",
+  "@originalUnit": {
+    "type": "text"
+  },
+  "originalUnitLabel": "元の単位: {unit}",
+  "@originalUnitLabel": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "oneUnit": "1 {unit}",
+  "@oneUnit": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "currentStock": "在庫: {count} {unit}",
+  "@currentStock": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "pleaseSelectConversionImage": "換算用商品の画像を選択してください。",
+  "@pleaseSelectConversionImage": {
+    "type": "text"
+  },
+  "pleaseEnterConversionName": "換算用商品名を入力してください。",
+  "@pleaseEnterConversionName": {
+    "type": "text"
+  },
+  "pleaseEnterValidConversionQuantity": "有効な換算数量を入力してください。",
+  "@pleaseEnterValidConversionQuantity": {
+    "type": "text"
+  },
+  "pleaseSelectConversionUnit": "換算単位を選択してください。",
+  "@pleaseSelectConversionUnit": {
+    "type": "text"
+  },
+  "conversionUnit": "換算単位",
+  "@conversionUnit": {
+    "type": "text"
+  },
+  "afterSplit": "分割後: {count} {unit}",
+  "@afterSplit": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "splitObtained": "受取: {count} {unit}",
+  "@splitObtained": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionFormula": "1 {parentUnit} = {value} {childUnit}",
+  "@conversionFormula": {
+    "type": "text",
+    "placeholders": {
+      "parentUnit": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "childUnit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionInfo": "換算情報",
+  "@conversionInfo": {
+    "type": "text"
+  },
+  "errorTitle": "エラー",
+  "@errorTitle": {
+    "type": "text"
+  },
+  "productNotSetupConversion": "この商品は換算が設定されていません。",
+  "@productNotSetupConversion": {
+    "type": "text"
+  },
+  "originalProduct": "元の商品",
+  "@originalProduct": {
+    "type": "text"
+  },
+  "conversionProductDefault": "換算用商品",
+  "@conversionProductDefault": {
+    "type": "text"
+  },
+  "enterQuantity": "数量を入力",
+  "@enterQuantity": {
+    "type": "text"
+  },
+  "exceedsCurrentQuantity": "現在の数量を超えています（{count} {unit}）",
+  "@exceedsCurrentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "warehouseImportStats": "倉庫入庫統計",
+  "@warehouseImportStats": {
+    "type": "text"
+  },
+  "monthLabel": "月 {month}",
+  "@monthLabel": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "yearLabel": "年 {year}",
+  "@yearLabel": {
+    "type": "text",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "storeInvoiceByDayTitle": "日別請求書数",
+  "@storeInvoiceByDayTitle": {
+    "type": "text"
+  },
+  "storeInvoiceCount": "請求書",
+  "@storeInvoiceCount": {
+    "type": "text"
+  },
+  "storeExportTableTitle": "データ書き出し表",
+  "@storeExportTableTitle": {
+    "type": "text"
+  },
+  "storeExportExcel": "Excelに書き出し",
+  "@storeExportExcel": {
+    "type": "text"
+  },
+  "storeExportSuccessOpen": "Excelファイルを作成し、既定のアプリで開きました。",
+  "@storeExportSuccessOpen": {
+    "type": "text"
+  },
+  "storeExportSuccessSaved": "ファイルを作成しました: {path}\n自動で開けませんでした ({message})。",
+  "@storeExportSuccessSaved": {
+    "type": "text",
+    "placeholders": {
+      "path": {
+        "type": "String"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "storeExportTable": "表を書き出し",
+  "@storeExportTable": {
+    "type": "text"
+  },
+  "storeHistoryStats": "数量統計",
+  "@storeHistoryStats": {
+    "type": "text"
+  },
+  "storeSoldLeast": "最も売れていない",
+  "@storeSoldLeast": {
+    "type": "text"
+  },
+  "storeSoldMost": "最も売れている",
+  "@storeSoldMost": {
+    "type": "text"
+  },
+  "storeNoDataForMonth": "データがありません\n月 {month}/{year}",
+  "@storeNoDataForMonth": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "storeColStt": "番号",
+  "@storeColStt": {
+    "type": "text"
+  },
+  "storeColDate": "取引日",
+  "@storeColDate": {
+    "type": "text"
+  },
+  "storeColRevenue": "収益",
+  "@storeColRevenue": {
+    "type": "text"
+  },
+  "storePreview": "プレビュー",
+  "@storePreview": {
+    "type": "text"
+  },
+  "storeNoteColumn": "説明",
+  "@storeNoteColumn": {
+    "type": "text"
+  },
+  "storeTodayRevenue": "今日の売上",
+  "@storeTodayRevenue": {
+    "type": "text"
+  },
+  "storeColumnNameLabel": "表示列名",
+  "@storeColumnNameLabel": {
+    "type": "text"
+  },
+  "storeColumnNameHint": "例：説明",
+  "@storeColumnNameHint": {
+    "type": "text"
+  },
+  "storeDefaultValueLabel": "備考が空の場合のデフォルト値",
+  "@storeDefaultValueLabel": {
+    "type": "text"
+  },
+  "storeDefaultValueHint": "例：今日の売上",
+  "@storeDefaultValueHint": {
+    "type": "text"
+  },
+  "storeShowProductNames": "商品名を表示",
+  "@storeShowProductNames": {
+    "type": "text"
+  },
+  "storeShowProductNamesSubtitle": "説明列に商品名が自動で連結されます",
+  "@storeShowProductNamesSubtitle": {
+    "type": "text"
+  },
+  "storeShowQuantity": "数量を表示",
+  "@storeShowQuantity": {
+    "type": "text"
+  },
+  "storeShowQuantitySubtitle": "各商品名の後に「(数量 単位)」を付加",
+  "@storeShowQuantitySubtitle": {
+    "type": "text"
+  },
+  "storeSplitPayment": "現金 / 振込の分割",
+  "@storeSplitPayment": {
+    "type": "text"
+  },
+  "storeSplitPaymentSubtitle": "収益列を決済方法ごとに2列に分割",
+  "@storeSplitPaymentSubtitle": {
+    "type": "text"
+  },
+  "empEditOrder": "注文の編集",
+  "@empEditOrder": {
+    "type": "text"
+  },
+  "empProductCost": "商品代金",
+  "@empProductCost": {
+    "type": "text"
+  },
+  "empTotalReceivedQty": "受領総数量",
+  "@empTotalReceivedQty": {
+    "type": "text"
+  },
+  "empPleaseEnterQuantity": "数量を入力してください",
+  "@empPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "empInvalidQuantity": "数量が無効です",
+  "@empInvalidQuantity": {
+    "type": "text"
+  },
+  "empDeleteSupplier": "サプライヤーの削除",
+  "@empDeleteSupplier": {
+    "type": "text"
+  },
+  "empSlAbbr": "数量",
+  "@empSlAbbr": {
+    "type": "text"
+  },
+  "empLineTotal": "小計",
+  "@empLineTotal": {
+    "type": "text"
+  },
+  "empEstimatedOrderAmount": "注文見積額",
+  "@empEstimatedOrderAmount": {
+    "type": "text"
+  },
+  "empReceivedLineTotal": "受領小計",
+  "@empReceivedLineTotal": {
+    "type": "text"
+  },
+  "empPickupPointsCount": "{count} 集荷ポイント",
+  "@empPickupPointsCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empProductsItemsCount": "{productCount} 商品 • {itemCount} 点",
+  "@empProductsItemsCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "itemCount": {
+        "type": "int"
+      }
+    }
+  },
+  "empMoreProducts": "+{count} 件のその他の商品",
+  "@empMoreProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empItemSummaryCount": "{productCount} 商品 ({totalQuantity})",
+  "@empItemSummaryCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPointCount": "{count} ポイント",
+  "@empPickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empSpAbbr": "{count} 商品",
+  "@empSpAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empMonAbbr": "({count} 点)",
+  "@empMonAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPoint": "集荷ポイント",
+  "@empPickupPoint": {
+    "type": "text"
+  },
+  "empMoreProductsDetail": "+{count} 件のその他の商品 (詳細を見るにはタップ)",
+  "@empMoreProductsDetail": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empLocationNotObtained": "位置を取得できませんでした",
+  "@empLocationNotObtained": {
+    "type": "text"
+  },
+  "empLocationRetryMessage": "現在の位置を取得できませんでした。確認して再取得してください。",
+  "@empLocationRetryMessage": {
+    "type": "text"
+  },
+  "empPickupFailed": "集荷に失敗しました。倉庫を確認してください。",
+  "@empPickupFailed": {
+    "type": "text"
+  },
+  "employeePhoneAlreadyExists": "電話番号は既に存在します",
+  "@employeePhoneAlreadyExists": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedTitle": "権限が更新されました",
+  "@employeePermissionUpdatedTitle": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedBody": "あなたの権限が更新されました。",
+  "@employeePermissionUpdatedBody": {
+    "type": "text"
+  },
+  "supplierHistoryStats": "入荷統計",
+  "@supplierHistoryStats": {
+    "type": "text"
+  },
+  "supplierUpdateImage": "サプライヤー画像を更新",
+  "@supplierUpdateImage": {
+    "type": "text"
+  },
+  "supplierCurrentImage": "現在の画像",
+  "@supplierCurrentImage": {
+    "type": "text"
+  },
+  "supplierChooseImage": "画像を選択",
+  "@supplierChooseImage": {
+    "type": "text"
+  },
+  "supplierChooseFromDevice": "デバイスから選択",
+  "@supplierChooseFromDevice": {
+    "type": "text"
+  },
+  "orderUpdateSuccess": "注文の更新に成功しました",
+  "@orderUpdateSuccess": {
+    "type": "text"
+  },
+  "orderDeleteSuccess": "注文の削除に成功しました",
+  "@orderDeleteSuccess": {
+    "type": "text"
+  },
+  "orderDeleteTitle": "注文を削除",
+  "@orderDeleteTitle": {
+    "type": "text"
+  },
+  "orderDeleteConfirmMessage": "この注文を削除してもよろしいですか？",
+  "@orderDeleteConfirmMessage": {
+    "type": "text"
+  },
+  "orderPleaseEnterQuantity": "数量を入力してください",
+  "@orderPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "orderInvalidQuantity": "数量が無効です",
+  "@orderInvalidQuantity": {
+    "type": "text"
+  },
+  "orderExceedsStock": "在庫数量を超えています",
+  "@orderExceedsStock": {
+    "type": "text"
+  },
+  "orderStt": "番号",
+  "@orderStt": {
+    "type": "text"
+  },
+  "homeDeliveryWaiting": "配送待ち",
+  "@homeDeliveryWaiting": {
+    "type": "text"
+  },
+  "homeSalesEmployee": "販売担当者",
+  "@homeSalesEmployee": {
+    "type": "text"
+  },
+  "homeWarehouseEmployee": "倉庫担当者",
+  "@homeWarehouseEmployee": {
+    "type": "text"
+  },
+  "homeLoadingEmployees": "従業員を読み込み中...",
+  "@homeLoadingEmployees": {
+    "type": "text"
+  },
+  "homeSelectWarehouseEmployee": "倉庫担当者を選択",
+  "@homeSelectWarehouseEmployee": {
+    "type": "text"
+  },
+  "homePickupGoods": "集荷",
+  "@homePickupGoods": {
+    "type": "text"
+  },
+  "homePickingUpGoods": "集荷中",
+  "@homePickingUpGoods": {
+    "type": "text"
+  },
+  "homePickingUpSubtitle": "ドライバーが集荷中です",
+  "@homePickingUpSubtitle": {
+    "type": "text"
+  },
+  "homePickupPointCount": "{count} 集荷地点",
+  "@homePickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDelivering": "配送中",
+  "@homeDelivering": {
+    "type": "text"
+  },
+  "homeDeliveringSubtitle": "ドライバーが配送先へ向かっています",
+  "@homeDeliveringSubtitle": {
+    "type": "text"
+  },
+  "homeDeliveryPointName": "配送先: {name}",
+  "@homeDeliveryPointName": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homePickupCountDest": "{count} 集荷地点 · {destination}",
+  "@homePickupCountDest": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "destination": {
+        "type": "String"
+      }
+    }
+  },
+  "homeViewJourney": "ルートを見る",
+  "@homeViewJourney": {
+    "type": "text"
+  },
+  "homeNoPickupInfo": "集荷地点の情報がありません。",
+  "@homeNoPickupInfo": {
+    "type": "text"
+  },
+  "homeProductCount": "{count} 商品",
+  "@homeProductCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeOtherProducts": "+{count} その他の商品",
+  "@homeOtherProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDestination": "配送先",
+  "@homeDestination": {
+    "type": "text"
+  },
+  "homeRecipient": "受取人: {name}",
+  "@homeRecipient": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAddWarehouseOrStore": "倉庫/店舗を追加",
+  "@homeAddWarehouseOrStore": {
+    "type": "text"
+  },
+  "supplierImportHistory": "仕入れ履歴（{name}）",
+  "@supplierImportHistory": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

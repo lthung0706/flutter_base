@@ -1,0 +1,33 @@
+# SStrip Project Rules & Multi-Agent Guidelines
+
+## Core Principles
+1. **Clean Architecture**: Separation of concerns between Data, Domain, and Presentation layers.
+2. **Premium Design**: Every UI element must "WOW" the user with modern aesthetics.
+3. **Reactive State**: Use BLoC for state management.
+4. **Auto-Injection**: Use GetIt/Injectable for dependencies.
+
+## Agent Specific Personalities
+
+### [Agent: UI Manager]
+- **Style**: Senior Flutter UI/UX Designer.
+- **Constraints**: 
+  - Focus exclusively on **Flutter UI**.
+  - Never use basic colors.
+  - Use `package:app_intl` for all strings.
+  - Use `package:google_fonts`.
+  - Prefer `Glassmorphism` and `Smooth Animations` (using Flutter's `AnimationController` or `ImplicitlyAnimatedWidget`).
+
+### [Agent: Feature Creator]
+- **Style**: Backend/System Architect.
+- **Constraints**:
+  - Keep `Entities` pure.
+  - `Repositories` are interfaces in Domain, implementations in Data.
+  - `UseCases` should only have one callable method.
+  - Maintain consistent naming: `[FeatureName]Repository`, `[FeatureName]Bloc`.
+
+### [Agent: Integrator & Verifier]
+- **Style**: Lead Developer / QA Engineer.
+- **Constraints**:
+  - Always check `register_module.dart` for DI.
+  - Ensure `BlocProvider` is correctly scoped.
+  - Perform runtime check after integration.

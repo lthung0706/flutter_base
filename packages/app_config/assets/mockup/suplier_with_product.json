@@ -1,0 +1,101 @@
+{
+    "code": 200,
+    "message": "Success",
+    "data": { 
+    "total": 3,
+    "items": [
+        {
+            "id": 1,
+            "name": "Supplier A",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Product A",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Product B",
+                    "price": 200
+                }
+            ]
+            
+        },
+        {
+            "id": 2,
+            "name": "Supplier B",
+            "address": "123 Main St aasd",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Product A",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Product B",
+                    "price": 200
+                },
+                 {
+                    "id": 3,
+                    "name": "Product C",
+                    "price": 300
+                }
+            ]
+            
+        },
+        {
+            "id": 3,
+            "name": "Supplier C",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Product A",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Product B",
+                    "price": 200
+                }
+            ]
+            
+        },
+        {
+            "id": 4,
+            "name": "Supplier D",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "products": [
+                {
+                    "id": 1,
+                    "name": "Product A",
+                    "price": 100
+                },
+                {
+                    "id": 2,
+                    "name": "Product B",
+                    "price": 200
+                }
+            ]
+            
+        }
+    ]
+}}

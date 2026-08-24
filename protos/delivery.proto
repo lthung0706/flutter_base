@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package delivery;
+
+service DeliveryService {
+  rpc SubscribeLocations(SubscribeRequest) returns (stream ResponseLocationUpdate);
+  rpc GetLineString(SubscribeRequest) returns (stream GetLineStringResponse);
+
+  rpc SendLocation(LocationUpdate) returns (Ack);
+  rpc SendLineString(LineStringUpdate) returns (Ack);
+}
+
+message SubscribeRequest {
+  string user_id = 1;
+}
+
+message LocationUpdate {
+  string shipper_id = 1;
+  string owner_id = 2;
+  double lat = 3;
+  double lng = 4;
+  int64 timestamp = 5;
+  double distance = 6;
+  double route_distance = 7;
+  string status = 8;
+  double current_heading = 9;
+  string from = 10;
+  string to = 11;
+  string to_name = 12;
+  string vehicle_type = 13;
+  string received_name = 14;
+  double to_lat = 15;
+  double to_lng = 16;
+  repeated StoreLocation stores = 17;
+}
+
+message LineStringUpdate {
+  string shipper_id = 1;
+  string owner_id = 2;
+  repeated PolylinePoint points = 3;
+}
+
+message ResponseLocationUpdate {
+  string shipper_id = 1;
+  double lat = 2;
+  double lng = 3;
+  int64 timestamp = 4;
+  double distance = 5;
+  double route_distance = 6;
+  string status = 7;
+  double current_heading = 8;
+  string from = 9;
+  string to = 10;
+  string to_name = 11;
+  string vehicle_type = 12;
+  string received_name = 13;
+  double to_lat = 14;
+  double to_lng = 15;
+  repeated StoreLocation stores = 16;
+}
+
+message GetLineStringResponse {
+  string shipper_id = 1;
+  repeated PolylinePoint points = 2;
+}
+
+message PolylinePoint {
+  double lat = 1;
+  double lng = 2;
+}
+
+message StoreLocation {
+  string store_id = 1;
+  double store_lat = 2;
+  double store_lng = 3;
+  repeated RGRPCProduct products = 4;
+}
+message RGRPCProduct {
+  string product_id = 1;
+  string name = 2;
+  int32 quantity = 3;
+  string unit = 4;
+  string image = 5;
+}
+
+message Ack {
+  bool success = 1;
+}

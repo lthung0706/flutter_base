@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Sstrip</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>sstrip</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>SStrip sử dụng camera để chụp ảnh khi tạo sản phẩm, nhà cung cấp, kho hàng hoặc cửa hàng. Ví dụ: chụp ảnh đại diện cho một sản phẩm mới khi thêm vào danh mục.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>SStrip sử dụng vị trí của bạn để hiển thị các đơn hàng gần đây và điều phối tài xế đến điểm lấy hàng. Ví dụ: khi bạn nhận đơn, ứng dụng dùng GPS để dẫn đường đến kho.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>SStrip sử dụng vị trí nền để theo dõi lộ trình giao hàng và đảm bảo an toàn hàng hóa ngay cả khi ứng dụng đang đóng.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SStrip sử dụng vị trí của bạn để hiển thị các đơn hàng gần đây và điều phối tài xế đến điểm lấy hàng. Ví dụ: khi bạn nhận đơn, ứng dụng dùng GPS để dẫn đường đến kho.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>SStrip truy cập thư viện ảnh để chọn ảnh khi tạo sản phẩm, nhà cung cấp, kho hàng hoặc cửa hàng. Ví dụ: chọn ảnh đại diện từ thư viện cho một sản phẩm mới khi thêm vào cửa hàng.</string>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+		<string>fetch</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>kTCCServiceMediaLibrary</key>
+	<string>We need media library access to access your music and media files.</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	
+	<!-- Google Sign-in Section -->
+	<key>GIDClientID</key>
+	<string>515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b</string>
+			</array>
+		</dict>
+	</array>
+	<!-- End of the Google Sign-in Section -->
+</dict>
+</plist>

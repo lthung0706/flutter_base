@@ -1,0 +1,42 @@
+targets:
+  $default:
+    builders:
+      json_serializable:
+        enabled: true
+        generate_for:
+          - "lib/src/data/models/**.dart"
+          - "lib/src/core/params/**.dart"
+          - "lib/src/domain/entities/**.dart"
+      hive_ce_generator|hive_schema_migrator:
+        enabled: true
+        generate_for:
+          - "lib/src/data/models/local/**.dart"
+          - "lib/src/domain/entities/**.dart"
+      injectable_generator|injectable_builder:
+        enabled: true
+        generate_for:
+          - "lib/src/data/datasources/local/**_impl.dart"
+          - "lib/src/data/repositories/**.dart"
+          - "lib/src/domain/usecases/**.dart"
+          - "lib/src/module/register_module.dart"
+          - "lib/src/presentation/**_bloc.dart"
+          - lib/src/core/**_helper.dart
+          - "lib/src/authentication/**.dart"
+          - "lib/src/billing/**.dart"
+      injectable_generator|injectable_config_builder:
+        enabled: true
+        generate_for:
+          - lib/src/module/injector.dart
+      retrofit_generator:
+        enabled: true
+        generate_for:
+          include:
+            - "lib/src/data/datasources/remote/**.dart"
+            - "lib/src/authentication/**.dart"
+      auto_mappr:
+        enabled: true
+        options:
+          safeMapping: true
+        generate_for:
+          include:
+            - lib/src/mapper/mappers.dart

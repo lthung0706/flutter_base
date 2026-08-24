@@ -1,0 +1,3197 @@
+{
+  "storeName": "Tên cửa hàng",
+  "@storeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "address": "Địa chỉ",
+  "@address": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phone": "Số điện thoại",
+  "@phone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unknown": "Không xác định",
+  "@unknown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notAvailable": "Không có",
+  "@notAvailable": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "systemManagement": "QUẢN LÝ HỆ THỐNG",
+  "@systemManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employees": "Nhân viên",
+  "@employees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appSettings": "Cài đặt ứng dụng",
+  "@appSettings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reportIssue": "Báo cáo sự cố",
+  "@reportIssue": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "regulationsAndPolicies": "QUY ĐỊNH & CHÍNH SÁCH",
+  "@regulationsAndPolicies": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditions": "Điều khoản và Điều kiện",
+  "@termsConditions": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicy": "Chính sách bảo mật",
+  "@privacyPolicy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditionsMarkdown": "## ĐIỀU KHOẢN DỊCH VỤ\n\n### 1. Chấp nhận điều khoản\nBằng việc đăng ký tài khoản và sử dụng ứng dụng SStrip, người dùng (bao gồm Chủ cửa hàng, Nhân viên kho và Nhân viên giao hàng) đồng ý tuân thủ toàn bộ các điều khoản dưới đây. Nếu bạn không đồng ý, vui lòng ngừng sử dụng dịch vụ ngay lập tức.\n\n### 2. Mô tả dịch vụ\nSStrip là nền tảng quản lý chuỗi cung ứng và vận chuyển hàng hóa. Ứng dụng cung cấp các công cụ để:\n* Quản lý kho, cửa hàng và nhà cung cấp.\n* Tạo và theo dõi đơn giao hàng.\n* Giám sát lộ trình giao hàng theo thời gian thực trên bản đồ.\n* Quét mã QR để tra cứu sản phẩm và đơn hàng.\n* Nhận thông báo đẩy về trạng thái đơn hàng.\n\n### 3. Tài khoản người dùng\n* **Đăng ký:** Người dùng đăng ký bằng địa chỉ email hoặc số điện thoại. Tài khoản nhân viên được Chủ cửa hàng tạo và phân quyền.\n* **Bảo mật:** Người dùng chịu trách nhiệm bảo vệ thông tin đăng nhập và mọi hoạt động được thực hiện dưới tài khoản của mình.\n* **Phân quyền:** Quyền truy cập các tính năng (tạo, sửa, xóa đơn hàng hoặc dữ liệu) được quản lý thông qua hệ thống vai trò do Chủ cửa hàng phân công.\n\n### 4. Trách nhiệm của người dùng\n* Cung cấp thông tin chính xác và trung thực về hàng hóa (tên, giá, đơn vị, hình ảnh).\n* Cam kết không vận chuyển hàng cấm, chất nổ, hàng lậu hoặc bất kỳ mặt hàng nào vi phạm pháp luật Việt Nam.\n* Không sử dụng ứng dụng cho mục đích gian lận, phá hoại hoặc bất hợp pháp.\n* Đảm bảo hình ảnh tải lên không vi phạm quyền sở hữu trí tuệ của bất kỳ bên thứ ba nào.\n\n### 5. Phí dịch vụ và thanh toán\n* Mọi chi phí liên quan sẽ được hiển thị công khai trong ứng dụng trước khi người dùng xác nhận đơn hàng.\n* Giá sản phẩm được tính bằng VNĐ và hiển thị rõ ràng cho từng mặt hàng.\n\n### 6. Giới hạn trách nhiệm\n* SStrip cung cấp giải pháp công nghệ và không chịu trách nhiệm trực tiếp về chất lượng hàng hóa hoặc sự cố do bên thứ ba gây ra.\n* Mọi khiếu nại về hàng hóa hư hỏng sẽ được giải quyết dựa trên bằng chứng (hình ảnh, biên bản giao nhận) được ghi nhận trong ứng dụng.\n* Chúng tôi không chịu trách nhiệm về việc gián đoạn dịch vụ do lỗi mạng, thiên tai hoặc các sự kiện bất khả kháng.\n\n### 7. Chấm dứt dịch vụ\n* Chúng tôi có quyền tạm ngừng hoặc chấm dứt tài khoản người dùng nếu phát hiện vi phạm các điều khoản này.\n* Người dùng có thể yêu cầu xóa tài khoản bất kỳ lúc nào.\n\n---\n*Cập nhật lần cuối: Ngày 05 tháng 03 năm 2026*",
+  "@termsConditionsMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicyMarkdown": "## CHÍNH SÁCH BẢO MẬT\n\n> Chính sách này được soạn thảo tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân tại Việt Nam.\n\n### 1. Dữ liệu chúng tôi thu thập\n\n**a) Thông tin tài khoản:**\n* Họ tên, email và số điện thoại (khi đăng ký).\n* Mật khẩu (được mã hóa và không bao giờ lưu dưới dạng văn bản thuần).\n* Vai trò và quyền hạn trong hệ thống (Chủ cửa hàng, Nhân viên kho, Nhân viên giao hàng).\n\n**b) Dữ liệu vị trí (GPS):**\n* Vị trí nhân viên giao hàng được thu thập theo thời gian thực, bao gồm cả khi ứng dụng chạy nền, để cập nhật lộ trình giao hàng cho các bên liên quan.\n* Vị trí kho, cửa hàng và nhà cung cấp được lưu để hiển thị trên bản đồ.\n\n**c) Hình ảnh và tệp:**\n* Hình ảnh sản phẩm, kho và cửa hàng do người dùng tải lên.\n* Ảnh chụp từ camera hoặc chọn từ thư viện ảnh phục vụ mục đích quản lý hàng hóa.\n\n**d) Thông tin thiết bị:**\n* Loại thiết bị, hệ điều hành và mã định danh thiết bị để gửi thông báo.\n* Thông tin lỗi ứng dụng được thu thập tự động để cải thiện chất lượng phần mềm.\n\n**e) Dữ liệu kinh doanh:**\n* Thông tin đơn hàng: người tạo, sản phẩm, số lượng, giá, trạng thái và ghi chú.\n* Thông tin nhà cung cấp: tên, địa chỉ, số điện thoại và danh mục sản phẩm.\n* Thông tin kho và cửa hàng: tên, địa chỉ, tọa độ và mô tả.\n\n### 2. Mục đích sử dụng dữ liệu\n\n* **Vận hành:** Quản lý kho, cửa hàng, đơn hàng và kết nối việc giao hàng với nhân viên phù hợp.\n* **Theo dõi:** Hiển thị vị trí giao hàng theo thời gian thực trên bản đồ để đảm bảo an toàn hàng hóa.\n* **Thông báo:** Gửi thông báo đẩy về trạng thái đơn hàng và cập nhật hệ thống.\n* **Hỗ trợ:** Giải quyết tranh chấp hoặc khiếu nại dựa trên dữ liệu giao dịch đã lưu.\n* **Cải thiện:** Phân tích lỗi và cải thiện tính năng dựa trên hành vi sử dụng.\n\n### 3. Quyền truy cập thiết bị\n\nỨng dụng yêu cầu các quyền sau trên thiết bị của bạn:\n\n| Quyền | Mục đích |\n|------------|---------|\n| Vị trí (khi sử dụng) | Hiển thị vị trí trên bản đồ, tìm nhà cung cấp gần nhất |\n| Vị trí (chạy nền) | Theo dõi liên tục lộ trình giao hàng (chỉ nhân viên giao hàng) |\n| Camera | Chụp ảnh sản phẩm, quét mã QR |\n| Thư viện ảnh | Chọn ảnh sản phẩm và kho từ thiết bị |\n| Thông báo | Nhận thông báo trạng thái đơn hàng và cập nhật hệ thống |\n| Bộ nhớ | Lưu dữ liệu cục bộ để cải thiện hiệu năng |\n\nBạn có thể tắt bất kỳ quyền nào trong **Cài đặt** của điện thoại. Tuy nhiên, việc tắt một số quyền có thể ảnh hưởng đến chức năng của ứng dụng.\n\n### 4. Chia sẻ thông tin\n\nChúng tôi cam kết **không bán** dữ liệu cá nhân cho bên thứ ba. Dữ liệu chỉ được chia sẻ trong các trường hợp sau:\n* **Trong nội bộ hệ thống:** Nhân viên giao hàng có thể xem thông tin đơn hàng (địa chỉ giao, sản phẩm); chủ cửa hàng có thể xem vị trí nhân viên giao hàng.\n* **Nhà cung cấp dịch vụ bản đồ:** Đối tác bản đồ nhận dữ liệu vị trí để hiển thị bản đồ và tính toán lộ trình.\n* **Dịch vụ thông báo:** Nhà cung cấp dịch vụ thông báo đẩy nhận mã định danh thiết bị để gửi thông báo.\n* **Cơ quan có thẩm quyền:** Khi có yêu cầu bằng văn bản theo quy định của pháp luật Việt Nam.\n\n### 5. Quyền của bạn (Theo Nghị định 13/2023/NĐ-CP)\n\nBạn có quyền:\n1. **Truy cập và Chỉnh sửa:** Cập nhật thông tin cá nhân (tên, số điện thoại) bất kỳ lúc nào trong mục Tài khoản.\n2. **Xóa dữ liệu:** Yêu cầu xóa tài khoản và dữ liệu liên quan bằng cách liên hệ bộ phận hỗ trợ.\n3. **Rút quyền:** Tắt quyền truy cập vị trí, camera hoặc thông báo trong cài đặt điện thoại.\n4. **Phản đối xử lý:** Phản đối việc xử lý dữ liệu cá nhân trong một số trường hợp theo quy định của pháp luật.\n\n### 6. Lưu trữ và bảo mật\n\n* Dữ liệu được truyền qua các giao thức mã hóa an toàn.\n* Dữ liệu nhạy cảm (mật khẩu) được mã hóa trước khi lưu trữ.\n* Dữ liệu cục bộ trên thiết bị được lưu bằng cơ sở dữ liệu được mã hóa.\n* Hệ thống sử dụng kết nối an toàn để theo dõi giao hàng theo thời gian thực.\n\n### 7. Thời gian lưu trữ dữ liệu\n\n* Dữ liệu tài khoản: Được lưu cho đến khi người dùng yêu cầu xóa.\n\n---\n*Cập nhật lần cuối: Ngày 05 tháng 03 năm 2026*",
+  "@privacyPolicyMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dangerZone": "VÙNG NGUY HIỂM",
+  "@dangerZone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccount": "Xóa tài khoản",
+  "@deleteAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccountConfirm": "Bạn có chắc chắn muốn xóa tài khoản này không?",
+  "@deleteAccountConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "Đăng xuất",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logoutConfirm": "Bạn có chắc chắn muốn đăng xuất không?",
+  "@logoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeLogoutConfirm": "Bạn có chắc chắn muốn đăng xuất khỏi tài khoản nhân viên không?",
+  "@employeeLogoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appVersion": "PHIÊN BẢN ỨNG DỤNG",
+  "@appVersion": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "Ngôn ngữ",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectLanguage": "Chọn ngôn ngữ",
+  "@selectLanguage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeList": "Danh sách nhân viên",
+  "@employeeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "Hủy",
+  "@cancel": {
+    "type": "text"
+  },
+  "save": "Lưu",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupPoints": "Nhập hàng",
+  "@pickupPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouses": "Kho hàng",
+  "@warehouses": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "importGoods": "Nhập hàng",
+  "@importGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "stores": "Cửa hàng",
+  "@stores": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createPickupPoint": "Tạo điểm lấy hàng",
+  "@createPickupPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createProduct": "Tạo sản phẩm",
+  "@createProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createWarehouse": "Tạo kho",
+  "@createWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createStore": "Tạo cửa hàng",
+  "@createStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appName": "SStrip",
+  "@appName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findAddress": "Tìm địa chỉ",
+  "@findAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchAddress": "Tìm kiếm địa chỉ",
+  "@searchAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectThisLocation": "Chọn vị trí này",
+  "@selectThisLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderFromWarehouse": "Đặt hàng từ kho",
+  "@orderFromWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderSuccessfully": "Đặt hàng thành công",
+  "@orderSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectProduct": "Vui lòng chọn sản phẩm",
+  "@pleaseSelectProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectDeliveryPoint": "Vui lòng chọn điểm giao hàng",
+  "@pleaseSelectDeliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "placeOrder": "Đặt hàng",
+  "@placeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pending": "Chờ xử lý",
+  "@pending": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "processing": "Đang xử lý",
+  "@processing": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completed": "Hoàn thành",
+  "@completed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivered": "Đã giao",
+  "@delivered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelled": "Đã hủy",
+  "@cancelled": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failed": "Thất bại",
+  "@failed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryPoint": "Điểm giao hàng",
+  "@deliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdDate": "Ngày tạo",
+  "@createdDate": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notes": "Ghi chú",
+  "@notes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "note": "Ghi chú",
+  "@note": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterNote": "Nhập ghi chú",
+  "@enterNote": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customer": "Khách hàng",
+  "@customer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "location": "Vị trí",
+  "@location": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "time": "Thời gian",
+  "@time": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirm": "Xác nhận",
+  "@confirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sessionExpiredTitle": "Phiên đã hết hạn",
+  "@sessionExpiredTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sessionExpiredMessage": "Phiên của bạn đã hết hạn, vui lòng đăng nhập lại",
+  "@sessionExpiredMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "Tổng",
+  "@total": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalAmount": "Tổng tiền",
+  "@totalAmount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noOrdersYet": "Chưa có đơn hàng",
+  "noOrders": "Không có đơn hàng",
+  "@noOrdersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "@noOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "turnOnLocation": "Truy cập vị trí",
+  "@turnOnLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locationPermissionDescription": "Chúng tôi cần quyền truy cập vị trí để theo dõi lộ trình và hỗ trợ dịch vụ giao hàng tốt nhất.",
+  "@locationPermissionDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCompletedWithId": "Đơn hàng {id} đã hoàn thành",
+  "@orderCompletedWithId": {
+    "type": "text",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmCancelOrderTitle": "Hủy đơn hàng",
+  "@confirmCancelOrderTitle": {
+    "type": "text"
+  },
+  "confirmCancelOrderMessage": "Bạn có chắc chắn muốn hủy đơn hàng này không?",
+  "@confirmCancelOrderMessage": {
+    "type": "text"
+  },
+  "noProductsSelected": "Chưa chọn sản phẩm nào",
+  "@noProductsSelected": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromWarehouseToStart": "Chọn sản phẩm từ kho để bắt đầu",
+  "@selectProductsFromWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromSupplierToStart": "Chọn sản phẩm từ nhà cung cấp để bắt đầu",
+  "@selectProductsFromSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderNumberTitle": "Đơn hàng #{shortId}",
+  "@orderNumberTitle": {
+    "type": "text",
+    "placeholders": {
+      "shortId": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveringOrders": "Đơn chờ giao",
+  "@deliveringOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveredOrders": "Đơn đã giao",
+  "@deliveredOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedOrders": "Đơn đã nhận",
+  "@receivedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchasedOrders": "Đơn đã mua",
+  "@purchasedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelledOrders": "Đơn đã hủy",
+  "@cancelledOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completedOrders": "Đơn hoàn thành",
+  "@completedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplier": "Nhà cung cấp",
+  "@supplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noSuppliersYet": "Chưa có nhà cung cấp",
+  "@noSuppliersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addSupplierToStart": "Thêm nhà cung cấp để bắt đầu lấy hàng",
+  "@addSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noWarehousesYet": "Chưa có kho hàng",
+  "@noWarehousesYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addWarehouseToStart": "Thiết lập kho để bắt đầu quản lý",
+  "@addWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noStoresYet": "Chưa có cửa hàng",
+  "@noStoresYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addStoreToStart": "Thiết lập cửa hàng để bắt đầu bán hàng",
+  "@addStoreToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouse": "Kho hàng",
+  "@warehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "product": "Sản phẩm",
+  "@product": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantity": "Số lượng",
+  "@quantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderedQuantity": "Đã đặt: x{count}",
+  "@orderedQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "supplierCount": "{count} nhà cung cấp",
+  "@supplierCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemCount": "{count} mặt hàng",
+  "@itemCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quantityCount": "Số lượng {count}",
+  "@quantityCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedQuantityLabel": "Đã nhận: {received}/{quantity}",
+  "@receivedQuantityLabel": {
+    "type": "text",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedEnough": "Đủ",
+  "@receivedEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedShort": "Chưa đủ",
+  "@receivedShort": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueDelivery": "Tiếp tục giao hàng",
+  "@continueDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productsAndQuantitySummary": "{productCount} mặt hàng • {totalQuantity} số lượng",
+  "@productsAndQuantitySummary": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "totalProducts": "Tổng {totalQuantity} sản phẩm",
+  "@totalProducts": {
+    "type": "text",
+    "placeholders": {
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "createOrder": "Tạo đơn hàng",
+  "@createOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createImportOrder": "Tạo đơn nhập hàng",
+  "@createImportOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createTransferOrder": "Tạo đơn chuyển hàng",
+  "@createTransferOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequestOrder": "Tạo yêu cầu",
+  "@createRequestOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverTo": "Giao đến: ",
+  "@deliverTo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "price": "Giá",
+  "@price": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseName": "Tên kho",
+  "@warehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierName": "Tên nhà cung cấp",
+  "@supplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productCode": "Mã sản phẩm",
+  "@productCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductCode": "Nhập mã sản phẩm",
+  "@enterProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanCode": "Quét mã",
+  "@scanCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warrantyPeriod": "Thời hạn bảo hành",
+  "@warrantyPeriod": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateProductCode": "Cập nhật mã sản phẩm",
+  "@updateProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateSuccessfully": "Cập nhật thành công",
+  "@updateSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "months": "{value} tháng",
+  "@months": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "years": "{value} năm",
+  "@years": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "home": "Trang chủ",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "order": "Đơn hàng",
+  "@order": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeInfo": "THÔNG TIN CỬA HÀNG",
+  "@storeInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "guide": "Hướng dẫn",
+  "@guide": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewStore": "Thiết lập cửa hàng mới",
+  "@setupNewStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "close": "Đóng",
+  "@close": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleStoreName": "VD: Cửa hàng Quận 1",
+  "@exampleStoreName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "description": "Mô tả",
+  "@description": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "additionalInfo": "Thông tin thêm...",
+  "@additionalInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveStore": "Lưu cửa hàng",
+  "@saveStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierInfo": "THÔNG TIN NHÀ CUNG CẤP",
+  "@supplierInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewSupplier": "Thiết lập nhà cung cấp mới",
+  "@setupNewSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleSupplierName": "VD: Đại lý Thành Công",
+  "@exampleSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phoneNumber": "Số điện thoại",
+  "@phoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "examplePhoneNumber": "0123 456 789",
+  "@examplePhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addressHint": "Số nhà, đường, quận/huyện...",
+  "@addressHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveSupplier": "Lưu nhà cung cấp",
+  "@saveSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectAddressBeforeSaving": "Vui lòng chọn địa chỉ trước khi lưu",
+  "@pleaseSelectAddressBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterSupplierName": "Vui lòng nhập tên nhà cung cấp",
+  "@pleaseEnterSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseInfo": "THÔNG TIN KHO HÀNG",
+  "@warehouseInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewWarehouse": "Thiết lập kho mới",
+  "@setupNewWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createSupplierShowcaseDescription": "Nhấn vào đây để tạo kho đầu tiên và bắt đầu quản lý nhà cung cấp và sản phẩm.",
+  "@createSupplierShowcaseDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleWarehouseName": "VD: Kho A",
+  "@exampleWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveWarehouse": "Lưu kho",
+  "@saveWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productInfo": "THÔNG TIN SẢN PHẨM",
+  "@productInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProduct": "Thêm sản phẩm",
+  "@addProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productName": "Tên sản phẩm",
+  "@productName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductName": "Nhập tên sản phẩm",
+  "@enterProductName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPrice": "Nhập giá",
+  "@enterPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveProduct": "Lưu sản phẩm",
+  "@saveProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "editProduct": "Sửa sản phẩm",
+  "@editProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteProduct": "Xóa sản phẩm",
+  "@deleteProduct": {
+    "type": "text"
+  },
+  "warrantyProduct": "Bảo hành sản phẩm",
+  "@warrantyProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createNewEmployee": "Tạo nhân viên mới",
+  "@createNewEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeName": "Tên nhân viên",
+  "@employeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmployeeName": "Nhập tên nhân viên",
+  "@enterEmployeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Mật khẩu",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPassword": "Nhập mật khẩu",
+  "@enterPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "role": "Vai trò",
+  "@role": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "inventoryManagement": "Quản lý kho",
+  "@inventoryManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivery": "Giao hàng",
+  "@delivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sales": "Bán hàng",
+  "@sales": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryVehicle": "Phương tiện giao hàng",
+  "@deliveryVehicle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "motorcycle": "Xe máy",
+  "@motorcycle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "truck": "Xe tải",
+  "@truck": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "create": "Tạo",
+  "@create": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatPage": "Trang trò chuyện",
+  "@chatPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionality": "Chức năng trò chuyện sẽ ở đây",
+  "@chatFunctionality": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Hồ sơ",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings": "Cài đặt",
+  "@settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "store": "Cửa hàng",
+  "@store": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGps": "Tiếp tục",
+  "@enableGps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "trackingInfoUpdated": "Đã cập nhật thông tin theo dõi: {data}",
+  "@trackingInfoUpdated": {
+    "type": "text",
+    "placeholders": {
+      "data": {
+        "type": "String"
+      }
+    }
+  },
+  "reject": "Từ chối",
+  "@reject": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "acceptOrder": "Nhận đơn",
+  "@acceptOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "declineOrder": "Từ chối đơn",
+  "@declineOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailsTitle": "Chi tiết {index}",
+  "@detailsTitle": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "orderInformation": "Thông tin đơn hàng",
+  "@orderInformation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailedViewForOrder": "Xem chi tiết đơn hàng #{index}",
+  "@detailedViewForOrder": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "demoCustomerName": "Nguyễn Văn A",
+  "@demoCustomerName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderLocation": "123 Đường Chính, Quận 1, TP.HCM",
+  "@demoOrderLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderTime": "10:30 - Hôm nay",
+  "@demoOrderTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderNotes": "Khách hàng yêu cầu giao hàng cẩn thận và gọi điện trước khi đến.",
+  "@demoOrderNotes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsMapRemovedDescription": "Chức năng bản đồ đã bị gỡ khỏi cài đặt. Vui lòng chuyển sang MapLibre.",
+  "@settingsMapRemovedDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noProducts": "Không có sản phẩm",
+  "@noProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProductsToCategory": "Thêm sản phẩm vào danh mục này.",
+  "@addProductsToCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeOrder": "Hoàn thành đơn",
+  "@completeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receiveOrder": "Nhận đơn",
+  "@receiveOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupCompleted": "Đã lấy hàng",
+  "@pickupCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "refreshList": "Làm mới danh sách",
+  "@refreshList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGPS": "Tiếp tục",
+  "@enableGPS": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "start": "Bắt đầu",
+  "@start": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "back": "Quay lại",
+  "@back": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanQRReceiveNotification": "Quét QR, nhận thông báo\nvà bắt đầu ngay",
+  "@scanQRReceiveNotification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manageWarehouseStore": "Quản lý kho, cửa hàng\nvà nhà cung cấp",
+  "@manageWarehouseStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createOrderTrackShipment": "Tạo đơn và theo dõi giao hàng\ntheo thời gian thực",
+  "@createOrderTrackShipment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sstripPlatform": "SStrip - nền tảng vận hành\nchuỗi cung ứng",
+  "@sstripPlatform": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Tìm kiếm",
+  "@search": {
+    "type": "text"
+  },
+  "anErrorOccurred": "Đã xảy ra lỗi",
+  "@anErrorOccurred": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "error": "Lỗi: {message}",
+  "@error": {
+    "type": "text",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "noName": "Chưa có tên",
+  "@noName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPhoneNumber": "Chưa có số điện thoại",
+  "@noPhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noEmployees": "Không có nhân viên",
+  "@noEmployees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pressButtonToAddEmployee": "Nhấn nút bên dưới để thêm nhân viên mới",
+  "@pressButtonToAddEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loading": "Đang tải...",
+  "@loading": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeList": "Danh sách cửa hàng",
+  "@storeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productsAtCounter": "Sản phẩm tại quầy",
+  "@productsAtCounter": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "salesHistory": "Lịch sử bán hàng",
+  "@salesHistory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "windbreakerJacket": "Áo khoác gió",
+  "@windbreakerJacket": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sportSneakers": "Giày thể thao",
+  "@sportSneakers": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "meshCap": "Mũ lưới",
+  "@meshCap": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "khakiPants": "Quần kaki",
+  "@khakiPants": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeProductInfoInOneGo": "Chọn nhà cung cấp và hoàn thiện thông tin từng sản phẩm để cập nhật danh mục gọn gàng trong một lần.",
+  "@completeProductInfoInOneGo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locked": "Đã khóa",
+  "@locked": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeSupplier": "Đổi nhà cung cấp",
+  "@changeSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectSupplier": "Chọn nhà cung cấp",
+  "@selectSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tapToChooseSupplierBeforeAddingProducts": "Nhấn để chọn nhà cung cấp trước khi thêm sản phẩm.",
+  "@tapToChooseSupplierBeforeAddingProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNumber": "Sản phẩm {number}",
+  "@productNumber": {
+    "type": "text",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newestItem": "Mặt hàng mới nhất",
+  "@newestItem": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "uploadImage": "TẢI ẢNH LÊN",
+  "@uploadImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeImage": "Đổi ảnh",
+  "@changeImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectSupplierBeforeSaving": "Vui lòng chọn nhà cung cấp trước khi lưu.",
+  "@pleaseSelectSupplierBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectImagesBeforeSaving": "Vui lòng chọn ảnh cho tất cả sản phẩm trước khi lưu.",
+  "@pleaseSelectImagesBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productType": "Loại sản phẩm",
+  "@productType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectType": "-- Chọn loại --",
+  "@selectType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vnd": "VNĐ",
+  "@vnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialPieceType": "Vật tư (cái)",
+  "@materialPieceType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialKilogramType": "Vật tư (kg)",
+  "@materialKilogramType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialBoxType": "Vật tư (thùng)",
+  "@materialBoxType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieceUnit": "cái",
+  "@pieceUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "kilogramUnit": "kg",
+  "@kilogramUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "boxUnit": "thùng",
+  "@boxUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "active": "Hoạt động",
+  "@active": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noData": "Không có dữ liệu",
+  "@noData": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chat": "Trò chuyện",
+  "@chat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionalityComingSoon": "Chức năng trò chuyện sẽ ở đây",
+  "@chatFunctionalityComingSoon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "owner": "Chủ cửa hàng",
+  "@owner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employee": "Nhân viên",
+  "@employee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "welcomeBack": "Chào mừng trở lại",
+  "@welcomeBack": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginToContinueManagingStore": "Đăng nhập để tiếp tục quản lý cửa hàng của bạn",
+  "@loginToContinueManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "Email",
+  "@email": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmail": "Nhập địa chỉ email",
+  "@enterEmail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPhone": "Nhập số điện thoại",
+  "@enterPhone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginFailed": "Đăng nhập thất bại",
+  "@loginFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Đăng nhập",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dontHaveAccountRegisterNow": "Chưa có tài khoản? Tạo miễn phí",
+  "@dontHaveAccountRegisterNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createAccount": "Tạo tài khoản miễn phí",
+  "@createAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerToStartManagingStore": "Tạo tài khoản SStrip miễn phí để bắt đầu",
+  "@registerToStartManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userName": "Tên đăng nhập",
+  "@userName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterName": "Nhập tên của bạn",
+  "@enterName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmPassword": "Xác nhận mật khẩu",
+  "@confirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterConfirmPassword": "Nhập lại mật khẩu",
+  "@enterConfirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsMatch": "Mật khẩu khớp",
+  "@passwordsMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsDoNotMatch": "Mật khẩu không khớp",
+  "@passwordsDoNotMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerFailed": "Đăng ký thất bại",
+  "@registerFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "Đăng ký",
+  "@register": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alreadyHaveAccountLogin": "Đã có tài khoản? Đăng nhập",
+  "@alreadyHaveAccountLogin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewTitle": "SStrip - nền tảng vận hành\nchuỗi cung ứng",
+  "@onboardingOverviewTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewDescription": "Quản lý kho bãi, luân chuyển hàng hóa và mạng lưới phân phối tập trung trong một ứng dụng duy nhất.",
+  "@onboardingOverviewDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHeadline": "Một màn hình - nhiều quy trình",
+  "@onboardingOverviewHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight1": "Chuỗi cung ứng",
+  "@onboardingOverviewHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight2": "Vận chuyển hàng hóa",
+  "@onboardingOverviewHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight3": "Dữ liệu tập trung",
+  "@onboardingOverviewHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat1": "Kho hàng",
+  "@onboardingOverviewStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat2": "Cửa hàng",
+  "@onboardingOverviewStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat3": "Nhà cung cấp",
+  "@onboardingOverviewStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsTitle": "Quản lý kho, cửa hàng\nvà nhà cung cấp",
+  "@onboardingLocationsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsDescription": "Thiết lập và giám sát các địa điểm vận hành quan trọng để kiểm soát tồn kho, nguồn cung và mạng lưới phân phối chính xác hơn.",
+  "@onboardingLocationsDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHeadline": "Hệ sinh thái điểm bán rõ ràng",
+  "@onboardingLocationsHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight1": "Kho hàng",
+  "@onboardingLocationsHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight2": "Cửa hàng",
+  "@onboardingLocationsHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight3": "Nhà cung cấp",
+  "@onboardingLocationsHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat1": "Theo dõi địa điểm",
+  "@onboardingLocationsStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat2": "Đồng bộ thông tin",
+  "@onboardingLocationsStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat3": "Mở rộng hệ thống",
+  "@onboardingLocationsStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryTitle": "Tạo đơn và theo dõi\ngiao hàng theo thời gian thực",
+  "@onboardingDeliveryTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryDescription": "Tạo đơn vận chuyển nhanh chóng, theo dõi lộ trình giao hàng trên bản đồ và cập nhật trạng thái tức thì trong suốt hành trình.",
+  "@onboardingDeliveryDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHeadline": "Logistics minh bạch theo thời gian thực",
+  "@onboardingDeliveryHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight1": "Tạo đơn nhanh",
+  "@onboardingDeliveryHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight2": "Theo dõi lộ trình",
+  "@onboardingDeliveryHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight3": "Cập nhật trạng thái",
+  "@onboardingDeliveryHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat1": "Bản đồ trực quan",
+  "@onboardingDeliveryStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat2": "Tiến độ giao hàng",
+  "@onboardingDeliveryStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat3": "Xử lý chủ động",
+  "@onboardingDeliveryStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitle": "Kết nối & ",
+  "@onboardingReadyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDescription": "Tra cứu sản phẩm và đơn hàng bằng mã QR và nhận thông báo đẩy để luôn cập nhật hoạt động mới nhất.",
+  "@onboardingReadyDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHeadline": "Sẵn sàng vào ứng dụng",
+  "@onboardingReadyHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight1": "Quét QR",
+  "@onboardingReadyHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight2": "Tra cứu đơn hàng",
+  "@onboardingReadyHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight3": "Thông báo đẩy",
+  "@onboardingReadyHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat1": "Chính xác",
+  "@onboardingReadyStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat2": "Nhanh chóng",
+  "@onboardingReadyStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat3": "Luôn cập nhật",
+  "@onboardingReadyStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseCompleted": "Đã lấy hàng",
+  "@purchaseCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverToWarehouse": "Giao về kho",
+  "@deliverToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "startDelivery": "Bắt đầu giao hàng",
+  "@startDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "complete": "Hoàn thành",
+  "@complete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "isEnd": "Đã hết danh sách",
+  "@isEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "shippingTab": "Giao hàng",
+  "@shippingTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "switchWarehouseTab": "Chuyển kho",
+  "@switchWarehouseTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestTab": "Yêu cầu",
+  "@requestTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterWarehouseName": "Vui lòng nhập tên kho",
+  "@pleaseEnterWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transferToWarehouse": "Chuyển đến kho",
+  "@transferToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nearlyOutOfStock": "Sắp hết hàng",
+  "@nearlyOutOfStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateMinimumQuantity": "Cập nhật số lượng tối thiểu",
+  "@updateMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minimumQuantity": "Số lượng tối thiểu",
+  "@minimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterMinimumQuantity": "Nhập số lượng tối thiểu",
+  "@enterMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterValidMinimumQuantity": "Vui lòng nhập số lượng tối thiểu hợp lệ",
+  "@pleaseEnterValidMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minCount": "Tối thiểu: {count}",
+  "@minCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingSstripTag": "SSTRIP",
+  "@onboardingSstripTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitle": "Logistics thông minh ",
+  "@onboardingSstripTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitleEm": "Đơn giản hóa chuỗi cung ứng",
+  "@onboardingSstripTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripDesc": "Kết nối kho hàng, nhà cung cấp và tài xế trên một nền tảng duy nhất.",
+  "@onboardingSstripDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTag": "TÍNH NĂNG",
+  "@onboardingFeatureTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitle": "Quản lý ",
+  "@onboardingFeatureTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitleEm": "thế hệ mới",
+  "@onboardingFeatureTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureDesc": "Công cụ mạnh mẽ để tối ưu hoạt động logistics hằng ngày của bạn.",
+  "@onboardingFeatureDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTag": "BẮT ĐẦU",
+  "@onboardingStartTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitle": "Thiết lập trong ",
+  "@onboardingStartTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitleEm": "vài phút",
+  "@onboardingStartTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartDesc": "Thiết lập hệ thống logistics của bạn nhanh chóng và dễ dàng.",
+  "@onboardingStartDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTag": "SẴN SÀNG",
+  "@onboardingReadyTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitleEm": "Bắt đầu ngay hôm nay",
+  "@onboardingReadyTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDesc": "Bắt đầu quản lý hàng hóa và đơn hàng với SStrip.",
+  "@onboardingReadyDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWelcome": "🎉 Chào mừng đến với SStrip!",
+  "@onboardingWelcome": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSkip": "Bỏ qua",
+  "@onboardingSkip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartNow": "Bắt đầu ngay",
+  "@onboardingStartNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingNext": "Tiếp theo",
+  "@onboardingNext": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderTitle": "Quản lý đơn hàng",
+  "@onboardingFeatOrderTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderDesc": "Tạo & theo dõi từ kho đến người nhận",
+  "@onboardingFeatOrderDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapTitle": "Theo dõi bản đồ",
+  "@onboardingFeatMapTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapDesc": "Vị trí và lộ trình tài xế theo thời gian thực",
+  "@onboardingFeatMapDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportTitle": "Báo cáo kho",
+  "@onboardingFeatReportTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportDesc": "Thống kê tồn kho và lịch sử",
+  "@onboardingFeatReportDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Title": "Tạo tài khoản miễn phí",
+  "@onboardingStep1Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Desc": "Đăng ký trong vài giây để bắt đầu sử dụng SStrip",
+  "@onboardingStep1Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Title": "Thiết lập kho & sản phẩm",
+  "@onboardingStep2Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Desc": "Thêm kho, nhà cung cấp và danh mục",
+  "@onboardingStep2Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Title": "Tạo & phân công",
+  "@onboardingStep3Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Desc": "Tạo và phân công đơn hàng tự động",
+  "@onboardingStep3Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Title": "Theo dõi & xác nhận",
+  "@onboardingStep4Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Desc": "Theo dõi thời gian thực và xác nhận giao hàng",
+  "@onboardingStep4Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOwner": "Chủ cửa hàng",
+  "@onboardingOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDriver": "Tài xế",
+  "@onboardingDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWarehouse": "Kho hàng",
+  "@onboardingWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleOwner": "Người gửi",
+  "@onboardingBubbleOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleDriver": "Tài xế",
+  "@onboardingBubbleDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleWarehouse": "Kho hàng",
+  "@onboardingBubbleWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleSupply": "Nhà cung cấp",
+  "@onboardingBubbleSupply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "interfaceTitle": "GIAO DIỆN",
+  "@interfaceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeTitle": "Giao diện",
+  "@themeTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeAuto": "Theo hệ thống",
+  "@themeAuto": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeLight": "Sáng",
+  "@themeLight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeDark": "Tối",
+  "@themeDark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTheme": "Chọn giao diện",
+  "@selectTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "paymentSection": "THANH TOÁN",
+  "@paymentSection": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "currencyTitle": "Tiền tệ",
+  "@currencyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cash": "Tiền mặt",
+  "@cash": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bankTransfer": "Chuyển khoản",
+  "@bankTransfer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nodeColor": "Màu node",
+  "@nodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectNodeColor": "Chọn màu",
+  "@selectNodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderUpdateCompletedSuccess": "Hoàn thành đơn hàng thành công",
+  "@orderUpdateCompletedSuccess": {
+    "type": "text"
+  },
+  "orderUpdateCancelledSuccess": "Hủy đơn hàng thành công",
+  "@orderUpdateCancelledSuccess": {
+    "type": "text"
+  },
+  "priceNotUpdated": "Chưa cập nhật giá",
+  "@priceNotUpdated": {
+    "type": "text"
+  },
+  "invalidPriceTitle": "Giá không hợp lệ",
+  "@invalidPriceTitle": {
+    "type": "text"
+  },
+  "invalidPriceMessage": "Một số sản phẩm có giá không hợp lệ hoặc chưa được cập nhật. Vui lòng kiểm tra lại.",
+  "@invalidPriceMessage": {
+    "type": "text"
+  },
+  "nameNotUpdated": "(Chưa cập nhật tên)",
+  "@nameNotUpdated": {
+    "type": "text"
+  },
+  "unitPrice": "Đơn giá",
+  "@unitPrice": {
+    "type": "text"
+  },
+  "select": "Chọn",
+  "@select": {
+    "type": "text"
+  },
+  "clearAll": "Xóa tất cả",
+  "@clearAll": {
+    "type": "text"
+  },
+  "recent": "Gần đây",
+  "@recent": {
+    "type": "text"
+  },
+  "scanInstruction": "Đặt mã vạch vào khung để quét",
+  "@scanInstruction": {
+    "type": "text"
+  },
+  "updateProductCodeHelper": "Thông tin bảo hành sẽ được lưu cùng mã sản phẩm.",
+  "@updateProductCodeHelper": {
+    "type": "text"
+  },
+  "monthsTitle": "Tháng",
+  "@monthsTitle": {
+    "type": "text"
+  },
+  "yearsTitle": "Năm",
+  "@yearsTitle": {
+    "type": "text"
+  },
+  "pleaseEnterProductCode": "Vui lòng nhập mã sản phẩm",
+  "@pleaseEnterProductCode": {
+    "type": "text"
+  },
+  "addPhotos": "Thêm {count} ảnh",
+  "@addPhotos": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearSelectedProducts": "Xóa sản phẩm đã chọn",
+  "@clearSelectedProducts": {
+    "type": "text"
+  },
+  "confirmClearSelectedProducts": "Bạn có muốn xóa tất cả sản phẩm đã chọn không?",
+  "@confirmClearSelectedProducts": {
+    "type": "text"
+  },
+  "movingTo": "Đang chuyển đến",
+  "@movingTo": {
+    "type": "text"
+  },
+  "deliverySuccess": "Giao hàng thành công",
+  "@deliverySuccess": {
+    "type": "text"
+  },
+  "products": "Sản phẩm",
+  "@products": {
+    "type": "text"
+  },
+  "deliveryToWarehouseCompleted": "Đã giao đến kho {name}",
+  "@deliveryToWarehouseCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryToStoreCompleted": "Đã giao đến cửa hàng {name}",
+  "@deliveryToStoreCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectProductFromStoreToStart": "Chọn sản phẩm từ cửa hàng để bắt đầu",
+  "@selectProductFromStoreToStart": {
+    "type": "text"
+  },
+  "sold": "Đã bán",
+  "@sold": {
+    "type": "text"
+  },
+  "minStock": "Tồn kho tối thiểu",
+  "@minStock": {
+    "type": "text"
+  },
+  "updatePrice": "Cập nhật giá bán",
+  "sellingPrice": "Giá bán",
+  "purchasePrice": "Giá nhập",
+  "updateProduct": "Cập nhật sản phẩm",
+  "@updatePrice": {
+    "type": "text"
+  },
+  "delete": "Xóa",
+  "@delete": {
+    "type": "text"
+  },
+  "confirmDeleteProduct": "Bạn có chắc chắn muốn xóa sản phẩm này không?",
+  "@confirmDeleteProduct": {
+    "type": "text"
+  },
+  "edit": "Sửa",
+  "@edit": {
+    "type": "text"
+  },
+  "information": "Thông tin",
+  "@information": {
+    "type": "text"
+  },
+  "noInformation": "Không có thông tin",
+  "@noInformation": {
+    "type": "text"
+  },
+  "confirmDeleteSupplier": "Bạn có chắc chắn muốn xóa nhà cung cấp này không?",
+  "@confirmDeleteSupplier": {
+    "type": "text"
+  },
+  "confirmDeleteWarehouse": "Bạn có chắc chắn muốn xóa kho này không?",
+  "@confirmDeleteWarehouse": {
+    "type": "text"
+  },
+  "confirmDeleteStore": "Bạn có chắc chắn muốn xóa cửa hàng này không?",
+  "@confirmDeleteStore": {
+    "type": "text"
+  },
+  "confirmDeleteRole": "Bạn có chắc chắn muốn xóa vai trò {roleName} không?",
+  "@confirmDeleteRole": {
+    "type": "text",
+    "placeholders": {
+      "roleName": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteActionCannotBeUndone": "Hành động này không thể hoàn tác.",
+  "@deleteActionCannotBeUndone": {
+    "type": "text"
+  },
+  "receiptSuccessFully": "Nhập hàng thành công",
+  "@receiptSuccessFully": {
+    "type": "text"
+  },
+  "deleteCategory": "Xóa danh mục",
+  "@deleteCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteCategoryConfirmation": "Bạn có chắc chắn muốn xóa danh mục này không?",
+  "@deleteCategoryConfirmation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createCategory": "Tạo danh mục",
+  "@createCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryName": "Tên danh mục",
+  "@categoryName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unit": "Đơn vị",
+  "@unit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteSuccess": "Xóa thành công",
+  "@deleteSuccess": {
+    "type": "text"
+  },
+  "confirmDeleteEmployee": "Bạn có chắc chắn muốn xóa nhân viên này không?",
+  "@confirmDeleteEmployee": {
+    "type": "text"
+  },
+  "addRole": "Thêm vai trò",
+  "@addRole": {
+    "type": "text"
+  },
+  "currentQuantity": "Số lượng hiện tại: {quantity}",
+  "@currentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "remainingQuantity": "Còn: {count}",
+  "@remainingQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "enterSplitQuantity": "Nhập số lượng cần tách",
+  "@enterSplitQuantity": {
+    "type": "text"
+  },
+  "splitQuantityHint": "Số lượng (ví dụ: 10)",
+  "@splitQuantityHint": {
+    "type": "text"
+  },
+  "splitQuantityInvalid": "Số lượng phải > 0 và < {quantity}",
+  "@splitQuantityInvalid": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "splitProduct": "Tách sản phẩm",
+  "@splitProduct": {
+    "type": "text"
+  },
+  "productCannotBeSplit": "Sản phẩm này không thể tách.",
+  "@productCannotBeSplit": {
+    "type": "text"
+  },
+  "mergeProduct": "Gộp sản phẩm",
+  "@mergeProduct": {
+    "type": "text"
+  },
+  "selectProductsToMerge": "Chọn sản phẩm cần gộp vào mục này",
+  "@selectProductsToMerge": {
+    "type": "text"
+  },
+  "noProductsToMerge": "Không có sản phẩm nào để gộp",
+  "@noProductsToMerge": {
+    "type": "text"
+  },
+  "mergeProductConfirm": "Gộp {count} sản phẩm đã chọn?",
+  "@mergeProductConfirm": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cannotMergeDifferentCode": "Sản phẩm khác mã không thể gộp",
+  "@cannotMergeDifferentCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cannotMergeDifferentExpiry": "Không thể gộp do khác hạn sử dụng",
+  "@cannotMergeDifferentExpiry": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manufacturingDate": "Ngày sản xuất",
+  "@manufacturingDate": {
+    "type": "text"
+  },
+  "expirationDate": "Hạn sử dụng (dự kiến)",
+  "@expirationDate": {
+    "type": "text"
+  },
+  "outOfStock": "Hết hàng",
+  "@outOfStock": {
+    "type": "text"
+  },
+  "confirmDeleteItem": "Bạn có chắc chắn muốn xóa {name} không?",
+  "@confirmDeleteItem": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "billFromStore": "Hóa đơn từ cửa hàng",
+  "@billFromStore": {
+    "type": "text"
+  },
+  "orderFromStore": "Đặt hàng từ cửa hàng",
+  "@orderFromStore": {
+    "type": "text"
+  },
+  "viewLocation": "Xem vị trí",
+  "@viewLocation": {
+    "type": "text"
+  },
+  "defaultCurrency": "Tiền tệ mặc định",
+  "@defaultCurrency": {
+    "type": "text"
+  },
+  "selectCurrency": "Chọn tiền tệ",
+  "@selectCurrency": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productCodeNotUpdated": "Chưa cập nhật mã sản phẩm",
+  "mfgDateNotUpdated": "Chưa cập nhật ngày sản xuất",
+  "expired": "Đã hết hạn",
+  "expiresInDays": "Hết hạn sau {days} ngày",
+  "@expiresInDays": {
+    "type": "text",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "longPressToSelectProduct": "Nhấn giữ vào sản phẩm để chọn",
+  "@longPressToSelectProduct": {
+    "type": "text"
+  },
+  "deleteItemConfirmation": "Bạn có chắc chắn muốn xóa {name} không?",
+  "@deleteItemConfirmation": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "pickingUpGoods": "ĐANG LẤY HÀNG",
+  "@pickingUpGoods": {
+    "type": "text"
+  },
+  "deliveringGoods": "ĐANG GIAO HÀNG",
+  "@deliveringGoods": {
+    "type": "text"
+  },
+  "selectDeliveryPoint": "- Chọn điểm giao hàng -",
+  "@selectDeliveryPoint": {
+    "type": "text"
+  },
+  "storeDescriptionHint": "Hoàn thiện thông tin nhận diện và vị trí để cửa hàng hiển thị rõ ràng trong hệ thống.",
+  "@storeDescriptionHint": {
+    "type": "text"
+  },
+  "supplierDescriptionHint": "Sắp xếp thông tin liên hệ và địa chỉ rõ ràng để dễ dàng theo dõi hàng hóa trong chuỗi cung ứng.",
+  "@supplierDescriptionHint": {
+    "type": "text"
+  },
+  "warehouseDescriptionHint": "Thêm thông tin nhận diện, vị trí và ghi chú để đội ngũ quản lý kho dễ dàng hơn.",
+  "@warehouseDescriptionHint": {
+    "type": "text"
+  },
+  "selectCurrencyToStart": "Vui lòng chọn tiền tệ để bắt đầu",
+  "@selectCurrencyToStart": {
+    "type": "text"
+  },
+  "quantityWithCount": "Số lượng {count}",
+  "@quantityWithCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "updateSupplierImage": "Cập nhật ảnh nhà cung cấp",
+  "@updateSupplierImage": {
+    "type": "text"
+  },
+  "currentImage": "Ảnh hiện tại",
+  "@currentImage": {
+    "type": "text"
+  },
+  "selectImage": "Chọn ảnh",
+  "@selectImage": {
+    "type": "text"
+  },
+  "selectFromDevice": "Chọn từ thiết bị",
+  "@selectFromDevice": {
+    "type": "text"
+  },
+  "updateWarehouseImage": "Cập nhật ảnh kho",
+  "@updateWarehouseImage": {
+    "type": "text"
+  },
+  "noProductData": "Không có dữ liệu sản phẩm",
+  "@noProductData": {
+    "type": "text"
+  },
+  "totalQuantityWithCount": "Tổng SL: {count} {unit}",
+  "@totalQuantityWithCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "num"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "somethingWentWrongTryAgain": "Đã có lỗi xảy ra, vui lòng thử lại sau!",
+  "@somethingWentWrongTryAgain": {
+    "type": "text"
+  },
+  "requestCancelled": "Yêu cầu đến máy chủ đã bị hủy",
+  "@requestCancelled": {
+    "type": "text"
+  },
+  "sendTimeout": "Hết thời gian gửi",
+  "@sendTimeout": {
+    "type": "text"
+  },
+  "receiveTimeout": "Hết thời gian nhận",
+  "@receiveTimeout": {
+    "type": "text"
+  },
+  "connectionTimeout": "Hết thời gian kết nối",
+  "@connectionTimeout": {
+    "type": "text"
+  },
+  "serverStatusCode": "Mã trạng thái máy chủ: {code}",
+  "@serverStatusCode": {
+    "type": "text",
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionFailed": "Kết nối đến máy chủ thất bại",
+  "@connectionFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectCurrencyToStart": "Vui lòng chọn tiền tệ để bắt đầu",
+  "@pleaseSelectCurrencyToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "organizeSupplierInfoDescription": "Sắp xếp thông tin liên hệ và địa chỉ rõ ràng để dễ dàng theo dõi nguồn cung trong chuỗi cung ứng.",
+  "@organizeSupplierInfoDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addWarehouseInfoDescription": "Thêm thông tin nhận diện, vị trí và ghi chú để đội ngũ vận hành quản lý kho dễ dàng hơn.",
+  "@addWarehouseInfoDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allowImportGoods": "Cho phép nhập hàng",
+  "@allowImportGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequest": "Tạo đơn yêu cầu",
+  "@createRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPurchasedMaterials": "Chưa có gói lượt tạo đơn nào",
+  "@noPurchasedMaterials": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "newPurchasedMaterialsWillAppearHere": "Các gói đã mua qua App Store sẽ xuất hiện tại đây",
+  "@newPurchasedMaterialsWillAppearHere": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityUsedUpdated": "Đã thêm lượt tạo đơn",
+  "@quantityUsedUpdated": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityMustBeBetween": "Chọn từ 1 đến {count} gói",
+  "@quantityMustBeBetween": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterial": "Thêm lượt tạo đơn",
+  "@useMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useQuantity": "Số gói muốn dùng",
+  "@useQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "Gói còn lại",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "remainingMaterial": "Gói còn lại: ",
+  "@remainingMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedCountRemaining": "Lượt tạo đơn còn lại",
+  "@usedCountRemaining": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedQuantityOfTotal": "Đã dùng: {used}/{total}",
+  "@usedQuantityOfTotal": {
+    "type": "text",
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterialAction": "Thêm lượt",
+  "@useMaterialAction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStore": "Mua lượt tạo đơn",
+  "@orderCreditsStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStoreSubtitle": "Mua gói lượt tạo đơn qua App Store",
+  "@orderCreditsStoreSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundles": "Gói lượt tạo đơn đã mua",
+  "@orderCreditBundles": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundleHint": "Mỗi gói thêm 35 lượt tạo đơn",
+  "@orderCreditBundleHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdBy": "Người tạo",
+  "@createdBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedBy": "Người nhận",
+  "@receivedBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vehicleType": "Phương tiện",
+  "@vehicleType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityEnough": "Đủ",
+  "@quantityEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityNotEnough": "Chưa đủ",
+  "@quantityNotEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ordered": "Đặt",
+  "@ordered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "received": "Nhận",
+  "@received": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "checkWarehouseStock": "Kiểm tra tồn kho",
+  "@checkWarehouseStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sufficient": "Đủ",
+  "@sufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "insufficient": "Chưa đủ",
+  "@insufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createQuickOrder": "Tạo đơn nhanh",
+  "@createQuickOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allProductsSufficient": "Tất cả sản phẩm đủ hàng",
+  "@allProductsSufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestedQuantity": "SL yêu cầu",
+  "@requestedQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "Tồn kho",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNotInWarehouse": "Không có trong kho",
+  "@productNotInWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseBadge": "Giao dịch dở dang",
+  "@pendingPurchaseBadge": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseTitle": "Đã mua / Khôi phục",
+  "@pendingPurchaseTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productId": "Mã sản phẩm",
+  "@productId": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completePendingTransaction": "Hoàn tất giao dịch này",
+  "@completePendingTransaction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyMoreCredits": "Mua thêm lượt",
+  "@buyMoreCredits": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyCreditsSuccess": "Mua lượt thành công",
+  "@buyCreditsSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditsNowMessage": "Bạn đã cập nhật lượt tạo đơn thành công. Bạn có muốn dùng ngay 1 lượt không?",
+  "@useCreditsNowMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useNow": "Dùng ngay",
+  "@useNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditSuccess": "Sử dụng 1 lượt tạo đơn thành công!",
+  "@useCreditSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseFailed": "Mua hàng thất bại!",
+  "@purchaseFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationError": "Lỗi xử lý xác thực: {error}",
+  "@verificationError": {
+    "type": "text",
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "buyPackageWithPrice": "Mua gói với giá {price}",
+  "@buyPackageWithPrice": {
+    "type": "text",
+    "placeholders": {
+      "price": {}
+    }
+  },
+  "selectOrderPackage": "Chọn một gói lượt tạo đơn",
+  "@selectOrderPackage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupConversion": "Thiết lập quy đổi",
+  "@setupConversion": {
+    "type": "text"
+  },
+  "setupConversionSuccess": "Thiết lập quy đổi thành công",
+  "@setupConversionSuccess": {
+    "type": "text"
+  },
+  "conversionProductName": "Tên sản phẩm quy đổi",
+  "@conversionProductName": {
+    "type": "text"
+  },
+  "conversionProductNameHint": "Ví dụ: Hộp nhỏ, Gói",
+  "@conversionProductNameHint": {
+    "type": "text"
+  },
+  "tapToSelectProductImage": "Chạm vào ảnh để chọn ảnh sản phẩm",
+  "@tapToSelectProductImage": {
+    "type": "text"
+  },
+  "productImageSelected": "Đã chọn ảnh sản phẩm",
+  "@productImageSelected": {
+    "type": "text"
+  },
+  "conversionQuantity": "Số lượng quy đổi",
+  "@conversionQuantity": {
+    "type": "text"
+  },
+  "conversionQuantityHint": "Ví dụ: 10",
+  "@conversionQuantityHint": {
+    "type": "text"
+  },
+  "saveConversion": "Lưu quy đổi",
+  "@saveConversion": {
+    "type": "text"
+  },
+  "originalUnit": "Đơn vị gốc",
+  "@originalUnit": {
+    "type": "text"
+  },
+  "originalUnitLabel": "Đơn vị gốc: {unit}",
+  "@originalUnitLabel": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "oneUnit": "1 {unit}",
+  "@oneUnit": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "currentStock": "Hiện có: {count} {unit}",
+  "@currentStock": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "pleaseSelectConversionImage": "Vui lòng chọn ảnh cho sản phẩm quy đổi.",
+  "@pleaseSelectConversionImage": {
+    "type": "text"
+  },
+  "pleaseEnterConversionName": "Vui lòng nhập tên sản phẩm quy đổi.",
+  "@pleaseEnterConversionName": {
+    "type": "text"
+  },
+  "pleaseEnterValidConversionQuantity": "Vui lòng nhập số lượng quy đổi hợp lệ.",
+  "@pleaseEnterValidConversionQuantity": {
+    "type": "text"
+  },
+  "pleaseSelectConversionUnit": "Vui lòng chọn đơn vị quy đổi.",
+  "@pleaseSelectConversionUnit": {
+    "type": "text"
+  },
+  "conversionUnit": "Đơn vị quy đổi",
+  "@conversionUnit": {
+    "type": "text"
+  },
+  "afterSplit": "Sau tách: {count} {unit}",
+  "@afterSplit": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "splitObtained": "Nhận được: {count} {unit}",
+  "@splitObtained": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionFormula": "1 {parentUnit} = {value} {childUnit}",
+  "@conversionFormula": {
+    "type": "text",
+    "placeholders": {
+      "parentUnit": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "childUnit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionInfo": "Thông tin quy đổi",
+  "@conversionInfo": {
+    "type": "text"
+  },
+  "errorTitle": "Lỗi",
+  "@errorTitle": {
+    "type": "text"
+  },
+  "productNotSetupConversion": "Sản phẩm chưa được thiết lập quy đổi.",
+  "@productNotSetupConversion": {
+    "type": "text"
+  },
+  "originalProduct": "Sản phẩm gốc",
+  "@originalProduct": {
+    "type": "text"
+  },
+  "conversionProductDefault": "Sản phẩm quy đổi",
+  "@conversionProductDefault": {
+    "type": "text"
+  },
+  "enterQuantity": "Nhập số lượng",
+  "@enterQuantity": {
+    "type": "text"
+  },
+  "exceedsCurrentQuantity": "Vượt quá số lượng hiện tại ({count} {unit})",
+  "@exceedsCurrentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "warehouseImportStats": "Thống kê nhập kho",
+  "@warehouseImportStats": {
+    "type": "text"
+  },
+  "monthLabel": "Tháng {month}",
+  "@monthLabel": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "yearLabel": "Năm {year}",
+  "@yearLabel": {
+    "type": "text",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "storeInvoiceByDayTitle": "Số hoá đơn theo ngày",
+  "@storeInvoiceByDayTitle": {
+    "type": "text"
+  },
+  "storeInvoiceCount": "Số hoá đơn",
+  "@storeInvoiceCount": {
+    "type": "text"
+  },
+  "storeExportTableTitle": "Bảng xuất dữ liệu",
+  "@storeExportTableTitle": {
+    "type": "text"
+  },
+  "storeExportExcel": "Xuất Excel",
+  "@storeExportExcel": {
+    "type": "text"
+  },
+  "storeExportSuccessOpen": "Đã tạo file Excel và mở bằng ứng dụng mặc định.",
+  "@storeExportSuccessOpen": {
+    "type": "text"
+  },
+  "storeExportSuccessSaved": "Đã tạo file: {path}\nKhông mở được tự động ({message}).",
+  "@storeExportSuccessSaved": {
+    "type": "text",
+    "placeholders": {
+      "path": {
+        "type": "String"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "storeExportTable": "Xuất bảng",
+  "@storeExportTable": {
+    "type": "text"
+  },
+  "storeHistoryStats": "Thống kê số lượng",
+  "@storeHistoryStats": {
+    "type": "text"
+  },
+  "storeSoldLeast": "Bán ít nhất",
+  "@storeSoldLeast": {
+    "type": "text"
+  },
+  "storeSoldMost": "Bán nhiều nhất",
+  "@storeSoldMost": {
+    "type": "text"
+  },
+  "storeNoDataForMonth": "Không có dữ liệu\ntháng {month}/{year}",
+  "@storeNoDataForMonth": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "storeColStt": "STT",
+  "@storeColStt": {
+    "type": "text"
+  },
+  "storeColDate": "Ngày giao dịch",
+  "@storeColDate": {
+    "type": "text"
+  },
+  "storeColRevenue": "Doanh thu",
+  "@storeColRevenue": {
+    "type": "text"
+  },
+  "storePreview": "Xem trước",
+  "@storePreview": {
+    "type": "text"
+  },
+  "storeNoteColumn": "Diễn giải",
+  "@storeNoteColumn": {
+    "type": "text"
+  },
+  "storeTodayRevenue": "Doanh thu hôm nay",
+  "@storeTodayRevenue": {
+    "type": "text"
+  },
+  "storeColumnNameLabel": "Tên cột hiển thị",
+  "@storeColumnNameLabel": {
+    "type": "text"
+  },
+  "storeColumnNameHint": "Ví dụ: Diễn giải",
+  "@storeColumnNameHint": {
+    "type": "text"
+  },
+  "storeDefaultValueLabel": "Giá trị mặc định khi note trống",
+  "@storeDefaultValueLabel": {
+    "type": "text"
+  },
+  "storeDefaultValueHint": "Ví dụ: Doanh thu hôm nay",
+  "@storeDefaultValueHint": {
+    "type": "text"
+  },
+  "storeShowProductNames": "Hiển thị tên sản phẩm",
+  "@storeShowProductNames": {
+    "type": "text"
+  },
+  "storeShowProductNamesSubtitle": "Cột diễn giải sẽ tự nối tên các sản phẩm",
+  "@storeShowProductNamesSubtitle": {
+    "type": "text"
+  },
+  "storeShowQuantity": "Hiển thị số lượng",
+  "@storeShowQuantity": {
+    "type": "text"
+  },
+  "storeShowQuantitySubtitle": "Nối thêm \"(số lượng đơn vị)\" sau mỗi tên sản phẩm",
+  "@storeShowQuantitySubtitle": {
+    "type": "text"
+  },
+  "storeSplitPayment": "Tách tiền mặt / chuyển khoản",
+  "@storeSplitPayment": {
+    "type": "text"
+  },
+  "storeSplitPaymentSubtitle": "Tách cột Doanh thu thành 2 cột theo hình thức thanh toán",
+  "@storeSplitPaymentSubtitle": {
+    "type": "text"
+  },
+  "empEditOrder": "Chỉnh sửa đơn hàng",
+  "@empEditOrder": {
+    "type": "text"
+  },
+  "empProductCost": "Tiền hàng",
+  "@empProductCost": {
+    "type": "text"
+  },
+  "empTotalReceivedQty": "Tổng SL nhận",
+  "@empTotalReceivedQty": {
+    "type": "text"
+  },
+  "empPleaseEnterQuantity": "Vui lòng nhập số lượng",
+  "@empPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "empInvalidQuantity": "Số lượng không hợp lệ",
+  "@empInvalidQuantity": {
+    "type": "text"
+  },
+  "empDeleteSupplier": "Xoá nhà cung cấp",
+  "@empDeleteSupplier": {
+    "type": "text"
+  },
+  "empSlAbbr": "SL",
+  "@empSlAbbr": {
+    "type": "text"
+  },
+  "empLineTotal": "Thành tiền",
+  "@empLineTotal": {
+    "type": "text"
+  },
+  "empEstimatedOrderAmount": "Tiền đặt (ước tính)",
+  "@empEstimatedOrderAmount": {
+    "type": "text"
+  },
+  "empReceivedLineTotal": "Thành tiền nhận",
+  "@empReceivedLineTotal": {
+    "type": "text"
+  },
+  "empPickupPointsCount": "{count} điểm lấy",
+  "@empPickupPointsCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empProductsItemsCount": "{productCount} sản phẩm • {itemCount} món",
+  "@empProductsItemsCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "itemCount": {
+        "type": "int"
+      }
+    }
+  },
+  "empMoreProducts": "+{count} sản phẩm khác",
+  "@empMoreProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empItemSummaryCount": "{productCount} SP ({totalQuantity})",
+  "@empItemSummaryCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPointCount": "{count} điểm",
+  "@empPickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empSpAbbr": "{count} SP",
+  "@empSpAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empMonAbbr": "({count} món)",
+  "@empMonAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPoint": "điểm lấy",
+  "@empPickupPoint": {
+    "type": "text"
+  },
+  "empMoreProductsDetail": "+{count} sản phẩm khác (nhấn để xem chi tiết)",
+  "@empMoreProductsDetail": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empLocationNotObtained": "Chưa lấy được vị trí",
+  "@empLocationNotObtained": {
+    "type": "text"
+  },
+  "empLocationRetryMessage": "Chưa lấy được vị trí hiện tại của bạn. Vui lòng xác nhận để thử lấy lại vị trí.",
+  "@empLocationRetryMessage": {
+    "type": "text"
+  },
+  "empPickupFailed": "Lấy hàng thất bại. Vui lòng kiểm tra lại kho!",
+  "@empPickupFailed": {
+    "type": "text"
+  },
+  "employeePhoneAlreadyExists": "Số điện thoại đã tồn tại",
+  "@employeePhoneAlreadyExists": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedTitle": "Cập nhật quyền hạn",
+  "@employeePermissionUpdatedTitle": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedBody": "Quyền hạn của bạn vừa được cập nhật.",
+  "@employeePermissionUpdatedBody": {
+    "type": "text"
+  },
+  "supplierHistoryStats": "Thống kê nhập hàng",
+  "@supplierHistoryStats": {
+    "type": "text"
+  },
+  "supplierUpdateImage": "Cập nhật ảnh nhà cung cấp",
+  "@supplierUpdateImage": {
+    "type": "text"
+  },
+  "supplierCurrentImage": "Ảnh hiện tại",
+  "@supplierCurrentImage": {
+    "type": "text"
+  },
+  "supplierChooseImage": "Chọn ảnh",
+  "@supplierChooseImage": {
+    "type": "text"
+  },
+  "supplierChooseFromDevice": "Chọn từ thiết bị",
+  "@supplierChooseFromDevice": {
+    "type": "text"
+  },
+  "orderUpdateSuccess": "Cập nhật đơn hàng thành công!",
+  "@orderUpdateSuccess": {
+    "type": "text"
+  },
+  "orderDeleteSuccess": "Xoá đơn hàng thành công!",
+  "@orderDeleteSuccess": {
+    "type": "text"
+  },
+  "orderDeleteTitle": "Xoá đơn hàng",
+  "@orderDeleteTitle": {
+    "type": "text"
+  },
+  "orderDeleteConfirmMessage": "Bạn có chắc chắn muốn xoá đơn hàng này?",
+  "@orderDeleteConfirmMessage": {
+    "type": "text"
+  },
+  "orderPleaseEnterQuantity": "Vui lòng nhập số lượng",
+  "@orderPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "orderInvalidQuantity": "Số lượng không hợp lệ",
+  "@orderInvalidQuantity": {
+    "type": "text"
+  },
+  "orderExceedsStock": "Vượt quá số lượng tồn kho",
+  "@orderExceedsStock": {
+    "type": "text"
+  },
+  "orderStt": "STT",
+  "@orderStt": {
+    "type": "text"
+  },
+  "homeDeliveryWaiting": "Chờ giao",
+  "@homeDeliveryWaiting": {
+    "type": "text"
+  },
+  "homeSalesEmployee": "Nhân viên bán hàng",
+  "@homeSalesEmployee": {
+    "type": "text"
+  },
+  "homeWarehouseEmployee": "Nhân viên kho",
+  "@homeWarehouseEmployee": {
+    "type": "text"
+  },
+  "homeLoadingEmployees": "Đang tải nhân viên...",
+  "@homeLoadingEmployees": {
+    "type": "text"
+  },
+  "homeSelectWarehouseEmployee": "Chọn nhân viên kho",
+  "@homeSelectWarehouseEmployee": {
+    "type": "text"
+  },
+  "homePickupGoods": "Lấy hàng",
+  "@homePickupGoods": {
+    "type": "text"
+  },
+  "homePickingUpGoods": "Đang lấy hàng",
+  "@homePickingUpGoods": {
+    "type": "text"
+  },
+  "homePickingUpSubtitle": "Tài xế đang thực hiện chặng lấy hàng",
+  "@homePickingUpSubtitle": {
+    "type": "text"
+  },
+  "homePickupPointCount": "{count} điểm lấy hàng",
+  "@homePickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDelivering": "Đang giao hàng",
+  "@homeDelivering": {
+    "type": "text"
+  },
+  "homeDeliveringSubtitle": "Tài xế đang di chuyển tới điểm giao",
+  "@homeDeliveringSubtitle": {
+    "type": "text"
+  },
+  "homeDeliveryPointName": "Điểm giao: {name}",
+  "@homeDeliveryPointName": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homePickupCountDest": "{count} điểm lấy · {destination}",
+  "@homePickupCountDest": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "destination": {
+        "type": "String"
+      }
+    }
+  },
+  "homeViewJourney": "Xem hành trình",
+  "@homeViewJourney": {
+    "type": "text"
+  },
+  "homeNoPickupInfo": "Chưa có thông tin điểm lấy hàng.",
+  "@homeNoPickupInfo": {
+    "type": "text"
+  },
+  "homeProductCount": "{count} sản phẩm",
+  "@homeProductCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeOtherProducts": "+{count} sản phẩm khác",
+  "@homeOtherProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDestination": "Điểm đến",
+  "@homeDestination": {
+    "type": "text"
+  },
+  "homeRecipient": "Người nhận: {name}",
+  "@homeRecipient": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAddWarehouseOrStore": "Thêm kho / cửa hàng",
+  "@homeAddWarehouseOrStore": {
+    "type": "text"
+  },
+  "supplierImportHistory": "Lịch sử nhập hàng ở {name}",
+  "@supplierImportHistory": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}

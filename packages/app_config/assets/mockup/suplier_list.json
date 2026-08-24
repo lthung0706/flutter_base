@@ -1,0 +1,50 @@
+{
+    "code": 200,
+    "message": "Success",
+    "data": { 
+    "total": 3,
+    "items": [
+        {
+            "id": 1,
+            "name": "Supplier A",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "offset": {
+                "dx": 0,
+                "dy": 0
+            },
+            "imageUrl": "https://via.placeholder.com/150"
+        },
+        {
+            "id": 2,
+            "name": "Supplier B",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "offset": {
+                "dx": 0,
+                "dy": 0
+            },
+            "imageUrl": "https://via.placeholder.com/151"
+        },
+        {
+            "id": 3,
+            "name": "Supplier C",
+            "address": "123 Main St",
+            "location": {
+                "latitude": 37.7749,
+                "longitude": -122.4194
+            },
+            "offset": {
+                "dx": 0,
+                "dy": 0
+            },
+            "imageUrl": "https://via.placeholder.com/152"
+        }
+    ]
+}}

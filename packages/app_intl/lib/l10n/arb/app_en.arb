@@ -1,0 +1,3197 @@
+{
+  "storeName": "Store Name",
+  "@storeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "address": "Address",
+  "@address": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phone": "Phone Number",
+  "@phone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unknown": "Unknown",
+  "@unknown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notAvailable": "N/A",
+  "@notAvailable": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "systemManagement": "SYSTEM MANAGEMENT",
+  "@systemManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employees": "Employees",
+  "@employees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appSettings": "App Settings",
+  "@appSettings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "reportIssue": "Report an Issue",
+  "@reportIssue": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "regulationsAndPolicies": "REGULATIONS & POLICIES",
+  "@regulationsAndPolicies": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditions": "Terms and Conditions",
+  "@termsConditions": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "termsConditionsMarkdown": "## TERMS OF SERVICE\n\n### 1. Acceptance of Terms\nBy registering an account and using the SStrip application, users (including Store Owners, Warehouse Staff, and Delivery Staff) agree to comply with all of the terms below. If you do not agree, please stop using the service immediately.\n\n### 2. Service Description\nSStrip is a platform for supply chain and goods transportation management. The application provides tools to:\n* Manage warehouses, stores, and suppliers.\n* Create and track delivery orders.\n* Monitor delivery routes in real time on the map.\n* Scan QR codes to look up products and orders.\n* Receive push notifications about order status.\n\n### 3. User Accounts\n* **Registration:** Users register with an email address or phone number. Employee accounts are created and assigned permissions by the Store Owner.\n* **Security:** Users are responsible for protecting their login credentials and all activities performed under their account.\n* **Authorization:** Access to features (create, edit, delete orders or data) is managed through a role system assigned by the Store Owner.\n\n### 4. User Responsibilities\n* Provide accurate and truthful information about goods (name, price, unit, image).\n* Commit not to transport prohibited goods, explosives, smuggled goods, or any items that violate Vietnamese law.\n* Do not use the application for fraudulent, destructive, or illegal purposes.\n* Ensure uploaded images do not infringe the intellectual property rights of any third party.\n\n### 5. Service Fees and Payment\n* Any related costs will be displayed publicly in the application before the user confirms an order.\n* Product prices are calculated in VND and displayed clearly for each item.\n\n### 6. Limitation of Liability\n* SStrip provides technology solutions and is not directly responsible for the quality of goods or incidents caused by third parties.\n* Any claims regarding damaged goods will be resolved based on evidence (images, delivery records) recorded in the application.\n* We are not liable for service interruptions caused by network failures, natural disasters, or force majeure events.\n\n### 7. Termination of Service\n* We reserve the right to suspend or terminate user accounts if violations of these terms are detected.\n* Users may request account deletion at any time.\n\n---\n*Last updated: March 05, 2026*",
+  "@termsConditionsMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "privacyPolicyMarkdown": "## PRIVACY POLICY\n\n> This policy is prepared in compliance with Decree 13/2023/ND-CP on personal data protection in Vietnam.\n\n### 1. Data We Collect\n\n**a) Account information:**\n* Full name, email, and phone number (during registration).\n* Passwords (encrypted and never stored as plain text).\n* Roles and permissions in the system (Store Owner, Warehouse Staff, Delivery Staff).\n\n**b) Location data (GPS):**\n* Delivery staff location is collected in real time, including when the application runs in the background, to update delivery routes for relevant parties.\n* Warehouse, store, and supplier locations are stored for map display purposes.\n\n**c) Images and files:**\n* Product, warehouse, and store images uploaded by users.\n* Photos captured from the camera or selected from the photo library for goods management purposes.\n\n**d) Device information:**\n* Device type, operating system, and device identifiers for notification delivery.\n* Application error information collected automatically to improve software quality.\n\n**e) Business data:**\n* Order information: creator, products, quantities, prices, status, and notes.\n* Supplier information: name, address, phone number, and product catalog.\n* Warehouse and store information: name, address, coordinates, and description.\n\n### 2. Purposes of Data Use\n\n* **Operations:** Manage warehouses, stores, orders, and connect deliveries to suitable staff.\n* **Tracking:** Display real-time delivery locations on the map to help ensure goods safety.\n* **Notifications:** Send push notifications about order status and system updates.\n* **Support:** Resolve disputes or complaints based on stored transaction data.\n* **Improvement:** Analyze errors and improve features based on usage behavior.\n\n### 3. Device Permissions\n\nThe application requests the following permissions on your device:\n\n| Permission | Purpose |\n|------------|---------|\n| Location (while in use) | Display location on the map, find the nearest supplier |\n| Location (background) | Continuously track delivery routes (delivery staff only) |\n| Camera | Take product photos, scan QR codes |\n| Photo library | Select product and warehouse images from the device |\n| Notifications | Receive order status and system update notifications |\n| Storage | Store local data to improve performance |\n\nYou may disable any permission in your phone's **Settings**. However, disabling some permissions may affect application functionality.\n\n### 4. Information Sharing\n\nWe commit to **not selling** personal data to third parties. Data is only shared in the following cases:\n* **Within the system:** Delivery staff can see order information (delivery address, products); owners can see delivery staff locations.\n* **Map service providers:** Map partners receive location data to display maps and calculate routes.\n* **Notification services:** Push notification service providers receive device identifiers to deliver notifications.\n* **Competent authorities:** When there is a written request under Vietnamese law.\n\n### 5. Your Rights (Under Decree 13/2023/ND-CP)\n\nYou have the right to:\n1. **Access and Edit:** Update personal information (name, phone number) at any time in the Account section.\n2. **Delete Data:** Request account deletion and removal of related data by contacting support.\n3. **Withdraw Permissions:** Disable access to location, camera, or notifications in phone settings.\n4. **Object to Processing:** Object to the processing of personal data in certain cases as provided by law.\n\n### 6. Storage and Security\n\n* Data is transmitted through secure encrypted protocols.\n* Sensitive data (passwords) is encrypted before storage.\n* Local data on the device is stored using encrypted databases.\n* The system uses secure connections for real-time delivery tracking.\n\n### 7. Data Retention Period\n\n* Account data: Stored until the user requests deletion.\n\n---\n*Last updated: March 05, 2026*",
+  "@privacyPolicyMarkdown": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dangerZone": "DANGER ZONE",
+  "@dangerZone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccount": "Delete Account",
+  "@deleteAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteAccountConfirm": "Are you sure you want to delete this account?",
+  "@deleteAccountConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logout": "Logout",
+  "@logout": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "logoutConfirm": "Are you sure you want to log out?",
+  "@logoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeLogoutConfirm": "Are you sure you want to log out of the employee account?",
+  "@employeeLogoutConfirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appVersion": "APP VERSION",
+  "@appVersion": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "language": "Language",
+  "@language": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeList": "Employee List",
+  "@employeeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "type": "text"
+  },
+  "save": "Save",
+  "@save": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupPoints": "Import Goods",
+  "@pickupPoints": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouses": "Warehouses",
+  "@warehouses": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "importGoods": "Import Goods",
+  "@importGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "stores": "Stores",
+  "@stores": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createPickupPoint": "Create Pickup Point",
+  "@createPickupPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createProduct": "Create Product",
+  "@createProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createWarehouse": "Create Warehouse",
+  "@createWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createStore": "Create Store",
+  "@createStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appName": "Flutter Demo",
+  "@appName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "findAddress": "Find Address",
+  "@findAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "searchAddress": "Search address",
+  "@searchAddress": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectThisLocation": "Select this location",
+  "@selectThisLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderFromWarehouse": "Order From Warehouse",
+  "@orderFromWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderSuccessfully": "Order successfully",
+  "@orderSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectProduct": "Please select product",
+  "@pleaseSelectProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectDeliveryPoint": "Please select delivery point",
+  "@pleaseSelectDeliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "placeOrder": "Place Order",
+  "@placeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pending": "Pending",
+  "@pending": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "processing": "Processing",
+  "@processing": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completed": "Completed",
+  "@completed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivered": "Delivered",
+  "@delivered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelled": "Cancelled",
+  "@cancelled": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "failed": "Failed",
+  "@failed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryPoint": "Delivery Point",
+  "@deliveryPoint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdDate": "Created Date",
+  "@createdDate": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "notes": "Notes",
+  "@notes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "note": "Note",
+  "@note": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterNote": "Enter note",
+  "@enterNote": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "customer": "Customer",
+  "@customer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "location": "Location",
+  "@location": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "time": "Time",
+  "@time": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirm": "Confirm",
+  "@confirm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sessionExpiredTitle": "Session expired",
+  "@sessionExpiredTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sessionExpiredMessage": "Your session has expired, please log in again",
+  "@sessionExpiredMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "total": "Total",
+  "@total": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "totalAmount": "Total Amount",
+  "@totalAmount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noOrdersYet": "No orders yet",
+  "noOrders": "No orders",
+  "@noOrdersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "@noOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "turnOnLocation": "Location Access",
+  "@turnOnLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locationPermissionDescription": "We need location access to track your route and support the best delivery service.",
+  "@locationPermissionDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCompletedWithId": "Order {id} completed successfully",
+  "@orderCompletedWithId": {
+    "type": "text",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "confirmCancelOrderTitle": "Cancel Order",
+  "@confirmCancelOrderTitle": {
+    "type": "text"
+  },
+  "confirmCancelOrderMessage": "Are you sure you want to cancel this order?",
+  "@confirmCancelOrderMessage": {
+    "type": "text"
+  },
+  "noProductsSelected": "No products selected",
+  "@noProductsSelected": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromWarehouseToStart": "Select products from the warehouse to get started",
+  "@selectProductsFromWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectProductsFromSupplierToStart": "Select products from the supplier to get started",
+  "@selectProductsFromSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderNumberTitle": "Order #{shortId}",
+  "@orderNumberTitle": {
+    "type": "text",
+    "placeholders": {
+      "shortId": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveringOrders": "Pending Orders",
+  "@deliveringOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveredOrders": "Delivered Orders",
+  "@deliveredOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedOrders": "Received Orders",
+  "@receivedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchasedOrders": "Purchased Orders",
+  "@purchasedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cancelledOrders": "Cancelled Orders",
+  "@cancelledOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completedOrders": "Completed Orders",
+  "@completedOrders": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplier": "Supplier",
+  "@supplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noSuppliersYet": "No suppliers yet",
+  "@noSuppliersYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addSupplierToStart": "Add a supplier to start getting products",
+  "@addSupplierToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noWarehousesYet": "No warehouses yet",
+  "@noWarehousesYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addWarehouseToStart": "Setup a warehouse to start managing",
+  "@addWarehouseToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noStoresYet": "No stores yet",
+  "@noStoresYet": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addStoreToStart": "Setup a store to start selling",
+  "@addStoreToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouse": "Warehouse",
+  "@warehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "product": "Product",
+  "@product": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantity": "Quantity",
+  "@quantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderedQuantity": "Ordered: x{count}",
+  "@orderedQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "supplierCount": "{count} suppliers",
+  "@supplierCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemCount": "{count} items",
+  "@itemCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quantityCount": "{count} quantity",
+  "@quantityCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedQuantityLabel": "Received: {received}/{quantity}",
+  "@receivedQuantityLabel": {
+    "type": "text",
+    "placeholders": {
+      "received": {
+        "type": "int"
+      },
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "receivedEnough": "Đủ",
+  "@receivedEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedShort": "Thiếu",
+  "@receivedShort": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueDelivery": "Continue delivery",
+  "@continueDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productsAndQuantitySummary": "{productCount} items • {totalQuantity} quantity",
+  "@productsAndQuantitySummary": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "totalProducts": "Total {totalQuantity} products",
+  "@totalProducts": {
+    "type": "text",
+    "placeholders": {
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "createOrder": "Create Order",
+  "@createOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createImportOrder": "Create Import Order",
+  "@createImportOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createTransferOrder": "Create Transfer Order",
+  "@createTransferOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequestOrder": "Create Request",
+  "@createRequestOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverTo": "Deliver to: ",
+  "@deliverTo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "price": "Price",
+  "@price": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseName": "Warehouse Name",
+  "@warehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierName": "Supplier Name",
+  "@supplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productCode": "Product Code",
+  "@productCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductCode": "Enter product code",
+  "@enterProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanCode": "Scan code",
+  "@scanCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warrantyPeriod": "Warranty Period",
+  "@warrantyPeriod": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateProductCode": "Update Product Code",
+  "@updateProductCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateSuccessfully": "Update successfully",
+  "@updateSuccessfully": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "months": "{value} months",
+  "@months": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "years": "{value} years",
+  "@years": {
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "home": "Home",
+  "@home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "order": "Order",
+  "@order": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeInfo": "STORE INFORMATION",
+  "@storeInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "guide": "Guide",
+  "@guide": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewStore": "Setup New Store",
+  "@setupNewStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "close": "Close",
+  "@close": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleStoreName": "E.g: Store District 1",
+  "@exampleStoreName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "description": "Description",
+  "@description": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "additionalInfo": "Additional info...",
+  "@additionalInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveStore": "Save Store",
+  "@saveStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "supplierInfo": "SUPPLIER INFORMATION",
+  "@supplierInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewSupplier": "Setup New Supplier",
+  "@setupNewSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleSupplierName": "E.g: Thanh Cong Agency",
+  "@exampleSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "phoneNumber": "Phone Number",
+  "@phoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "examplePhoneNumber": "0123 456 789",
+  "@examplePhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addressHint": "House number, street, district...",
+  "@addressHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveSupplier": "Save Supplier",
+  "@saveSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectAddressBeforeSaving": "Please select an address before saving",
+  "@pleaseSelectAddressBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterSupplierName": "Please enter the supplier name",
+  "@pleaseEnterSupplierName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "warehouseInfo": "WAREHOUSE INFORMATION",
+  "@warehouseInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupNewWarehouse": "Setup New Warehouse",
+  "@setupNewWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createSupplierShowcaseDescription": "Tap here to create your first warehouse and start managing suppliers and products.",
+  "@createSupplierShowcaseDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "exampleWarehouseName": "E.g: Warehouse A",
+  "@exampleWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveWarehouse": "Save Warehouse",
+  "@saveWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productInfo": "PRODUCT INFORMATION",
+  "@productInfo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProduct": "Add Product",
+  "@addProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productName": "Product Name",
+  "@productName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterProductName": "Enter product name",
+  "@enterProductName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPrice": "Enter price",
+  "@enterPrice": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "saveProduct": "Save Product",
+  "@saveProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "editProduct": "Edit Product",
+  "@editProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteProduct": "Delete Product",
+  "@deleteProduct": {
+    "type": "text"
+  },
+  "warrantyProduct": "Warranty Product",
+  "@warrantyProduct": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createNewEmployee": "Create New Employee",
+  "@createNewEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employeeName": "Employee Name",
+  "@employeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmployeeName": "Enter employee name",
+  "@enterEmployeeName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Password",
+  "@password": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPassword": "Enter password",
+  "@enterPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "role": "Role",
+  "@role": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "inventoryManagement": "Inventory Management",
+  "@inventoryManagement": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "delivery": "Delivery",
+  "@delivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sales": "Sales",
+  "@sales": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliveryVehicle": "Delivery Vehicle",
+  "@deliveryVehicle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "motorcycle": "Motorcycle",
+  "@motorcycle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "truck": "Truck",
+  "@truck": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "create": "Create",
+  "@create": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatPage": "Chat Page",
+  "@chatPage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionality": "Chat functionality will be here",
+  "@chatFunctionality": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "profile": "Profile",
+  "@profile": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings": "Settings (Map Removed)",
+  "@settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "store": "Store",
+  "@store": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGps": "Continue",
+  "@enableGps": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "trackingInfoUpdated": "Tracking info updated: {data}",
+  "@trackingInfoUpdated": {
+    "type": "text",
+    "placeholders": {
+      "data": {
+        "type": "String"
+      }
+    }
+  },
+  "reject": "Reject",
+  "@reject": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "acceptOrder": "Accept Order",
+  "@acceptOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "declineOrder": "Decline Order",
+  "@declineOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailsTitle": "Details {index}",
+  "@detailsTitle": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "orderInformation": "Order Information",
+  "@orderInformation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "detailedViewForOrder": "Detailed view for order #{index}",
+  "@detailedViewForOrder": {
+    "type": "text",
+    "placeholders": {
+      "index": {
+        "type": "String"
+      }
+    }
+  },
+  "demoCustomerName": "Nguyen Van A",
+  "@demoCustomerName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderLocation": "123 Main Street, District 1, HCMC",
+  "@demoOrderLocation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderTime": "10:30 AM - Today",
+  "@demoOrderTime": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "demoOrderNotes": "Customer requested careful delivery and a call before arrival.",
+  "@demoOrderNotes": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "settingsMapRemovedDescription": "Map functionality has been removed from settings. Please refactor to MapLibre.",
+  "@settingsMapRemovedDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noProducts": "No products",
+  "@noProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addProductsToCategory": "Add products to this category.",
+  "@addProductsToCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeOrder": "Complete Order",
+  "@completeOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receiveOrder": "Receive Order",
+  "@receiveOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pickupCompleted": "Pickup Completed",
+  "@pickupCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "refreshList": "Refresh List",
+  "@refreshList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enableGPS": "Continue",
+  "@enableGPS": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "start": "Start",
+  "@start": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "back": "Back",
+  "@back": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "scanQRReceiveNotification": "Scan QR, receive notifications\nand start now",
+  "@scanQRReceiveNotification": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manageWarehouseStore": "Manage warehouse, store\nand supplier",
+  "@manageWarehouseStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createOrderTrackShipment": "Create order and track shipment\nin real time",
+  "@createOrderTrackShipment": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sstripPlatform": "SStrip - supply chain\noperating platform",
+  "@sstripPlatform": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "search": "Search",
+  "@search": {
+    "type": "text"
+  },
+  "anErrorOccurred": "An error occurred",
+  "@anErrorOccurred": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "error": "Error: {message}",
+  "@error": {
+    "type": "text",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "noName": "No name",
+  "@noName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPhoneNumber": "No phone number",
+  "@noPhoneNumber": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noEmployees": "No employees",
+  "@noEmployees": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pressButtonToAddEmployee": "Press button below to add new employee",
+  "@pressButtonToAddEmployee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "storeList": "Store List",
+  "@storeList": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productsAtCounter": "Products at the counter",
+  "@productsAtCounter": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "salesHistory": "Sales history",
+  "@salesHistory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "windbreakerJacket": "Windbreaker Jacket",
+  "@windbreakerJacket": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sportSneakers": "Sport Sneakers",
+  "@sportSneakers": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "meshCap": "Mesh Cap",
+  "@meshCap": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "khakiPants": "Khaki Pants",
+  "@khakiPants": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completeProductInfoInOneGo": "Select a supplier and complete each product's information to keep the catalog neatly updated in one go.",
+  "@completeProductInfoInOneGo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "locked": "Locked",
+  "@locked": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeSupplier": "Change supplier",
+  "@changeSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectSupplier": "Select supplier",
+  "@selectSupplier": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "tapToChooseSupplierBeforeAddingProducts": "Tap to choose a supplier before adding products.",
+  "@tapToChooseSupplierBeforeAddingProducts": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNumber": "Product {number}",
+  "@productNumber": {
+    "type": "text",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newestItem": "Newest item",
+  "@newestItem": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "uploadImage": "UPLOAD IMAGE",
+  "@uploadImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "changeImage": "Change image",
+  "@changeImage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectSupplierBeforeSaving": "Please select a supplier before saving.",
+  "@pleaseSelectSupplierBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectImagesBeforeSaving": "Please select images for all products before saving.",
+  "@pleaseSelectImagesBeforeSaving": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productType": "Product type",
+  "@productType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectType": "-- Select type --",
+  "@selectType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vnd": "VND",
+  "@vnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialPieceType": "Material (piece)",
+  "@materialPieceType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialKilogramType": "Material (kg)",
+  "@materialKilogramType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "materialBoxType": "Material (box)",
+  "@materialBoxType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pieceUnit": "piece",
+  "@pieceUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "kilogramUnit": "kg",
+  "@kilogramUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "boxUnit": "box",
+  "@boxUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "active": "Active",
+  "@active": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noData": "No data available",
+  "@noData": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chat": "Chat",
+  "@chat": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "chatFunctionalityComingSoon": "Chat functionality will be here",
+  "@chatFunctionalityComingSoon": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "owner": "Store owner",
+  "@owner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "employee": "Employee",
+  "@employee": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "welcomeBack": "Welcome back",
+  "@welcomeBack": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginToContinueManagingStore": "Log in to continue managing your store",
+  "@loginToContinueManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "Email",
+  "@email": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterEmail": "Enter email address",
+  "@enterEmail": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterPhone": "Enter phone number",
+  "@enterPhone": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "loginFailed": "Login failed",
+  "@loginFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Log in",
+  "@login": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "dontHaveAccountRegisterNow": "Don't have an account? Create one free",
+  "@dontHaveAccountRegisterNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createAccount": "Create free account",
+  "@createAccount": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerToStartManagingStore": "Create a free SStrip account to get started",
+  "@registerToStartManagingStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "userName": "Username",
+  "@userName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterName": "Enter your name",
+  "@enterName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "confirmPassword": "Confirm password",
+  "@confirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterConfirmPassword": "Re-enter password",
+  "@enterConfirmPassword": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsMatch": "Passwords match",
+  "@passwordsMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordsDoNotMatch": "Passwords do not match",
+  "@passwordsDoNotMatch": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "registerFailed": "Registration failed",
+  "@registerFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "register": "Register",
+  "@register": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "alreadyHaveAccountLogin": "Already have an account? Log in",
+  "@alreadyHaveAccountLogin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewTitle": "SStrip - supply chain\noperations platform",
+  "@onboardingOverviewTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewDescription": "Manage warehousing, goods movement, and your distribution network centrally in a single application.",
+  "@onboardingOverviewDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHeadline": "One screen - multiple workflows",
+  "@onboardingOverviewHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight1": "Supply chain",
+  "@onboardingOverviewHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight2": "Goods transportation",
+  "@onboardingOverviewHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewHighlight3": "Centralized data",
+  "@onboardingOverviewHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat1": "Warehouse",
+  "@onboardingOverviewStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat2": "Store",
+  "@onboardingOverviewStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOverviewStat3": "Supplier",
+  "@onboardingOverviewStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsTitle": "Manage warehouses, stores,\nand suppliers",
+  "@onboardingLocationsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsDescription": "Set up and monitor key operating locations to control inventory, supply sources, and the distribution network more accurately.",
+  "@onboardingLocationsDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHeadline": "A clear point-of-sale ecosystem",
+  "@onboardingLocationsHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight1": "Warehouse",
+  "@onboardingLocationsHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight2": "Store",
+  "@onboardingLocationsHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsHighlight3": "Supplier",
+  "@onboardingLocationsHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat1": "Track locations",
+  "@onboardingLocationsStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat2": "Sync information",
+  "@onboardingLocationsStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingLocationsStat3": "Scale the system",
+  "@onboardingLocationsStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryTitle": "Create orders and track\ndeliveries in real time",
+  "@onboardingDeliveryTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryDescription": "Create shipping orders quickly, monitor delivery routes on the map, and update statuses instantly throughout the journey.",
+  "@onboardingDeliveryDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHeadline": "Transparent logistics in real time",
+  "@onboardingDeliveryHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight1": "Quick order creation",
+  "@onboardingDeliveryHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight2": "Route tracking",
+  "@onboardingDeliveryHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryHighlight3": "Status updates",
+  "@onboardingDeliveryHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat1": "Visual map",
+  "@onboardingDeliveryStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat2": "Delivery progress",
+  "@onboardingDeliveryStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDeliveryStat3": "Proactive handling",
+  "@onboardingDeliveryStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitle": "Connect & ",
+  "@onboardingReadyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDescription": "Look up products and orders by QR code and receive push notifications to always stay updated on the latest operations.",
+  "@onboardingReadyDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHeadline": "Ready to enter the app",
+  "@onboardingReadyHeadline": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight1": "QR scanning",
+  "@onboardingReadyHighlight1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight2": "Order lookup",
+  "@onboardingReadyHighlight2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyHighlight3": "Push notifications",
+  "@onboardingReadyHighlight3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat1": "Accurate",
+  "@onboardingReadyStat1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat2": "Fast",
+  "@onboardingReadyStat2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyStat3": "Always up to date",
+  "@onboardingReadyStat3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseCompleted": "Purchase Completed",
+  "@purchaseCompleted": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deliverToWarehouse": "Deliver to Warehouse",
+  "@deliverToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "startDelivery": "Start delivery",
+  "@startDelivery": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "complete": "Complete",
+  "@complete": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "isEnd": "End of list",
+  "@isEnd": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "shippingTab": "Shipping",
+  "@shippingTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "switchWarehouseTab": "Switch Warehouse",
+  "@switchWarehouseTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestTab": "Request",
+  "@requestTab": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterWarehouseName": "Please enter the warehouse name",
+  "@pleaseEnterWarehouseName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "transferToWarehouse": "Transfer to warehouse",
+  "@transferToWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nearlyOutOfStock": "Nearly out of stock",
+  "@nearlyOutOfStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "updateMinimumQuantity": "Update minimum quantity",
+  "@updateMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minimumQuantity": "Minimum quantity",
+  "@minimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "enterMinimumQuantity": "Enter minimum quantity",
+  "@enterMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseEnterValidMinimumQuantity": "Please enter a valid minimum quantity",
+  "@pleaseEnterValidMinimumQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minCount": "Min: {count}",
+  "@minCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "onboardingSstripTag": "SSTRIP",
+  "@onboardingSstripTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitle": "Smart Logistics ",
+  "@onboardingSstripTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripTitleEm": "Simplifying Supply Chain",
+  "@onboardingSstripTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSstripDesc": "Connect warehouses, suppliers, and drivers on a single platform.",
+  "@onboardingSstripDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTag": "FEATURES",
+  "@onboardingFeatureTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitle": "Next Generation ",
+  "@onboardingFeatureTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureTitleEm": "Management",
+  "@onboardingFeatureTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatureDesc": "Powerful tools to optimize your daily logistics operations.",
+  "@onboardingFeatureDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTag": "GET STARTED",
+  "@onboardingStartTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitle": "Setup in ",
+  "@onboardingStartTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartTitleEm": "minutes",
+  "@onboardingStartTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartDesc": "Setup your logistics system quickly and easily.",
+  "@onboardingStartDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTag": "READY",
+  "@onboardingReadyTag": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyTitleEm": "Get Started Today",
+  "@onboardingReadyTitleEm": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingReadyDesc": "Start managing products and orders with SStrip.",
+  "@onboardingReadyDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWelcome": "🎉 Welcome to SStrip!",
+  "@onboardingWelcome": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingSkip": "Skip",
+  "@onboardingSkip": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStartNow": "Start Now",
+  "@onboardingStartNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingNext": "Next",
+  "@onboardingNext": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderTitle": "Order Management",
+  "@onboardingFeatOrderTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatOrderDesc": "Create & track from warehouse to receiver",
+  "@onboardingFeatOrderDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapTitle": "Map Tracking",
+  "@onboardingFeatMapTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatMapDesc": "Real-time driver location and route",
+  "@onboardingFeatMapDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportTitle": "Warehouse Reports",
+  "@onboardingFeatReportTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingFeatReportDesc": "Inventory statistics and history",
+  "@onboardingFeatReportDesc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Title": "Create Free Account",
+  "@onboardingStep1Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep1Desc": "Sign up in seconds and start using SStrip",
+  "@onboardingStep1Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Title": "Setup Warehouse & Products",
+  "@onboardingStep2Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep2Desc": "Add warehouses, suppliers, and categories",
+  "@onboardingStep2Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Title": "Create & Assign",
+  "@onboardingStep3Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep3Desc": "Automated order creation and assignment",
+  "@onboardingStep3Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Title": "Track & Confirm",
+  "@onboardingStep4Title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingStep4Desc": "Real-time tracking and delivery confirmation",
+  "@onboardingStep4Desc": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingOwner": "Owner",
+  "@onboardingOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingDriver": "Driver",
+  "@onboardingDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingWarehouse": "Warehouse",
+  "@onboardingWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleOwner": "Sender",
+  "@onboardingBubbleOwner": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleDriver": "Driver",
+  "@onboardingBubbleDriver": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleWarehouse": "Warehouse",
+  "@onboardingBubbleWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "onboardingBubbleSupply": "Supplier",
+  "@onboardingBubbleSupply": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "interfaceTitle": "INTERFACE",
+  "@interfaceTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeTitle": "Theme",
+  "@themeTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeAuto": "System",
+  "@themeAuto": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeLight": "Light",
+  "@themeLight": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "themeDark": "Dark",
+  "@themeDark": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectTheme": "Select Theme",
+  "@selectTheme": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "paymentSection": "PAYMENT",
+  "@paymentSection": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "currencyTitle": "Currency",
+  "@currencyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cash": "Cash",
+  "@cash": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bankTransfer": "Bank transfer",
+  "@bankTransfer": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "nodeColor": "Node Color",
+  "@nodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectNodeColor": "Select Color",
+  "@selectNodeColor": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderUpdateCompletedSuccess": "Order completed successfully",
+  "@orderUpdateCompletedSuccess": {
+    "type": "text"
+  },
+  "orderUpdateCancelledSuccess": "Order cancelled successfully",
+  "@orderUpdateCancelledSuccess": {
+    "type": "text"
+  },
+  "priceNotUpdated": "Price not updated",
+  "@priceNotUpdated": {
+    "type": "text"
+  },
+  "invalidPriceTitle": "Invalid Price",
+  "@invalidPriceTitle": {
+    "type": "text"
+  },
+  "invalidPriceMessage": "Some products have invalid or missing prices. Please review.",
+  "@invalidPriceMessage": {
+    "type": "text"
+  },
+  "nameNotUpdated": "(Name not updated)",
+  "@nameNotUpdated": {
+    "type": "text"
+  },
+  "unitPrice": "Unit Price",
+  "@unitPrice": {
+    "type": "text"
+  },
+  "select": "Select",
+  "@select": {
+    "type": "text"
+  },
+  "clearAll": "Clear all",
+  "@clearAll": {
+    "type": "text"
+  },
+  "recent": "Recent",
+  "@recent": {
+    "type": "text"
+  },
+  "scanInstruction": "Place barcode in frame to scan",
+  "@scanInstruction": {
+    "type": "text"
+  },
+  "updateProductCodeHelper": "Warranty info will be saved with product code.",
+  "@updateProductCodeHelper": {
+    "type": "text"
+  },
+  "monthsTitle": "Months",
+  "@monthsTitle": {
+    "type": "text"
+  },
+  "yearsTitle": "Years",
+  "@yearsTitle": {
+    "type": "text"
+  },
+  "pleaseEnterProductCode": "Please enter product code",
+  "@pleaseEnterProductCode": {
+    "type": "text"
+  },
+  "addPhotos": "Add {count} photos",
+  "@addPhotos": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "clearSelectedProducts": "Clear selected products",
+  "@clearSelectedProducts": {
+    "type": "text"
+  },
+  "confirmClearSelectedProducts": "Do you want to clear all selected products?",
+  "@confirmClearSelectedProducts": {
+    "type": "text"
+  },
+  "movingTo": "Moving to",
+  "@movingTo": {
+    "type": "text"
+  },
+  "deliverySuccess": "Delivered successfully",
+  "@deliverySuccess": {
+    "type": "text"
+  },
+  "products": "Products",
+  "@products": {
+    "type": "text"
+  },
+  "deliveryToWarehouseCompleted": "Delivery to warehouse {name} completed",
+  "@deliveryToWarehouseCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryToStoreCompleted": "Delivery to store {name} completed",
+  "@deliveryToStoreCompleted": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "selectProductFromStoreToStart": "Select products from store to start",
+  "@selectProductFromStoreToStart": {
+    "type": "text"
+  },
+  "sold": "Sold",
+  "@sold": {
+    "type": "text"
+  },
+  "minStock": "Minimum Stock",
+  "@minStock": {
+    "type": "text"
+  },
+  "updatePrice": "Update Selling Price",
+  "sellingPrice": "Selling Price",
+  "purchasePrice": "Purchase Price",
+  "updateProduct": "Update Product",
+  "@updatePrice": {
+    "type": "text"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "type": "text"
+  },
+  "confirmDeleteProduct": "Are you sure you want to delete this product?",
+  "@confirmDeleteProduct": {
+    "type": "text"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "type": "text"
+  },
+  "information": "Information",
+  "@information": {
+    "type": "text"
+  },
+  "noInformation": "No information",
+  "@noInformation": {
+    "type": "text"
+  },
+  "confirmDeleteSupplier": "Are you sure you want to delete this supplier?",
+  "@confirmDeleteSupplier": {
+    "type": "text"
+  },
+  "confirmDeleteWarehouse": "Are you sure you want to delete this warehouse?",
+  "@confirmDeleteWarehouse": {
+    "type": "text"
+  },
+  "confirmDeleteStore": "Are you sure you want to delete this store?",
+  "@confirmDeleteStore": {
+    "type": "text"
+  },
+  "confirmDeleteRole": "Are you sure you want to delete the role {roleName}?",
+  "@confirmDeleteRole": {
+    "type": "text",
+    "placeholders": {
+      "roleName": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteActionCannotBeUndone": "This action cannot be undone.",
+  "@deleteActionCannotBeUndone": {
+    "type": "text"
+  },
+  "receiptSuccessFully": "Receipt successfully",
+  "@receiptSuccessFully": {
+    "type": "text"
+  },
+  "deleteCategory": "Delete Category",
+  "@deleteCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteCategoryConfirmation": "Are you sure you want to delete this category?",
+  "@deleteCategoryConfirmation": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createCategory": "Create Category",
+  "@createCategory": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "categoryName": "Category Name",
+  "@categoryName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "unit": "Unit",
+  "@unit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deleteSuccess": "Deleted successfully",
+  "@deleteSuccess": {
+    "type": "text"
+  },
+  "confirmDeleteEmployee": "Are you sure you want to delete this employee?",
+  "@confirmDeleteEmployee": {
+    "type": "text"
+  },
+  "addRole": "Add Role",
+  "@addRole": {
+    "type": "text"
+  },
+  "currentQuantity": "Current quantity: {quantity}",
+  "@currentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "remainingQuantity": "Remaining: {count}",
+  "@remainingQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "enterSplitQuantity": "Enter quantity to split",
+  "@enterSplitQuantity": {
+    "type": "text"
+  },
+  "splitQuantityHint": "Quantity (for example: 10)",
+  "@splitQuantityHint": {
+    "type": "text"
+  },
+  "splitQuantityInvalid": "Quantity must be > 0 and < {quantity}",
+  "@splitQuantityInvalid": {
+    "type": "text",
+    "placeholders": {
+      "quantity": {
+        "type": "int"
+      }
+    }
+  },
+  "splitProduct": "Split Product",
+  "@splitProduct": {
+    "type": "text"
+  },
+  "productCannotBeSplit": "This product cannot be split.",
+  "@productCannotBeSplit": {
+    "type": "text"
+  },
+  "mergeProduct": "Merge Product",
+  "@mergeProduct": {
+    "type": "text"
+  },
+  "selectProductsToMerge": "Select products to merge into this item",
+  "@selectProductsToMerge": {
+    "type": "text"
+  },
+  "noProductsToMerge": "No products to merge",
+  "@noProductsToMerge": {
+    "type": "text"
+  },
+  "mergeProductConfirm": "Merge {count} selected products?",
+  "@mergeProductConfirm": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "cannotMergeDifferentCode": "Products with different codes cannot be merged",
+  "@cannotMergeDifferentCode": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "cannotMergeDifferentExpiry": "Cannot merge due to different expiration dates",
+  "@cannotMergeDifferentExpiry": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "manufacturingDate": "Manufacturing Date",
+  "@manufacturingDate": {
+    "type": "text"
+  },
+  "expirationDate": "Expiration Date (Est.)",
+  "@expirationDate": {
+    "type": "text"
+  },
+  "outOfStock": "Out of stock",
+  "@outOfStock": {
+    "type": "text"
+  },
+  "confirmDeleteItem": "Are you sure you want to delete {name}?",
+  "@confirmDeleteItem": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "billFromStore": "Bill from store",
+  "@billFromStore": {
+    "type": "text"
+  },
+  "orderFromStore": "Order from store",
+  "@orderFromStore": {
+    "type": "text"
+  },
+  "viewLocation": "View location",
+  "@viewLocation": {
+    "type": "text"
+  },
+  "defaultCurrency": "Default currency",
+  "@defaultCurrency": {
+    "type": "text"
+  },
+  "selectCurrency": "Select Currency",
+  "@selectCurrency": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productCodeNotUpdated": "Product code not updated",
+  "mfgDateNotUpdated": "MFG date not updated",
+  "expired": "Expired",
+  "expiresInDays": "Expires in {days} days",
+  "@expiresInDays": {
+    "type": "text",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "longPressToSelectProduct": "Long press on product to select",
+  "@longPressToSelectProduct": {
+    "type": "text"
+  },
+  "deleteItemConfirmation": "Are you sure you want to delete {name}?",
+  "@deleteItemConfirmation": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "pickingUpGoods": "PICKING UP GOODS",
+  "@pickingUpGoods": {
+    "type": "text"
+  },
+  "deliveringGoods": "DELIVERING GOODS",
+  "@deliveringGoods": {
+    "type": "text"
+  },
+  "selectDeliveryPoint": "- Select delivery point -",
+  "@selectDeliveryPoint": {
+    "type": "text"
+  },
+  "storeDescriptionHint": "Complete identification and location to make the store clearly visible in the system.",
+  "@storeDescriptionHint": {
+    "type": "text"
+  },
+  "supplierDescriptionHint": "Organize contact information and clear address to easily track goods in the supply chain.",
+  "@supplierDescriptionHint": {
+    "type": "text"
+  },
+  "warehouseDescriptionHint": "Add identification information, location and notes to help the team manage the warehouse easier.",
+  "@warehouseDescriptionHint": {
+    "type": "text"
+  },
+  "selectCurrencyToStart": "Please select a currency to start",
+  "@selectCurrencyToStart": {
+    "type": "text"
+  },
+  "quantityWithCount": "Quantity {count}",
+  "@quantityWithCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "updateSupplierImage": "Update supplier image",
+  "@updateSupplierImage": {
+    "type": "text"
+  },
+  "currentImage": "Current image",
+  "@currentImage": {
+    "type": "text"
+  },
+  "selectImage": "Select image",
+  "@selectImage": {
+    "type": "text"
+  },
+  "selectFromDevice": "Select from device",
+  "@selectFromDevice": {
+    "type": "text"
+  },
+  "updateWarehouseImage": "Update warehouse image",
+  "@updateWarehouseImage": {
+    "type": "text"
+  },
+  "noProductData": "No product data",
+  "@noProductData": {
+    "type": "text"
+  },
+  "totalQuantityWithCount": "Total Qty: {count} {unit}",
+  "@totalQuantityWithCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "num"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "somethingWentWrongTryAgain": "Something went wrong, please try again later!",
+  "@somethingWentWrongTryAgain": {
+    "type": "text"
+  },
+  "requestCancelled": "Request to server was cancelled",
+  "@requestCancelled": {
+    "type": "text"
+  },
+  "sendTimeout": "Send timeout",
+  "@sendTimeout": {
+    "type": "text"
+  },
+  "receiveTimeout": "Receive timeout",
+  "@receiveTimeout": {
+    "type": "text"
+  },
+  "connectionTimeout": "Connection timeout",
+  "@connectionTimeout": {
+    "type": "text"
+  },
+  "serverStatusCode": "Server status code: {code}",
+  "@serverStatusCode": {
+    "type": "text",
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionFailed": "Connection to server failed",
+  "@connectionFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseSelectCurrencyToStart": "Please select a currency to start",
+  "@pleaseSelectCurrencyToStart": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "organizeSupplierInfoDescription": "Organize contact info and address clearly to easily track sources in the supply chain.",
+  "@organizeSupplierInfoDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "addWarehouseInfoDescription": "Add identification information, location and notes to make it easier for the operations team to manage the warehouse.",
+  "@addWarehouseInfoDescription": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allowImportGoods": "Allow goods receipt",
+  "@allowImportGoods": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createRequest": "Create request order",
+  "@createRequest": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "noPurchasedMaterials": "No order-credit bundles yet",
+  "@noPurchasedMaterials": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "newPurchasedMaterialsWillAppearHere": "Bundles purchased through the App Store will appear here",
+  "@newPurchasedMaterialsWillAppearHere": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityUsedUpdated": "Order-creation credits added",
+  "@quantityUsedUpdated": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityMustBeBetween": "Choose between 1 and {count} bundles",
+  "@quantityMustBeBetween": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterial": "Add order-creation credits",
+  "@useMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useQuantity": "Bundles to use",
+  "@useQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "Bundles remaining",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "remainingMaterial": "Bundles remaining: ",
+  "@remainingMaterial": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedCountRemaining": "Order-creation credits remaining",
+  "@usedCountRemaining": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "usedQuantityOfTotal": "Used: {used}/{total}",
+  "@usedQuantityOfTotal": {
+    "type": "text",
+    "placeholders": {
+      "used": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "useMaterialAction": "Add credits",
+  "@useMaterialAction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStore": "Buy Order Credits",
+  "@orderCreditsStore": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditsStoreSubtitle": "Buy order-credit bundles through the App Store",
+  "@orderCreditsStoreSubtitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundles": "Purchased Order-Credit Bundles",
+  "@orderCreditBundles": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "orderCreditBundleHint": "Each bundle adds 35 order-creation credits",
+  "@orderCreditBundleHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdBy": "Creator",
+  "@createdBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "receivedBy": "Receiver",
+  "@receivedBy": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "vehicleType": "Vehicle",
+  "@vehicleType": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityEnough": "Sufficient",
+  "@quantityEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "quantityNotEnough": "Insufficient",
+  "@quantityNotEnough": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ordered": "Ordered",
+  "@ordered": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "received": "Received",
+  "@received": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "checkWarehouseStock": "Check warehouse stock",
+  "@checkWarehouseStock": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "sufficient": "Sufficient",
+  "@sufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "insufficient": "Insufficient",
+  "@insufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "createQuickOrder": "Quick order",
+  "@createQuickOrder": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "allProductsSufficient": "All products in stock",
+  "@allProductsSufficient": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "requestedQuantity": "Requested",
+  "@requestedQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "availableQuantity": "In stock",
+  "@availableQuantity": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productNotInWarehouse": "Not in warehouse",
+  "@productNotInWarehouse": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseBadge": "Pending Transaction",
+  "@pendingPurchaseBadge": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pendingPurchaseTitle": "Purchased / Restored",
+  "@pendingPurchaseTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "productId": "Product ID",
+  "@productId": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "completePendingTransaction": "Complete this transaction",
+  "@completePendingTransaction": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyMoreCredits": "Buy more credits",
+  "@buyMoreCredits": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "buyCreditsSuccess": "Purchase successful",
+  "@buyCreditsSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditsNowMessage": "You have successfully updated your order credits. Do you want to use 1 credit now?",
+  "@useCreditsNowMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useNow": "Use now",
+  "@useNow": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "useCreditSuccess": "Used 1 order credit successfully!",
+  "@useCreditSuccess": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "purchaseFailed": "Purchase failed!",
+  "@purchaseFailed": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "verificationError": "Verification error: {error}",
+  "@verificationError": {
+    "type": "text",
+    "placeholders": {
+      "error": {}
+    }
+  },
+  "buyPackageWithPrice": "Buy package for {price}",
+  "@buyPackageWithPrice": {
+    "type": "text",
+    "placeholders": {
+      "price": {}
+    }
+  },
+  "selectOrderPackage": "Select an order package",
+  "@selectOrderPackage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "setupConversion": "Set up conversion",
+  "@setupConversion": {
+    "type": "text"
+  },
+  "setupConversionSuccess": "Conversion set up successfully",
+  "@setupConversionSuccess": {
+    "type": "text"
+  },
+  "conversionProductName": "Conversion product name",
+  "@conversionProductName": {
+    "type": "text"
+  },
+  "conversionProductNameHint": "e.g. Small box, Pack",
+  "@conversionProductNameHint": {
+    "type": "text"
+  },
+  "tapToSelectProductImage": "Tap the image to select a product photo",
+  "@tapToSelectProductImage": {
+    "type": "text"
+  },
+  "productImageSelected": "Product photo selected",
+  "@productImageSelected": {
+    "type": "text"
+  },
+  "conversionQuantity": "Conversion quantity",
+  "@conversionQuantity": {
+    "type": "text"
+  },
+  "conversionQuantityHint": "e.g. 10",
+  "@conversionQuantityHint": {
+    "type": "text"
+  },
+  "saveConversion": "Save conversion",
+  "@saveConversion": {
+    "type": "text"
+  },
+  "originalUnit": "Original unit",
+  "@originalUnit": {
+    "type": "text"
+  },
+  "originalUnitLabel": "Original unit: {unit}",
+  "@originalUnitLabel": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "oneUnit": "1 {unit}",
+  "@oneUnit": {
+    "type": "text",
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "currentStock": "In stock: {count} {unit}",
+  "@currentStock": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "pleaseSelectConversionImage": "Please select an image for the conversion product.",
+  "@pleaseSelectConversionImage": {
+    "type": "text"
+  },
+  "pleaseEnterConversionName": "Please enter the conversion product name.",
+  "@pleaseEnterConversionName": {
+    "type": "text"
+  },
+  "pleaseEnterValidConversionQuantity": "Please enter a valid conversion quantity.",
+  "@pleaseEnterValidConversionQuantity": {
+    "type": "text"
+  },
+  "pleaseSelectConversionUnit": "Please select a conversion unit.",
+  "@pleaseSelectConversionUnit": {
+    "type": "text"
+  },
+  "conversionUnit": "Conversion unit",
+  "@conversionUnit": {
+    "type": "text"
+  },
+  "afterSplit": "After split: {count} {unit}",
+  "@afterSplit": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "splitObtained": "Received: {count} {unit}",
+  "@splitObtained": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionFormula": "1 {parentUnit} = {value} {childUnit}",
+  "@conversionFormula": {
+    "type": "text",
+    "placeholders": {
+      "parentUnit": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "childUnit": {
+        "type": "String"
+      }
+    }
+  },
+  "conversionInfo": "Conversion information",
+  "@conversionInfo": {
+    "type": "text"
+  },
+  "errorTitle": "Error",
+  "@errorTitle": {
+    "type": "text"
+  },
+  "productNotSetupConversion": "This product has not been set up for conversion.",
+  "@productNotSetupConversion": {
+    "type": "text"
+  },
+  "originalProduct": "Original product",
+  "@originalProduct": {
+    "type": "text"
+  },
+  "conversionProductDefault": "Conversion product",
+  "@conversionProductDefault": {
+    "type": "text"
+  },
+  "enterQuantity": "Enter quantity",
+  "@enterQuantity": {
+    "type": "text"
+  },
+  "exceedsCurrentQuantity": "Exceeds current quantity ({count} {unit})",
+  "@exceedsCurrentQuantity": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "warehouseImportStats": "Warehouse import statistics",
+  "@warehouseImportStats": {
+    "type": "text"
+  },
+  "monthLabel": "Month {month}",
+  "@monthLabel": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "yearLabel": "Year {year}",
+  "@yearLabel": {
+    "type": "text",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "storeInvoiceByDayTitle": "Invoices by Day",
+  "@storeInvoiceByDayTitle": {
+    "type": "text"
+  },
+  "storeInvoiceCount": "Invoices",
+  "@storeInvoiceCount": {
+    "type": "text"
+  },
+  "storeExportTableTitle": "Data Export Table",
+  "@storeExportTableTitle": {
+    "type": "text"
+  },
+  "storeExportExcel": "Export to Excel",
+  "@storeExportExcel": {
+    "type": "text"
+  },
+  "storeExportSuccessOpen": "Excel file created and opened with the default app.",
+  "@storeExportSuccessOpen": {
+    "type": "text"
+  },
+  "storeExportSuccessSaved": "File created: {path}\nCould not open automatically ({message}).",
+  "@storeExportSuccessSaved": {
+    "type": "text",
+    "placeholders": {
+      "path": {
+        "type": "String"
+      },
+      "message": {
+        "type": "String"
+      }
+    }
+  },
+  "storeExportTable": "Export Table",
+  "@storeExportTable": {
+    "type": "text"
+  },
+  "storeHistoryStats": "Quantity Statistics",
+  "@storeHistoryStats": {
+    "type": "text"
+  },
+  "storeSoldLeast": "Sell the least",
+  "@storeSoldLeast": {
+    "type": "text"
+  },
+  "storeSoldMost": "Sell the most",
+  "@storeSoldMost": {
+    "type": "text"
+  },
+  "storeNoDataForMonth": "No data\nmonth {month}/{year}",
+  "@storeNoDataForMonth": {
+    "type": "text",
+    "placeholders": {
+      "month": {
+        "type": "int"
+      },
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "storeColStt": "No.",
+  "@storeColStt": {
+    "type": "text"
+  },
+  "storeColDate": "Transaction Date",
+  "@storeColDate": {
+    "type": "text"
+  },
+  "storeColRevenue": "Revenue",
+  "@storeColRevenue": {
+    "type": "text"
+  },
+  "storePreview": "Preview",
+  "@storePreview": {
+    "type": "text"
+  },
+  "storeNoteColumn": "Description",
+  "@storeNoteColumn": {
+    "type": "text"
+  },
+  "storeTodayRevenue": "Today's revenue",
+  "@storeTodayRevenue": {
+    "type": "text"
+  },
+  "storeColumnNameLabel": "Display column name",
+  "@storeColumnNameLabel": {
+    "type": "text"
+  },
+  "storeColumnNameHint": "E.g.: Description",
+  "@storeColumnNameHint": {
+    "type": "text"
+  },
+  "storeDefaultValueLabel": "Default value when note is empty",
+  "@storeDefaultValueLabel": {
+    "type": "text"
+  },
+  "storeDefaultValueHint": "E.g.: Today's revenue",
+  "@storeDefaultValueHint": {
+    "type": "text"
+  },
+  "storeShowProductNames": "Show product names",
+  "@storeShowProductNames": {
+    "type": "text"
+  },
+  "storeShowProductNamesSubtitle": "The description column will auto-join product names",
+  "@storeShowProductNamesSubtitle": {
+    "type": "text"
+  },
+  "storeShowQuantity": "Show quantity",
+  "@storeShowQuantity": {
+    "type": "text"
+  },
+  "storeShowQuantitySubtitle": "Append \"(quantity unit)\" after each product name",
+  "@storeShowQuantitySubtitle": {
+    "type": "text"
+  },
+  "storeSplitPayment": "Split cash / transfer",
+  "@storeSplitPayment": {
+    "type": "text"
+  },
+  "storeSplitPaymentSubtitle": "Split the revenue column into 2 columns by payment method",
+  "@storeSplitPaymentSubtitle": {
+    "type": "text"
+  },
+  "empEditOrder": "Edit order",
+  "@empEditOrder": {
+    "type": "text"
+  },
+  "empProductCost": "Product cost",
+  "@empProductCost": {
+    "type": "text"
+  },
+  "empTotalReceivedQty": "Total received qty",
+  "@empTotalReceivedQty": {
+    "type": "text"
+  },
+  "empPleaseEnterQuantity": "Please enter quantity",
+  "@empPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "empInvalidQuantity": "Invalid quantity",
+  "@empInvalidQuantity": {
+    "type": "text"
+  },
+  "empDeleteSupplier": "Delete supplier",
+  "@empDeleteSupplier": {
+    "type": "text"
+  },
+  "empSlAbbr": "Qty",
+  "@empSlAbbr": {
+    "type": "text"
+  },
+  "empLineTotal": "Subtotal",
+  "@empLineTotal": {
+    "type": "text"
+  },
+  "empEstimatedOrderAmount": "Estimated order amount",
+  "@empEstimatedOrderAmount": {
+    "type": "text"
+  },
+  "empReceivedLineTotal": "Received subtotal",
+  "@empReceivedLineTotal": {
+    "type": "text"
+  },
+  "empPickupPointsCount": "{count} pickup points",
+  "@empPickupPointsCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empProductsItemsCount": "{productCount} products • {itemCount} items",
+  "@empProductsItemsCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "itemCount": {
+        "type": "int"
+      }
+    }
+  },
+  "empMoreProducts": "+{count} more products",
+  "@empMoreProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empItemSummaryCount": "{productCount} products ({totalQuantity})",
+  "@empItemSummaryCount": {
+    "type": "text",
+    "placeholders": {
+      "productCount": {
+        "type": "int"
+      },
+      "totalQuantity": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPointCount": "{count} points",
+  "@empPickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empSpAbbr": "{count} products",
+  "@empSpAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empMonAbbr": "({count} items)",
+  "@empMonAbbr": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empPickupPoint": "pickup points",
+  "@empPickupPoint": {
+    "type": "text"
+  },
+  "empMoreProductsDetail": "+{count} more products (tap to view details)",
+  "@empMoreProductsDetail": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "empLocationNotObtained": "Location not obtained",
+  "@empLocationNotObtained": {
+    "type": "text"
+  },
+  "empLocationRetryMessage": "Couldn't get your current location. Please confirm to retry.",
+  "@empLocationRetryMessage": {
+    "type": "text"
+  },
+  "empPickupFailed": "Pickup failed. Please check the warehouse!",
+  "@empPickupFailed": {
+    "type": "text"
+  },
+  "employeePhoneAlreadyExists": "Phone number already exists",
+  "@employeePhoneAlreadyExists": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedTitle": "Permission updated",
+  "@employeePermissionUpdatedTitle": {
+    "type": "text"
+  },
+  "employeePermissionUpdatedBody": "Your permissions have just been updated.",
+  "@employeePermissionUpdatedBody": {
+    "type": "text"
+  },
+  "supplierHistoryStats": "Import statistics",
+  "@supplierHistoryStats": {
+    "type": "text"
+  },
+  "supplierUpdateImage": "Update supplier image",
+  "@supplierUpdateImage": {
+    "type": "text"
+  },
+  "supplierCurrentImage": "Current image",
+  "@supplierCurrentImage": {
+    "type": "text"
+  },
+  "supplierChooseImage": "Choose image",
+  "@supplierChooseImage": {
+    "type": "text"
+  },
+  "supplierChooseFromDevice": "Choose from device",
+  "@supplierChooseFromDevice": {
+    "type": "text"
+  },
+  "orderUpdateSuccess": "Order updated successfully",
+  "@orderUpdateSuccess": {
+    "type": "text"
+  },
+  "orderDeleteSuccess": "Order deleted successfully",
+  "@orderDeleteSuccess": {
+    "type": "text"
+  },
+  "orderDeleteTitle": "Delete Order",
+  "@orderDeleteTitle": {
+    "type": "text"
+  },
+  "orderDeleteConfirmMessage": "Are you sure you want to delete this order?",
+  "@orderDeleteConfirmMessage": {
+    "type": "text"
+  },
+  "orderPleaseEnterQuantity": "Please enter quantity",
+  "@orderPleaseEnterQuantity": {
+    "type": "text"
+  },
+  "orderInvalidQuantity": "Invalid quantity",
+  "@orderInvalidQuantity": {
+    "type": "text"
+  },
+  "orderExceedsStock": "Exceeds stock quantity",
+  "@orderExceedsStock": {
+    "type": "text"
+  },
+  "orderStt": "No.",
+  "@orderStt": {
+    "type": "text"
+  },
+  "homeDeliveryWaiting": "Awaiting delivery",
+  "@homeDeliveryWaiting": {
+    "type": "text"
+  },
+  "homeSalesEmployee": "Sales employee",
+  "@homeSalesEmployee": {
+    "type": "text"
+  },
+  "homeWarehouseEmployee": "Warehouse employee",
+  "@homeWarehouseEmployee": {
+    "type": "text"
+  },
+  "homeLoadingEmployees": "Loading employees...",
+  "@homeLoadingEmployees": {
+    "type": "text"
+  },
+  "homeSelectWarehouseEmployee": "Select warehouse employee",
+  "@homeSelectWarehouseEmployee": {
+    "type": "text"
+  },
+  "homePickupGoods": "Pickup",
+  "@homePickupGoods": {
+    "type": "text"
+  },
+  "homePickingUpGoods": "Picking up",
+  "@homePickingUpGoods": {
+    "type": "text"
+  },
+  "homePickingUpSubtitle": "Driver is picking up goods",
+  "@homePickingUpSubtitle": {
+    "type": "text"
+  },
+  "homePickupPointCount": "{count} pickup points",
+  "@homePickupPointCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDelivering": "Delivering",
+  "@homeDelivering": {
+    "type": "text"
+  },
+  "homeDeliveringSubtitle": "Driver is heading to the delivery point",
+  "@homeDeliveringSubtitle": {
+    "type": "text"
+  },
+  "homeDeliveryPointName": "Delivery point: {name}",
+  "@homeDeliveryPointName": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homePickupCountDest": "{count} pickup points · {destination}",
+  "@homePickupCountDest": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "destination": {
+        "type": "String"
+      }
+    }
+  },
+  "homeViewJourney": "View journey",
+  "@homeViewJourney": {
+    "type": "text"
+  },
+  "homeNoPickupInfo": "No pickup point information.",
+  "@homeNoPickupInfo": {
+    "type": "text"
+  },
+  "homeProductCount": "{count} products",
+  "@homeProductCount": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeOtherProducts": "+{count} other products",
+  "@homeOtherProducts": {
+    "type": "text",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeDestination": "Destination",
+  "@homeDestination": {
+    "type": "text"
+  },
+  "homeRecipient": "Recipient: {name}",
+  "@homeRecipient": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeAddWarehouseOrStore": "Add warehouse / store",
+  "@homeAddWarehouseOrStore": {
+    "type": "text"
+  },
+  "supplierImportHistory": "Import history at {name}",
+  "@supplierImportHistory": {
+    "type": "text",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  }
+}
