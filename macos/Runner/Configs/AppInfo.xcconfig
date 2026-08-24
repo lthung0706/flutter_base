@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = sstrip
+PRODUCT_NAME = report_person
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.lthung.sstrip
+PRODUCT_BUNDLE_IDENTIFIER = com.lthung.reportperson
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2025 com.lthung. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2026 com.lthung. All rights reserved.

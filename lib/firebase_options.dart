@@ -57,19 +57,20 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCRR8npQW31ZiQhgzCewgB7UEcXhk50lnY',
-    appId: '1:515037032433:android:f42b4663957dc698f45e50',
-    messagingSenderId: '515037032433',
-    projectId: 'strip-924b9',
-    storageBucket: 'strip-924b9.firebasestorage.app',
+    apiKey: 'AIzaSyBKdWdFatkMYtd6dlchPdW2XipxqLE9Uc0',
+    appId: '1:181527620299:android:5a154b6b8cb04b8584c94e',
+    messagingSenderId: '181527620299',
+    projectId: 'report-person-app',
+    storageBucket: 'report-person-app.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA1fgO0G2UnCNYOzcTah8AVVfqS4JqBqs4',
-    appId: '1:515037032433:ios:c5c899e5c32b51c4f45e50',
-    messagingSenderId: '515037032433',
-    projectId: 'strip-924b9',
-    storageBucket: 'strip-924b9.firebasestorage.app',
-    iosBundleId: 'com.lthung.sstrip',
+    apiKey: 'AIzaSyB7MywtsWoxQaJLUzrslUiTu67JHM3j6FA',
+    appId: '1:181527620299:ios:fd7f387ef20c017484c94e',
+    messagingSenderId: '181527620299',
+    projectId: 'report-person-app',
+    storageBucket: 'report-person-app.firebasestorage.app',
+    iosBundleId: 'com.lthung.reportperson',
   );
+
 }

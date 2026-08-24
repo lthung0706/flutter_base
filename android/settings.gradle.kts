@@ -30,3 +30,4 @@ plugins {
 }
 
 include(":app")
+rootProject.name = "report_person"

@@ -1,87 +1,26 @@
 {
   "project_info": {
-    "project_number": "515037032433",
-    "project_id": "strip-924b9",
-    "storage_bucket": "strip-924b9.firebasestorage.app"
+    "project_number": "181527620299",
+    "project_id": "report-person-app",
+    "storage_bucket": "report-person-app.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:515037032433:android:f42b4663957dc698f45e50",
+        "mobilesdk_app_id": "1:181527620299:android:5a154b6b8cb04b8584c94e",
         "android_client_info": {
-          "package_name": "com.lthung123.sstrip"
+          "package_name": "com.lthung.reportperson"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "515037032433-cr3i3a2320aq2ookrjmej9o6jp2qe9dm.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.lthung123.sstrip",
-            "certificate_hash": "490dc4047ccdaeb6a80759089b9853036a24e7f3"
-          }
-        },
-        {
-          "client_id": "515037032433-g6qastv2583p0bpgmrtlfgua5og793p2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCRR8npQW31ZiQhgzCewgB7UEcXhk50lnY"
+          "current_key": "AIzaSyBKdWdFatkMYtd6dlchPdW2XipxqLE9Uc0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "515037032433-g6qastv2583p0bpgmrtlfgua5og793p2.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.lthung123.sstrip"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:515037032433:android:a95254d9346ff763f45e50",
-        "android_client_info": {
-          "package_name": "com.lthung123.sstrip"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "515037032433-g6qastv2583p0bpgmrtlfgua5og793p2.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCRR8npQW31ZiQhgzCewgB7UEcXhk50lnY"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "515037032433-g6qastv2583p0bpgmrtlfgua5og793p2.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.lthung.sstrip"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
