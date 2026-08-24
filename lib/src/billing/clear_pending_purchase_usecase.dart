@@ -1,4 +1,4 @@
-import 'package:sstrip/src/data/models/usecase/usecase.dart';
+import 'package:report_person/src/data/models/usecase/usecase.dart';
 
 import 'billing_store_repository.dart';
 

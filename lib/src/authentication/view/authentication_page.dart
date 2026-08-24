@@ -3,8 +3,8 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:sstrip/src/authentication/bloc/authentication_bloc.dart';
-import 'package:sstrip/src/routes/routes.dart';
+import 'package:report_person/src/authentication/bloc/authentication_bloc.dart';
+import 'package:report_person/src/routes/routes.dart';
 
 import '../../data/models/local/user_model.dart';
 import '../../module/injector.dart';

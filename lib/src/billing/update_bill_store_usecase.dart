@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
-import 'package:sstrip/src/core/params/billing_store_update_status_body.dart';
-import 'package:sstrip/src/data/models/data/data.dart';
-import 'package:sstrip/src/domain/entities/billing_store.dart';
+import 'package:report_person/src/core/params/billing_store_update_status_body.dart';
+import 'package:report_person/src/data/models/data/data.dart';
+import 'package:report_person/src/domain/entities/billing_store.dart';
 
 import '../data/models/usecase/usecase.dart';
 

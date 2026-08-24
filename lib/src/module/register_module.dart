@@ -4,15 +4,15 @@ import 'package:firebase_performance/firebase_performance.dart';
 import 'package:go_router/go_router.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:injectable/injectable.dart';
-import 'package:sstrip/src/authentication/auth_api_service.dart';
-import 'package:sstrip/src/authentication/interception_auth.dart';
-import 'package:sstrip/src/core/session/session_guard.dart';
-import 'package:sstrip/src/data/datasources/remote/billing_product_api_service.dart';
-import 'package:sstrip/src/data/datasources/remote/upload_api_service.dart';
-import 'package:sstrip/src/mapper/mappers.dart';
-import 'package:sstrip/src/module/api_helper.dart';
-import 'package:sstrip/src/module/injector.dart';
-import 'package:sstrip/src/routes/page_routes/home_routes.dart';
+import 'package:report_person/src/authentication/auth_api_service.dart';
+import 'package:report_person/src/authentication/interception_auth.dart';
+import 'package:report_person/src/core/session/session_guard.dart';
+import 'package:report_person/src/data/datasources/remote/billing_product_api_service.dart';
+import 'package:report_person/src/data/datasources/remote/upload_api_service.dart';
+import 'package:report_person/src/mapper/mappers.dart';
+import 'package:report_person/src/module/api_helper.dart';
+import 'package:report_person/src/module/injector.dart';
+import 'package:report_person/src/routes/page_routes/home_routes.dart';
 
 const String kApiDio = 'ApiDio';
 const String kApiBaseUrl = 'ApiBaseUrl';
@@ -41,11 +41,11 @@ abstract class RegisterModule {
 
   @Named(kApiAuthProviderDio)
   Dio get apiAuthProviderDio =>
-      getIt<ApiNetwork>().collaboratorApiProvider.apiDio
+      getIt<ApiNetwork>().apiAuthProvider.apiDio
         ..interceptors.add(HeaderInterceptor());
   @Named(kApiAuthProviderBaseUrl)
   String get apiAuthProviderBaseUrl =>
-      getIt<ApiNetwork>().collaboratorApiProvider.apiDio.options.baseUrl;
+      getIt<ApiNetwork>().apiAuthProvider.apiDio.options.baseUrl;
 
   @Named(kApiSocialDio)
   Dio get collaboratorApiSocialDio =>
@@ -121,6 +121,21 @@ abstract class RegisterModule {
 
   @lazySingleton
   GrpcManager get grpcManager => GrpcManager();
+
+  @lazySingleton
+  SupabaseNetwork get supabaseNetwork => SupabaseNetwork(
+    enableLogger: AppConfig.isDebug,
+    url: AppConfig.supabaseUrl,
+    anonKey: AppConfig.supabaseAnonKey,
+  );
+
+  @lazySingleton
+  SupabaseProvider get supabaseProvider =>
+      getIt<SupabaseNetwork>().supabaseProvider;
+
+  @lazySingleton
+  SupabaseClient get supabaseClient =>
+      getIt<SupabaseNetwork>().supabaseProvider.client;
 
   @lazySingleton
   AuthInterceptor get authInterceptor =>

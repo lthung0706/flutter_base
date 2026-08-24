@@ -1,4 +1,4 @@
-import 'package:sstrip/src/data/models/local/user_model.dart';
+import 'package:report_person/src/data/models/local/user_model.dart';
 
 class AuthData {
   AuthData({

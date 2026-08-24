@@ -2,11 +2,11 @@ import 'package:app_config/app_config.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:sstrip/firebase_options.dart';
-import 'package:sstrip/src/core/firebase_crashlytics_helper.dart';
-import 'package:sstrip/src/core/hive_service_helper.dart';
-import 'package:sstrip/src/module/injector.dart';
-import 'package:sstrip/src/presentation/app/view/global_app_view.dart';
+import 'package:report_person/firebase_options.dart';
+import 'package:report_person/src/core/firebase_crashlytics_helper.dart';
+import 'package:report_person/src/core/hive_service_helper.dart';
+import 'package:report_person/src/module/injector.dart';
+import 'package:report_person/src/presentation/app/view/global_app_view.dart';
 
 import 'src/core/services/firebase_messaging_service.dart';
 import 'src/core/services/local_notifications_service.dart';
@@ -55,6 +55,12 @@ void main() async {
   try {
     getIt<GrpcNetwork>().grpcProvider.init();
   } catch (_) {}
+
+  try {
+    await getIt<SupabaseNetwork>().supabaseProvider.init();
+  } catch (e) {
+    debugPrint('Supabase init error (dev): $e');
+  }
 
   runApp(const GlobalAppPage());
 }

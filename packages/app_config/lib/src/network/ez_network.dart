@@ -13,3 +13,8 @@ export 'interceptors/grpc_header_interceptior.dart';
 
 export 'graphQl/graphql_network.dart';
 export 'graphQl/graphql_provider.dart';
+
+export 'package:supabase_flutter/supabase_flutter.dart'
+    hide Headers, MultipartFile, User;
+export 'supabase/supabase_network.dart';
+export 'supabase/supabase_provider.dart';

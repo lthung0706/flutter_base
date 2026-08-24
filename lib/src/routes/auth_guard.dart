@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sstrip/src/core/constants/key_local_store.dart';
-import 'package:sstrip/src/routes/routes.dart';
+import 'package:report_person/src/core/constants/key_local_store.dart';
+import 'package:report_person/src/routes/routes.dart';
 
 abstract class RouteGuard {
   FutureOr<String?> redirect(BuildContext context, GoRouterState state);

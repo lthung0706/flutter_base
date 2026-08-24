@@ -9,20 +9,22 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_mappr_annotation/auto_mappr_annotation.dart' as _i1;
-import 'package:sstrip/src/authentication/auth.dart' as _i3;
-import 'package:sstrip/src/data/models/apple_transaction_model.dart' as _i12;
-import 'package:sstrip/src/data/models/auth_model.dart' as _i2;
-import 'package:sstrip/src/data/models/auth_register_model.dart' as _i6;
-import 'package:sstrip/src/data/models/billing_store_model.dart' as _i10;
-import 'package:sstrip/src/data/models/upload_model.dart' as _i4;
-import 'package:sstrip/src/data/models/user_updated_model.dart' as _i8;
-import 'package:sstrip/src/domain/entities/apple_transaction.dart' as _i13;
-import 'package:sstrip/src/domain/entities/auth_register.dart' as _i7;
-import 'package:sstrip/src/domain/entities/billing_store.dart' as _i11;
-import 'package:sstrip/src/domain/entities/upload_entity.dart' as _i5;
-import 'package:sstrip/src/domain/entities/user_updated.dart' as _i9;
+import 'package:report_person/src/authentication/auth.dart' as _i3;
+import 'package:report_person/src/data/models/apple_transaction_model.dart'
+    as _i12;
+import 'package:report_person/src/data/models/auth_model.dart' as _i2;
+import 'package:report_person/src/data/models/auth_register_model.dart' as _i6;
+import 'package:report_person/src/data/models/billing_store_model.dart' as _i10;
+import 'package:report_person/src/data/models/upload_model.dart' as _i4;
+import 'package:report_person/src/data/models/user_updated_model.dart' as _i8;
+import 'package:report_person/src/domain/entities/apple_transaction.dart'
+    as _i13;
+import 'package:report_person/src/domain/entities/auth_register.dart' as _i7;
+import 'package:report_person/src/domain/entities/billing_store.dart' as _i11;
+import 'package:report_person/src/domain/entities/upload_entity.dart' as _i5;
+import 'package:report_person/src/domain/entities/user_updated.dart' as _i9;
 
-/// {@template package:sstrip/src/mapper/mappers.dart}
+/// {@template package:report_person/src/mapper/mappers.dart}
 /// Available mappings:
 /// - `AuthDataModel` → `AuthData`.
 /// - `AuthDataUserModel` → `AuthDataUser`.
@@ -48,7 +50,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   List<_i1.AutoMapprInterface> get _delegates => const [];
 
   /// {@macro AutoMapprInterface:canConvert}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   bool canConvert<SOURCE, TARGET>({bool recursive = true}) {
     final sourceTypeOf = _typeOf<SOURCE>();
@@ -157,7 +159,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:convert}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   TARGET convert<SOURCE, TARGET>(SOURCE? model) {
     if (canConvert<SOURCE, TARGET>(recursive: false)) {
@@ -173,7 +175,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:tryConvert}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   TARGET? tryConvert<SOURCE, TARGET>(
     SOURCE? model, {
@@ -193,7 +195,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:convertIterable}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   Iterable<TARGET> convertIterable<SOURCE, TARGET>(Iterable<SOURCE?> model) {
     if (canConvert<SOURCE, TARGET>(recursive: false)) {
@@ -212,7 +214,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   ///
   /// When an item in the source iterable is null, uses `whenSourceIsNull` if defined or null
   ///
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   Iterable<TARGET?> tryConvertIterable<SOURCE, TARGET>(
     Iterable<SOURCE?> model, {
@@ -234,7 +236,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:convertList}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   List<TARGET> convertList<SOURCE, TARGET>(Iterable<SOURCE?> model) {
     if (canConvert<SOURCE, TARGET>(recursive: false)) {
@@ -253,7 +255,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   ///
   /// When an item in the source iterable is null, uses `whenSourceIsNull` if defined or null
   ///
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   List<TARGET?> tryConvertList<SOURCE, TARGET>(
     Iterable<SOURCE?> model, {
@@ -276,7 +278,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:convertSet}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   Set<TARGET> convertSet<SOURCE, TARGET>(Iterable<SOURCE?> model) {
     if (canConvert<SOURCE, TARGET>(recursive: false)) {
@@ -295,7 +297,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   ///
   /// When an item in the source iterable is null, uses `whenSourceIsNull` if defined or null
   ///
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   Set<TARGET?> tryConvertSet<SOURCE, TARGET>(
     Iterable<SOURCE?> model, {
@@ -526,7 +528,7 @@ class $Mapper implements _i1.AutoMapprInterface {
   }
 
   /// {@macro AutoMapprInterface:useSafeMapping}
-  /// {@macro package:sstrip/src/mapper/mappers.dart}
+  /// {@macro package:report_person/src/mapper/mappers.dart}
   @override
   bool useSafeMapping<SOURCE, TARGET>() {
     return true;

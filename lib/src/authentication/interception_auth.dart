@@ -1,9 +1,9 @@
 // Package imports:
 
 import 'package:app_config/app_config.dart';
-import 'package:sstrip/src/authentication/usecase/get_user_usecase.dart';
-import 'package:sstrip/src/core/session/session_guard.dart';
-import 'package:sstrip/src/module/injector.dart';
+import 'package:report_person/src/authentication/usecase/get_user_usecase.dart';
+import 'package:report_person/src/core/session/session_guard.dart';
+import 'package:report_person/src/module/injector.dart';
 
 class HeaderInterceptor extends Interceptor {
   @override

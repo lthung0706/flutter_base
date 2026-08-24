@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:retry/retry.dart';
-import 'package:sstrip/src/authentication/view/authentication_page.dart';
+import 'package:report_person/src/authentication/view/authentication_page.dart';
 
 import 'local_notifications_service.dart';
 

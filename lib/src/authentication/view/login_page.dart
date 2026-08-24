@@ -8,12 +8,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:sstrip/src/authentication/bloc/authentication_bloc.dart';
-import 'package:sstrip/src/core/firebase_analytics_helper.dart';
-import 'package:sstrip/src/core/firebase_performance_helper.dart';
-import 'package:sstrip/src/core/params/login_request_body.dart';
-import 'package:sstrip/src/module/injector.dart';
-import 'package:sstrip/src/routes/routes.dart';
+import 'package:report_person/src/authentication/bloc/authentication_bloc.dart';
+import 'package:report_person/src/core/firebase_analytics_helper.dart';
+import 'package:report_person/src/core/firebase_performance_helper.dart';
+import 'package:report_person/src/core/params/login_request_body.dart';
+import 'package:report_person/src/module/injector.dart';
+import 'package:report_person/src/routes/routes.dart';
 
 import '../../core/params/user_request_body.dart';
 import '../../presentation/app/widgets/app_language_popup_button.dart';
@@ -22,8 +22,6 @@ import '../widgets/auth_button.dart';
 import '../widgets/auth_text_field.dart';
 import 'authentication_page.dart';
 import '../../components/app_snackbar.dart';
-
-enum LoginTypeEnum { owner, employee }
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -35,7 +33,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   LoginRequestBody loginRequestBody = LoginRequestBody();
 
-  // Controllers và FocusNodes để tránh keyboard flicker
+  // Controllers and FocusNodes to avoid keyboard flicker
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _emailFocusNode = FocusNode();
@@ -49,10 +47,6 @@ class _LoginPageState extends State<LoginPage> {
     _passwordFocusNode.dispose();
     super.dispose();
   }
-
-  final ValueNotifier<LoginTypeEnum> _loginType = ValueNotifier(
-    LoginTypeEnum.owner,
-  );
 
   Future<void> _handleGoogleSignIn(BuildContext context) async {
     try {
@@ -139,37 +133,6 @@ class _LoginPageState extends State<LoginPage> {
                         child: AppLanguagePopupButton(),
                       ),
                       const SizedBox(height: 24),
-                      ValueListenableBuilder<LoginTypeEnum>(
-                        valueListenable: _loginType,
-                        builder: (context, value, child) {
-                          return SegmentedButton(
-                            style: SegmentedButton.styleFrom(
-                              selectedForegroundColor: Theme.of(
-                                context,
-                              ).colorScheme.onPrimary,
-                              selectedBackgroundColor: Theme.of(
-                                context,
-                              ).colorScheme.primary,
-                            ),
-                            segments: [
-                              ButtonSegment<LoginTypeEnum>(
-                                value: LoginTypeEnum.owner,
-                                label: Text(context.l10n.owner),
-                              ),
-                              ButtonSegment<LoginTypeEnum>(
-                                value: LoginTypeEnum.employee,
-                                label: Text(context.l10n.employee),
-                              ),
-                            ],
-                            selected: {value},
-                            onSelectionChanged: (selection) {
-                              FocusScope.of(context).unfocus();
-                              _loginType.value = selection.first;
-                            },
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 24),
                       Text(
                         context.l10n.login,
                         style: Theme.of(context).textTheme.headlineMedium
@@ -178,29 +141,16 @@ class _LoginPageState extends State<LoginPage> {
                       const SizedBox(height: 24),
 
                       // Email field
-                      ValueListenableBuilder<LoginTypeEnum>(
-                        valueListenable: _loginType,
-                        builder: (context, value, child) {
-                          return AuthTextField(
-                            controller: _emailController,
-                            label: value == LoginTypeEnum.owner
-                                ? context.l10n.email
-                                : context.l10n.phone,
-                            hint: value == LoginTypeEnum.owner
-                                ? context.l10n.enterEmail
-                                : context.l10n.enterPhone,
-                            icon: value == LoginTypeEnum.owner
-                                ? Icons.email_outlined
-                                : Icons.phone_outlined,
-                            keyboardType: value == LoginTypeEnum.owner
-                                ? TextInputType.emailAddress
-                                : TextInputType.phone,
-                            textInputAction: TextInputAction.next,
-                            onChanged: (valueText) {
-                              loginRequestBody = value == LoginTypeEnum.owner
-                                  ? loginRequestBody.copyWith(email: valueText)
-                                  : loginRequestBody.copyWith(phone: valueText);
-                            },
+                      AuthTextField(
+                        controller: _emailController,
+                        label: context.l10n.email,
+                        hint: context.l10n.enterEmail,
+                        icon: Icons.email_outlined,
+                        keyboardType: TextInputType.emailAddress,
+                        textInputAction: TextInputAction.next,
+                        onChanged: (valueText) {
+                          loginRequestBody = loginRequestBody.copyWith(
+                            email: valueText,
                           );
                         },
                       ),
@@ -301,7 +251,6 @@ class _LoginPageState extends State<LoginPage> {
                             FirebaseAnalyticsHelper.logEvent(
                               name: 'login_success',
                               parameters: {
-                                'login_type': 'owner',
                                 'user_id': data?.user?.id ?? '',
                               },
                             );
@@ -322,46 +271,25 @@ class _LoginPageState extends State<LoginPage> {
                         builder: (context, state) {
                           final isLoading =
                               state.status == AuthenticationStatus.loading;
-                          return ValueListenableBuilder<LoginTypeEnum>(
-                            valueListenable: _loginType,
-                            builder: (context, value, child) {
-                              return AuthPrimaryButton(
-                                label: context.l10n.login,
-                                isLoading: isLoading,
-                                onPressed: () {
-                                  final typeStr = value == LoginTypeEnum.owner
-                                      ? 'owner'
-                                      : 'employee';
-                                  FirebaseAnalyticsHelper.logEvent(
-                                    name: 'login_started',
-                                    parameters: {'login_type': typeStr},
-                                  );
-                                  FirebasePerformanceHelper.startTrace(
-                                    'login_process',
-                                  );
+                          return AuthPrimaryButton(
+                            label: context.l10n.login,
+                            isLoading: isLoading,
+                            onPressed: () {
+                              FirebaseAnalyticsHelper.logEvent(
+                                name: 'login_started',
+                              );
+                              FirebasePerformanceHelper.startTrace(
+                                'login_process',
+                              );
 
-                                  if (value == LoginTypeEnum.owner) {
-                                    BlocProvider.of<AuthenticationBloc>(
-                                      context,
-                                    ).add(
-                                      Login(
-                                        loginRequestBody.copyWith(
-                                          deviceId: AuthenticationPage.deviceId,
-                                        ),
-                                      ),
-                                    );
-                                  } else {
-                                    BlocProvider.of<AuthenticationBloc>(
-                                      context,
-                                    ).add(
-                                      Login(
-                                        loginRequestBody.copyWith(
-                                          deviceId: AuthenticationPage.deviceId,
-                                        ),
-                                      ),
-                                    );
-                                  }
-                                },
+                              BlocProvider.of<AuthenticationBloc>(
+                                context,
+                              ).add(
+                                Login(
+                                  loginRequestBody.copyWith(
+                                    deviceId: AuthenticationPage.deviceId,
+                                  ),
+                                ),
                               );
                             },
                           );

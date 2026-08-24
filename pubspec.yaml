@@ -1,5 +1,5 @@
-name: sstrip
-description: "A Flutter starter base application."
+name: report_person
+description: "Report Person base application"
 publish_to: 'none'
 
 version: 1.0.0+1

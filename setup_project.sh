@@ -12,7 +12,8 @@
 #       --dart-name "my_app" \
 #       --package-id "com.company.myapp" \
 #       --base-url "https://api.myapp.com" \
-#       --auth-base-url "https://api.myapp.com"
+#       --auth-base-url "https://api.myapp.com" \
+#       --upload-url "https://upload.myapp.com"
 # ==============================================================================
 
 set -e
@@ -46,6 +47,7 @@ DART_NAME=""
 PACKAGE_ID=""
 BASE_URL=""
 BASE_AUTH_URL=""
+UPLOAD_URL=""
 SUPABASE_URL=""
 SUPABASE_ANON_KEY=""
 
@@ -56,6 +58,7 @@ while [[ "$#" -gt 0 ]]; do
         --package-id) PACKAGE_ID="$2"; shift ;;
         --base-url) BASE_URL="$2"; shift ;;
         --auth-base-url) BASE_AUTH_URL="$2"; shift ;;
+        --upload-url) UPLOAD_URL="$2"; shift ;;
         --supabase-url) SUPABASE_URL="$2"; shift ;;
         --supabase-anon-key) SUPABASE_ANON_KEY="$2"; shift ;;
         -h|--help)
@@ -66,6 +69,7 @@ while [[ "$#" -gt 0 ]]; do
             echo "  --package-id <id>         Bundle/Application ID (e.g., 'com.example.myapp')"
             echo "  --base-url <url>          Backend API Base URL"
             echo "  --auth-base-url <url>     Backend Auth API Base URL"
+            echo "  --upload-url <url>        Backend Upload API Base URL"
             echo "  --supabase-url <url>      Supabase Project URL (optional)"
             echo "  --supabase-anon-key <key> Supabase Anon Key (optional)"
             exit 0
@@ -112,12 +116,20 @@ if [ -z "$BASE_AUTH_URL" ]; then
     fi
 fi
 
+if [ -z "$UPLOAD_URL" ]; then
+    read -p "$(echo -e "${YELLOW}👉 Enter Upload Base URL [default: $BASE_URL]: ${NC}")" UPLOAD_URL
+    if [ -z "$UPLOAD_URL" ]; then
+        UPLOAD_URL="$BASE_URL"
+    fi
+fi
+
 echo -e "\n${BOLD}${BLUE}--- Review Configuration ---${NC}"
 echo -e "📱 App Name:        ${GREEN}$APP_NAME${NC}"
 echo -e "📦 Dart Package:    ${GREEN}$DART_NAME${NC} (Previous: $OLD_DART_NAME)"
 echo -e "🆔 Package / ID:     ${GREEN}$PACKAGE_ID${NC} (Previous: $OLD_PACKAGE_ID)"
 echo -e "🌐 API Base URL:    ${GREEN}$BASE_URL${NC}"
 echo -e "🔐 Auth Base URL:   ${GREEN}$BASE_AUTH_URL${NC}"
+echo -e "📤 Upload Base URL: ${GREEN}$UPLOAD_URL${NC}"
 echo -e "----------------------------\n"
 
 read -p "Proceed with configuration? (y/N): " CONFIRM
@@ -196,6 +208,7 @@ if [ -f "$DEV_ENV" ]; then
     sed -i "" "s|^APP_NAME=.*|APP_NAME=\x27$APP_NAME - dev\x27|" "$DEV_ENV"
     sed -i "" "s|^BASE_URL=.*|BASE_URL=\x27$BASE_URL\x27|" "$DEV_ENV"
     sed -i "" "s|^BASE_AUTH_URL=.*|BASE_AUTH_URL=\x27$BASE_AUTH_URL\x27|" "$DEV_ENV"
+    sed -i "" "s|^UPLOAD_URL=.*|UPLOAD_URL=\x27$UPLOAD_URL\x27|" "$DEV_ENV"
     if [ -n "$SUPABASE_URL" ]; then
         sed -i "" "s|^SUPABASE_URL=.*|SUPABASE_URL=\x27$SUPABASE_URL\x27|" "$DEV_ENV"
     fi
@@ -208,6 +221,7 @@ if [ -f "$PROD_ENV" ]; then
     sed -i "" "s|^APP_NAME=.*|APP_NAME=\x27$APP_NAME\x27|" "$PROD_ENV"
     sed -i "" "s|^BASE_URL=.*|BASE_URL=\x27$BASE_URL\x27|" "$PROD_ENV"
     sed -i "" "s|^BASE_AUTH_URL=.*|BASE_AUTH_URL=\x27$BASE_AUTH_URL\x27|" "$PROD_ENV"
+    sed -i "" "s|^UPLOAD_URL=.*|UPLOAD_URL=\x27$UPLOAD_URL\x27|" "$PROD_ENV"
     if [ -n "$SUPABASE_URL" ]; then
         sed -i "" "s|^SUPABASE_URL=.*|SUPABASE_URL=\x27$SUPABASE_URL\x27|" "$PROD_ENV"
     fi

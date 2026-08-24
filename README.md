@@ -53,7 +53,8 @@ To configure and rebrand this base project into a new app, run:
   --dart-name "my_new_app" \
   --package-id "com.company.mynewapp" \
   --base-url "https://api.mynewapp.com" \
-  --auth-base-url "https://api.mynewapp.com"
+  --auth-base-url "https://api.mynewapp.com" \
+  --upload-url "https://upload.mynewapp.com"
 ```
 
 The script will automatically:

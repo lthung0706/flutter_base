@@ -8,5 +8,7 @@ export 'src/network/ez_network.dart';
 export 'src/network/endpoints/end_points.dart';
 export 'src/network/grpc/grpc_provider.dart';
 export 'src/network/log/log.dart';
+export 'src/network/supabase/supabase_network.dart';
+export 'src/network/supabase/supabase_provider.dart';
 export 'package:protobuf/protobuf.dart';
 export 'package:grpc/service_api.dart';

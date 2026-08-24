@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:sstrip/src/components/app_snackbar.dart';
-import 'package:sstrip/src/core/permission_helper.dart';
+import 'package:report_person/src/components/app_snackbar.dart';
+import 'package:report_person/src/core/permission_helper.dart';
 
 /// Example usage of PermissionHelper
 ///

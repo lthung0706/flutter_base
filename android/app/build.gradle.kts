@@ -11,19 +11,19 @@ plugins {
 }
 
 android {
-    namespace = "com.lthung123.sstrip"
+    namespace = "com.lthung.reportperson"
     flavorDimensions += listOf("environment")
 
     productFlavors {
         create("dev") {
             dimension = "environment"
-            applicationId = "com.lthung123.sstrip"
-            resValue("string", "app_name", "sstrip - dev")
+            applicationId = "com.lthung.reportperson"
+            resValue("string", "app_name", "Report Person")
         }
         create("prod") {
             dimension = "environment"
-            applicationId = "com.lthung123.sstrip"
-            resValue("string", "app_name", "sstrip")
+            applicationId = "com.lthung.reportperson"
+            resValue("string", "app_name", "Report Person")
         }
     }
     compileSdk = flutter.compileSdkVersion
@@ -41,7 +41,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.lthung123.sstrip"
+        applicationId = "com.lthung.reportperson"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

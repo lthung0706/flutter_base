@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sstrip/src/components/inputs/app_text_field.dart';
-import 'package:sstrip/src/theme/color.dart';
-import 'package:sstrip/src/theme/theme.dart';
+import 'package:report_person/src/components/inputs/app_text_field.dart';
+import 'package:report_person/src/theme/color.dart';
+import 'package:report_person/src/theme/theme.dart';
 
 void main() {
   setUpAll(() {

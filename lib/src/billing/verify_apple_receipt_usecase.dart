@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
-import 'package:sstrip/src/core/params/apple_verify_receipt_body.dart';
-import 'package:sstrip/src/data/models/data/data.dart';
-import 'package:sstrip/src/domain/entities/apple_transaction.dart';
+import 'package:report_person/src/core/params/apple_verify_receipt_body.dart';
+import 'package:report_person/src/data/models/data/data.dart';
+import 'package:report_person/src/domain/entities/apple_transaction.dart';
 
 import '../data/models/usecase/usecase.dart';
 import 'billing_store_repository.dart';

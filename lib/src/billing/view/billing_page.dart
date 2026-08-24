@@ -10,21 +10,21 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:in_app_purchase_android/billing_client_wrappers.dart';
 import 'package:in_app_purchase_android/in_app_purchase_android.dart';
 import 'package:in_app_purchase_storekit/in_app_purchase_storekit.dart';
-import 'package:sstrip/src/billing/billing_store_repository.dart';
-import 'package:sstrip/src/billing/clear_pending_purchase_usecase.dart';
-import 'package:sstrip/src/billing/get_pending_purchase_usecase.dart';
-import 'package:sstrip/src/billing/save_pending_purchase_usecase.dart';
-import 'package:sstrip/src/authentication/view/authentication_page.dart';
-import 'package:sstrip/src/core/params/apple_verify_receipt_body.dart';
-import 'package:sstrip/src/core/params/billing_store_create_body.dart';
-import 'package:sstrip/src/core/params/billing_store_update_status_body.dart';
-import 'package:sstrip/src/data/models/local/pending_purchase_model.dart';
-import 'package:sstrip/src/domain/entities/apple_transaction.dart';
-import 'package:sstrip/src/domain/entities/billing_store.dart';
-import 'package:sstrip/src/core/firebase_analytics_helper.dart';
-import 'package:sstrip/src/core/firebase_performance_helper.dart';
+import 'package:report_person/src/billing/billing_store_repository.dart';
+import 'package:report_person/src/billing/clear_pending_purchase_usecase.dart';
+import 'package:report_person/src/billing/get_pending_purchase_usecase.dart';
+import 'package:report_person/src/billing/save_pending_purchase_usecase.dart';
+import 'package:report_person/src/authentication/view/authentication_page.dart';
+import 'package:report_person/src/core/params/apple_verify_receipt_body.dart';
+import 'package:report_person/src/core/params/billing_store_create_body.dart';
+import 'package:report_person/src/core/params/billing_store_update_status_body.dart';
+import 'package:report_person/src/data/models/local/pending_purchase_model.dart';
+import 'package:report_person/src/domain/entities/apple_transaction.dart';
+import 'package:report_person/src/domain/entities/billing_store.dart';
+import 'package:report_person/src/core/firebase_analytics_helper.dart';
+import 'package:report_person/src/core/firebase_performance_helper.dart';
 
-import 'package:sstrip/src/module/injector.dart';
+import 'package:report_person/src/module/injector.dart';
 
 
 import '../../components/app_snackbar.dart';

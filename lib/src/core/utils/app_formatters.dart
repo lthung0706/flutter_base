@@ -1,5 +1,5 @@
 import 'package:app_intl/ez_intl.dart';
-import 'package:sstrip/src/authentication/view/authentication_page.dart';
+import 'package:report_person/src/authentication/view/authentication_page.dart';
 
 class AppFormatters {
   AppFormatters._();

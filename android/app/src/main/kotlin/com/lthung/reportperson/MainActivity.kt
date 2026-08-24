@@ -1,4 +1,4 @@
-package com.lthung123.sstrip
+package com.lthung.reportperson
 
 import io.flutter.embedding.android.FlutterActivity
 

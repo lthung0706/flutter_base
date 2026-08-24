@@ -1,6 +1,6 @@
 import 'package:injectable/injectable.dart';
-import 'package:sstrip/src/authentication/auth_repository.dart';
-import 'package:sstrip/src/data/models/data/data.dart';
+import 'package:report_person/src/authentication/auth_repository.dart';
+import 'package:report_person/src/data/models/data/data.dart';
 
 import '../../data/models/usecase/usecase.dart';
 

@@ -1,5 +1,5 @@
 import 'package:injectable/injectable.dart';
-import 'package:sstrip/hive_registrar.g.dart';
+import 'package:report_person/hive_registrar.g.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
 /// Service quản lý Hive database với singleton pattern

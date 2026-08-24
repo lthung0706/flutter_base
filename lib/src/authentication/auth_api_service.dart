@@ -1,9 +1,9 @@
 import 'package:app_config/app_config.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:sstrip/src/core/params/login_request_body.dart';
-import 'package:sstrip/src/core/params/register_body_params.dart';
-import 'package:sstrip/src/data/models/auth_model.dart';
-import 'package:sstrip/src/data/models/generic_respone_model.dart';
+import 'package:report_person/src/core/params/login_request_body.dart';
+import 'package:report_person/src/core/params/register_body_params.dart';
+import 'package:report_person/src/data/models/auth_model.dart';
+import 'package:report_person/src/data/models/generic_respone_model.dart';
 
 import '../core/params/add_user_request_body.dart';
 import '../core/params/refresh_token_body.dart';

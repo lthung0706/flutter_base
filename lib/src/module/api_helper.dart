@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:sstrip/src/authentication/usecase/get_user_usecase.dart';
-import 'package:sstrip/src/module/injector.dart';
+import 'package:report_person/src/authentication/usecase/get_user_usecase.dart';
+import 'package:report_person/src/module/injector.dart';
 
 Future<Map<String, dynamic>> getCollaboratorHeaders() async {
   final user = await getIt<GetUserUsecase>().call();

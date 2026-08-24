@@ -3,8 +3,8 @@
 // Check in to version control
 
 import 'package:hive_ce/hive_ce.dart';
-import 'package:sstrip/src/data/models/local/pending_purchase_model.dart';
-import 'package:sstrip/src/data/models/local/user_model.dart';
+import 'package:report_person/src/data/models/local/pending_purchase_model.dart';
+import 'package:report_person/src/data/models/local/user_model.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {
