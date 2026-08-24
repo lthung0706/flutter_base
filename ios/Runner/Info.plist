@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Sstrip</string>
+	<string>$(BUNDLE_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>sstrip</string>
+	<string>report_person</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,15 +27,15 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>SStrip sử dụng camera để chụp ảnh khi tạo sản phẩm, nhà cung cấp, kho hàng hoặc cửa hàng. Ví dụ: chụp ảnh đại diện cho một sản phẩm mới khi thêm vào danh mục.</string>
+	<string>Ứng dụng sử dụng camera để chụp ảnh và quét tài liệu/hình ảnh.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>SStrip sử dụng vị trí của bạn để hiển thị các đơn hàng gần đây và điều phối tài xế đến điểm lấy hàng. Ví dụ: khi bạn nhận đơn, ứng dụng dùng GPS để dẫn đường đến kho.</string>
+	<string>Ứng dụng sử dụng vị trí của bạn để hiển thị và điều phối vị trí theo thời gian thực.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>SStrip sử dụng vị trí nền để theo dõi lộ trình giao hàng và đảm bảo an toàn hàng hóa ngay cả khi ứng dụng đang đóng.</string>
+	<string>Ứng dụng sử dụng vị trí nền để theo dõi vị trí và đảm bảo cập nhật liên tục.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>SStrip sử dụng vị trí của bạn để hiển thị các đơn hàng gần đây và điều phối tài xế đến điểm lấy hàng. Ví dụ: khi bạn nhận đơn, ứng dụng dùng GPS để dẫn đường đến kho.</string>
+	<string>Ứng dụng sử dụng vị trí của bạn để định vị và hiển thị trên bản đồ.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>SStrip truy cập thư viện ảnh để chọn ảnh khi tạo sản phẩm, nhà cung cấp, kho hàng hoặc cửa hàng. Ví dụ: chọn ảnh đại diện từ thư viện cho một sản phẩm mới khi thêm vào cửa hàng.</string>
+	<string>Ứng dụng truy cập thư viện ảnh để tải lên hình ảnh.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UIBackgroundModes</key>

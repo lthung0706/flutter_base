@@ -4,7 +4,6 @@ import 'package:firebase_performance/firebase_performance.dart';
 import 'package:go_router/go_router.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:injectable/injectable.dart';
-import 'package:report_person/src/authentication/auth_api_service.dart';
 import 'package:report_person/src/authentication/interception_auth.dart';
 import 'package:report_person/src/core/session/session_guard.dart';
 import 'package:report_person/src/data/datasources/remote/billing_product_api_service.dart';
@@ -13,18 +12,13 @@ import 'package:report_person/src/mapper/mappers.dart';
 import 'package:report_person/src/module/api_helper.dart';
 import 'package:report_person/src/module/injector.dart';
 import 'package:report_person/src/routes/page_routes/home_routes.dart';
+import 'package:supabase_flutter/supabase_flutter.dart' as sb;
 
 const String kApiDio = 'ApiDio';
 const String kApiBaseUrl = 'ApiBaseUrl';
 
-const String kApiAuthProviderDio = 'ApiAuthProviderDio';
-const String kApiAuthProviderBaseUrl = 'ApiAuthProviderBaseUrl';
-
 const String kStaticApiDio = 'StaticApiDio';
 const String kStaticApiBaseUrl = 'StaticApiBaseUrl';
-
-const String kApiSocialDio = 'ApiSocialDio';
-const String kApiSocialBaseUrl = 'ApiSocialBaseUrl';
 
 const String kApiUploadDio = 'ApiUploadDio';
 const String kApiUploadBaseUrl = 'ApiUploadBaseUrl';
@@ -38,21 +32,6 @@ abstract class RegisterModule {
   @Named(kApiBaseUrl)
   String get collaboratorApiBaseUrl =>
       getIt<ApiNetwork>().collaboratorApiProvider.apiDio.options.baseUrl;
-
-  @Named(kApiAuthProviderDio)
-  Dio get apiAuthProviderDio =>
-      getIt<ApiNetwork>().apiAuthProvider.apiDio
-        ..interceptors.add(HeaderInterceptor());
-  @Named(kApiAuthProviderBaseUrl)
-  String get apiAuthProviderBaseUrl =>
-      getIt<ApiNetwork>().apiAuthProvider.apiDio.options.baseUrl;
-
-  @Named(kApiSocialDio)
-  Dio get collaboratorApiSocialDio =>
-      getIt<ApiNetwork>().apiSocialProvider.apiDio;
-  @Named(kApiSocialBaseUrl)
-  String get collaboratorApiSocialBaseUrl =>
-      getIt<ApiNetwork>().apiSocialProvider.apiDio.options.baseUrl;
 
   @Named(kStaticApiDio)
   Dio get collaboratorStaticApiDio =>
@@ -97,32 +76,6 @@ abstract class RegisterModule {
   );
 
   @lazySingleton
-  GraphQLNetwork get graphQLNetwork => GraphQLNetwork(
-    enableLogger: true,
-    baseUrl: 'https://api.example.com/graphql',
-    getHeaders: () async => <String, dynamic>{},
-    enableOnlineLogger: false,
-  );
-
-  @lazySingleton
-  SocketNetwork get socketNetwork => SocketNetwork(
-    enableLogger: true,
-    getChatHeadersProvider: <String, dynamic>{},
-    enableOnlineLogger: false,
-    eventControllers: getMapStream(),
-  );
-
-  @lazySingleton
-  GrpcNetwork get grpcNetwork => GrpcNetwork(
-    enableLogger: true,
-    headersProvider: <String, dynamic>{},
-    enableOnlineLogger: false,
-  );
-
-  @lazySingleton
-  GrpcManager get grpcManager => GrpcManager();
-
-  @lazySingleton
   SupabaseNetwork get supabaseNetwork => SupabaseNetwork(
     enableLogger: AppConfig.isDebug,
     url: AppConfig.supabaseUrl,
@@ -134,18 +87,8 @@ abstract class RegisterModule {
       getIt<SupabaseNetwork>().supabaseProvider;
 
   @lazySingleton
-  SupabaseClient get supabaseClient =>
+  sb.SupabaseClient get supabaseClient =>
       getIt<SupabaseNetwork>().supabaseProvider.client;
-
-  @lazySingleton
-  AuthInterceptor get authInterceptor =>
-      AuthInterceptor(getToken: getCollaboratorHeaders);
-
-  @lazySingleton
-  AuthApiService collaboratorAuthApiService(
-    @Named(kApiAuthProviderDio) final Dio dio,
-    @Named(kApiAuthProviderBaseUrl) final String url,
-  ) => AuthApiService(dio, baseUrl: url);
 
   @lazySingleton
   UploadApiService uploadApiService(

@@ -30,14 +30,15 @@ void main() async {
     debugPrint('Firebase init error (dev): $e');
   }
 
+  // Initialize Environment Config (.env)
+  await AppConfig.init(environment: Environment.sandbox);
+
   // Configure DI
   configureDependencies();
 
   final hive = getIt<HiveServiceHelper>();
   await hive.init();
   await hive.initAssets();
-
-  await AppConfig.init(environment: Environment.sandbox);
 
   FlutterError.onError = (final details) {
     FirebaseCrashlyticsHelper.recordError(
@@ -51,10 +52,6 @@ void main() async {
     debugPrint(error.toString());
     return true;
   };
-
-  try {
-    getIt<GrpcNetwork>().grpcProvider.init();
-  } catch (_) {}
 
   try {
     await getIt<SupabaseNetwork>().supabaseProvider.init();

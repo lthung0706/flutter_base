@@ -16,8 +16,6 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:go_router/go_router.dart' as _i583;
 import 'package:in_app_purchase/in_app_purchase.dart' as _i690;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:report_person/src/authentication/auth_api_service.dart'
-    as _i747;
 import 'package:report_person/src/authentication/auth_repository.dart'
     as _i1062;
 import 'package:report_person/src/authentication/bloc/authentication_bloc.dart'
@@ -70,6 +68,7 @@ import 'package:report_person/src/mapper/mappers.dart' as _i595;
 import 'package:report_person/src/module/register_module.dart' as _i225;
 import 'package:report_person/src/presentation/app/bloc/global_app_bloc.dart'
     as _i975;
+import 'package:supabase_flutter/supabase_flutter.dart' as _i454;
 
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -92,10 +91,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i583.GoRouter>(() => registerModule.goRouter);
     gh.lazySingleton<_i595.Mapper>(() => registerModule.mapper);
     gh.lazySingleton<_i651.ApiNetwork>(() => registerModule.apiNetwork);
-    gh.lazySingleton<_i651.GraphQLNetwork>(() => registerModule.graphQLNetwork);
-    gh.lazySingleton<_i651.SocketNetwork>(() => registerModule.socketNetwork);
-    gh.lazySingleton<_i651.GrpcNetwork>(() => registerModule.grpcNetwork);
-    gh.lazySingleton<_i651.GrpcManager>(() => registerModule.grpcManager);
     gh.lazySingleton<_i651.SupabaseNetwork>(
       () => registerModule.supabaseNetwork,
     );
@@ -103,9 +98,6 @@ extension GetItInjectableX on _i174.GetIt {
       () => registerModule.supabaseProvider,
     );
     gh.lazySingleton<_i651.SupabaseClient>(() => registerModule.supabaseClient);
-    gh.lazySingleton<_i651.AuthInterceptor>(
-      () => registerModule.authInterceptor,
-    );
     gh.lazySingleton<_i690.InAppPurchase>(() => registerModule.inAppPurchase);
     gh.lazySingleton<_i975.GlobalAppBloc>(() => _i975.GlobalAppBloc());
     gh.factory<_i651.Dio>(
@@ -115,10 +107,6 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i651.Dio>(
       () => registerModule.uploadApiDio,
       instanceName: 'ApiUploadDio',
-    );
-    gh.factory<_i651.Dio>(
-      () => registerModule.collaboratorApiSocialDio,
-      instanceName: 'ApiSocialDio',
     );
     gh.factory<_i651.Dio>(
       () => registerModule.collaboratorApiDio,
@@ -133,18 +121,6 @@ extension GetItInjectableX on _i174.GetIt {
       instanceName: 'StaticApiBaseUrl',
     );
     gh.factory<String>(
-      () => registerModule.apiAuthProviderBaseUrl,
-      instanceName: 'ApiAuthProviderBaseUrl',
-    );
-    gh.factory<String>(
-      () => registerModule.collaboratorApiSocialBaseUrl,
-      instanceName: 'ApiSocialBaseUrl',
-    );
-    gh.factory<_i651.Dio>(
-      () => registerModule.apiAuthProviderDio,
-      instanceName: 'ApiAuthProviderDio',
-    );
-    gh.factory<String>(
       () => registerModule.collaboratorApiBaseUrl,
       instanceName: 'ApiBaseUrl',
     );
@@ -154,23 +130,56 @@ extension GetItInjectableX on _i174.GetIt {
         gh<String>(instanceName: 'ApiUploadBaseUrl'),
       ),
     );
+    gh.lazySingleton<_i1062.AuthRepository>(
+      () => _i1062.AuthRepositoryImpl(gh<_i454.SupabaseClient>()),
+    );
     gh.lazySingleton<_i1039.BillingProductApiService>(
       () => registerModule.billingProductApiService(
         gh<_i651.Dio>(instanceName: 'ApiDio'),
         gh<String>(instanceName: 'ApiBaseUrl'),
       ),
     );
-    gh.lazySingleton<_i747.AuthApiService>(
-      () => registerModule.collaboratorAuthApiService(
-        gh<_i651.Dio>(instanceName: 'ApiAuthProviderDio'),
-        gh<String>(instanceName: 'ApiAuthProviderBaseUrl'),
-      ),
+    gh.factory<_i267.CheckLoginedUsecase>(
+      () => _i267.CheckLoginedUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i302.GetUserUsecase>(
+      () => _i302.GetUserUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i1041.SaveUserUsecase>(
+      () => _i1041.SaveUserUsecase(gh<_i1062.AuthRepository>()),
     );
     gh.lazySingleton<_i772.BillingStoreRepository>(
       () => _i772.BillingStoreRepositoryImpl(
         gh<_i1039.BillingProductApiService>(),
         gh<_i719.BillingProductService>(),
       ),
+    );
+    gh.factory<_i543.AddUserUsecase>(
+      () => _i543.AddUserUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i39.DeleteUserUseCase>(
+      () => _i39.DeleteUserUseCase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i670.LoginAppleUsecase>(
+      () => _i670.LoginAppleUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i897.LoginGoogleUsecase>(
+      () => _i897.LoginGoogleUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i103.LoginUsecase>(
+      () => _i103.LoginUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i1063.LogoutUsecase>(
+      () => _i1063.LogoutUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i452.RefreshTokenUsecase>(
+      () => _i452.RefreshTokenUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i970.RegisterUsecase>(
+      () => _i970.RegisterUsecase(gh<_i1062.AuthRepository>()),
+    );
+    gh.factory<_i647.UpdateInfoUserUsecase>(
+      () => _i647.UpdateInfoUserUsecase(gh<_i1062.AuthRepository>()),
     );
     gh.factory<_i341.CreateBillStoreUsecase>(
       () => _i341.CreateBillStoreUsecase(
@@ -205,45 +214,6 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i931.GetBillingProductDetailsUsecase>(),
         gh<_i666.VerifyAppleReceiptUsecase>(),
       ),
-    );
-    gh.lazySingleton<_i1062.AuthRepository>(
-      () => _i1062.AuthRepositoryImpl(gh<_i747.AuthApiService>()),
-    );
-    gh.factory<_i267.CheckLoginedUsecase>(
-      () => _i267.CheckLoginedUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i302.GetUserUsecase>(
-      () => _i302.GetUserUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i1041.SaveUserUsecase>(
-      () => _i1041.SaveUserUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i543.AddUserUsecase>(
-      () => _i543.AddUserUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i39.DeleteUserUseCase>(
-      () => _i39.DeleteUserUseCase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i670.LoginAppleUsecase>(
-      () => _i670.LoginAppleUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i897.LoginGoogleUsecase>(
-      () => _i897.LoginGoogleUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i103.LoginUsecase>(
-      () => _i103.LoginUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i1063.LogoutUsecase>(
-      () => _i1063.LogoutUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i452.RefreshTokenUsecase>(
-      () => _i452.RefreshTokenUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i970.RegisterUsecase>(
-      () => _i970.RegisterUsecase(gh<_i1062.AuthRepository>()),
-    );
-    gh.factory<_i647.UpdateInfoUserUsecase>(
-      () => _i647.UpdateInfoUserUsecase(gh<_i1062.AuthRepository>()),
     );
     gh.lazySingleton<_i956.AuthenticationBloc>(
       () => _i956.AuthenticationBloc(

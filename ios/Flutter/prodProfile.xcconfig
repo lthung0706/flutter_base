@@ -2,7 +2,7 @@
 #include "Generated.xcconfig"
 
 FLUTTER_TARGET=lib/main_prod.dart
-PRODUCT_BUNDLE_IDENTIFIER=com.lthung.sstrip
+PRODUCT_BUNDLE_IDENTIFIER=com.lthung.reportperson
 ASSET_PREFIX=prod
-BUNDLE_NAME=sstrip
+BUNDLE_NAME=Report Person
 FLAVOR=prod

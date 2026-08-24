@@ -57,6 +57,7 @@ SUPABASE_ANON_KEY=""
 SETUP_FIREBASE=""
 FIREBASE_PROJECT_ID=""
 CREATE_FIREBASE_PROJECT=false
+GOOGLE_WEB_CLIENT_ID=""
 
 while [[ "$#" -gt 0 ]]; do
     case $1 in
@@ -70,6 +71,7 @@ while [[ "$#" -gt 0 ]]; do
         --supabase-anon-key) SUPABASE_ANON_KEY="$2"; shift ;;
         --firebase-project-id) FIREBASE_PROJECT_ID="$2"; SETUP_FIREBASE="true"; shift ;;
         --create-firebase-project) CREATE_FIREBASE_PROJECT=true; SETUP_FIREBASE="true"; shift ;;
+        --google-web-client-id) GOOGLE_WEB_CLIENT_ID="$2"; shift ;;
         --setup-firebase) SETUP_FIREBASE="true"; shift ;;
         --skip-firebase) SETUP_FIREBASE="false"; shift ;;
         -h|--help)
@@ -85,6 +87,7 @@ while [[ "$#" -gt 0 ]]; do
             echo "  --supabase-anon-key <key>       Supabase Anon Key (optional)"
             echo "  --firebase-project-id <id>      Firebase Project ID to link"
             echo "  --create-firebase-project       Automatically create a new Firebase project"
+            echo "  --google-web-client-id <id>     Google Web Client ID for Google Sign-In"
             echo "  --setup-firebase                Enable Firebase configuration step"
             echo "  --skip-firebase                 Skip Firebase configuration step"
             exit 0
@@ -171,6 +174,9 @@ if [ -z "$SETUP_FIREBASE" ]; then
             FIREBASE_PROJECT_ID="$(echo "$DART_NAME" | tr '_' '-')-app"
             ;;
     esac
+    if [ "$SETUP_FIREBASE" = "true" ] && [ -z "$GOOGLE_WEB_CLIENT_ID" ]; then
+        read -p "$(echo -e "${YELLOW}👉 Enter Google Web Client ID (optional, leave blank to auto-detect): ${NC}")" GOOGLE_WEB_CLIENT_ID
+    fi
 fi
 
 echo -e "\n${BOLD}${BLUE}--- Review Configuration ---${NC}"
@@ -180,6 +186,9 @@ echo -e "🆔 Package / ID:     ${GREEN}$PACKAGE_ID${NC} (Previous: $OLD_PACKAGE
 echo -e "🌐 API Base URL:    ${GREEN}$BASE_URL${NC}"
 echo -e "🔐 Auth Base URL:   ${GREEN}$BASE_AUTH_URL${NC}"
 echo -e "📤 Upload Base URL: ${GREEN}$UPLOAD_URL${NC}"
+if [ -n "$GOOGLE_WEB_CLIENT_ID" ]; then
+    echo -e "🔑 Web Client ID:   ${GREEN}$GOOGLE_WEB_CLIENT_ID${NC}"
+fi
 if [ "$SETUP_FIREBASE" = "true" ]; then
     if [ "$CREATE_FIREBASE_PROJECT" = true ]; then
         echo -e "🔥 Firebase:        ${GREEN}Create new project ($FIREBASE_PROJECT_ID)${NC}"
@@ -261,9 +270,16 @@ if [ -f "ios/Runner.xcodeproj/project.pbxproj" ]; then
     sed -i "" "s/PRODUCT_BUNDLE_IDENTIFIER = $PACKAGE_ID.RunnerTests;/PRODUCT_BUNDLE_IDENTIFIER = $PACKAGE_ID.RunnerTests;/g" ios/Runner.xcodeproj/project.pbxproj
 fi
 
+# iOS xcconfig files
+find ios -name "*.xcconfig" -type f | while read -r xcfile; do
+    sed -i "" "s|^PRODUCT_BUNDLE_IDENTIFIER=.*|PRODUCT_BUNDLE_IDENTIFIER=$PACKAGE_ID|g" "$xcfile"
+    sed -i "" "s|^BUNDLE_NAME=.* - dev|BUNDLE_NAME=$APP_NAME - dev|g" "$xcfile"
+    sed -i "" "s|^BUNDLE_NAME=.*|BUNDLE_NAME=$APP_NAME|g" "$xcfile"
+done
+
 if [ -f "ios/Runner/Info.plist" ]; then
     sed -i "" "s|<key>CFBundleDisplayName</key>[[:space:]]*<string>[^<]*</string>|<key>CFBundleDisplayName</key>\
-	<string>$APP_NAME</string>|g" ios/Runner/Info.plist
+	<string>\$(BUNDLE_NAME)</string>|g" ios/Runner/Info.plist
     sed -i "" "s|<key>CFBundleName</key>[[:space:]]*<string>[^<]*</string>|<key>CFBundleName</key>\
 	<string>$DART_NAME</string>|g" ios/Runner/Info.plist
 fi
@@ -390,6 +406,157 @@ if [ "$SETUP_FIREBASE" = "true" ]; then
             -y -f
     fi
     echo -e "${GREEN}✔ Firebase configured successfully.${NC}"
+
+    echo -e "\n${BOLD}🔑 Step 7.1: Extracting Debug Keystore SHA Fingerprints & Registering with Firebase...${NC}"
+    DEBUG_KEYSTORE="$HOME/.android/debug.keystore"
+    if [ ! -f "$DEBUG_KEYSTORE" ]; then
+        echo -e "🔹 Keystore not found at $DEBUG_KEYSTORE, generating a new debug keystore..."
+        mkdir -p "$HOME/.android"
+        keytool -genkey -v -keystore "$DEBUG_KEYSTORE" -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" >/dev/null 2>&1 || true
+    fi
+
+    DEBUG_SHA1=$(keytool -list -v -keystore "$DEBUG_KEYSTORE" -alias androiddebugkey -storepass android -keypass android 2>/dev/null | grep "SHA1:" | head -n 1 | awk '{print $2}')
+    DEBUG_SHA256=$(keytool -list -v -keystore "$DEBUG_KEYSTORE" -alias androiddebugkey -storepass android -keypass android 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $2}')
+
+    echo -e "  📌 Debug SHA-1:   ${GREEN}${DEBUG_SHA1:-Not found}${NC}"
+    echo -e "  📌 Debug SHA-256: ${GREEN}${DEBUG_SHA256:-Not found}${NC}"
+
+    FB_PROJECT="$FIREBASE_PROJECT_ID"
+    if [ -z "$FB_PROJECT" ] || [ "$FB_PROJECT" = "interactive" ]; then
+        if [ -f "android/app/google-services.json" ]; then
+            FB_PROJECT=$(grep '"project_id"' android/app/google-services.json 2>/dev/null | head -n 1 | sed -E 's/.*"project_id": "([^"]+)".*/\1/')
+        fi
+    fi
+
+    ANDROID_APP_ID=""
+    if [ -f "android/app/google-services.json" ]; then
+        ANDROID_APP_ID=$(grep '"mobilesdk_app_id"' android/app/google-services.json 2>/dev/null | head -n 1 | sed -E 's/.*"mobilesdk_app_id": "([^"]+)".*/\1/')
+    fi
+
+    G_TOKEN=""
+    if command -v gcloud &> /dev/null; then
+        G_TOKEN=$(gcloud auth print-access-token 2>/dev/null || true)
+    fi
+
+    if [ -n "$G_TOKEN" ] && [ -n "$FB_PROJECT" ] && [ -n "$ANDROID_APP_ID" ] && [ -n "$DEBUG_SHA1" ]; then
+        echo -e "🔹 Auto-registering SHA-1 & SHA-256 to Firebase project '$FB_PROJECT'..."
+        SHA1_HEX=$(echo "$DEBUG_SHA1" | tr -d ':')
+        SHA256_HEX=$(echo "$DEBUG_SHA256" | tr -d ':')
+        
+        curl -s -X POST \
+          -H "Authorization: Bearer $G_TOKEN" \
+          -H "X-Goog-User-Project: $FB_PROJECT" \
+          -H "Content-Type: application/json" \
+          -d "{\"shaHash\": \"$SHA1_HEX\", \"certType\": \"SHA_1\"}" \
+          "https://firebase.googleapis.com/v1beta1/projects/$FB_PROJECT/androidApps/$ANDROID_APP_ID/sha" >/dev/null 2>&1 || true
+
+        curl -s -X POST \
+          -H "Authorization: Bearer $G_TOKEN" \
+          -H "X-Goog-User-Project: $FB_PROJECT" \
+          -H "Content-Type: application/json" \
+          -d "{\"shaHash\": \"$SHA256_HEX\", \"certType\": \"SHA_256\"}" \
+          "https://firebase.googleapis.com/v1beta1/projects/$FB_PROJECT/androidApps/$ANDROID_APP_ID/sha" >/dev/null 2>&1 || true
+
+        echo -e "${GREEN}✔ SHA fingerprints registered to Firebase.${NC}"
+
+        # Re-fetch latest google-services.json with new SHA config
+        if command -v firebase &> /dev/null; then
+            firebase apps:sdkconfig ANDROID "$ANDROID_APP_ID" --project="$FB_PROJECT" > android/app/google-services.json 2>/dev/null || true
+        fi
+    fi
+
+    echo -e "\n${BOLD}🔐 Step 7.2: Extracting Google OAuth 2.0 Client IDs (GCP / Firebase)...${NC}"
+    # Read Web Client ID and Android Client ID from google-services.json
+    WEB_CLIENT_ID=$(python3 -c "
+import json
+try:
+    with open('android/app/google-services.json') as f:
+        data = json.load(f)
+        for client in data.get('client', []):
+            for oauth in client.get('oauth_client', []):
+                if oauth.get('client_type') == 3:
+                    print(oauth.get('client_id'))
+                    exit(0)
+            for other in client.get('services', {}).get('appinvite_service', {}).get('other_platform_oauth_client', []):
+                if other.get('client_type') == 3:
+                    print(other.get('client_id'))
+                    exit(0)
+except Exception:
+    pass
+" 2>/dev/null || true)
+
+    ANDROID_CLIENT_ID=$(python3 -c "
+import json
+try:
+    with open('android/app/google-services.json') as f:
+        data = json.load(f)
+        for client in data.get('client', []):
+            for oauth in client.get('oauth_client', []):
+                if oauth.get('client_type') == 1:
+                    print(oauth.get('client_id'))
+                    exit(0)
+except Exception:
+    pass
+" 2>/dev/null || true)
+
+    IOS_CLIENT_ID=$(python3 -c "
+import plistlib
+try:
+    with open('ios/Runner/GoogleService-Info.plist', 'rb') as f:
+        data = plistlib.load(f)
+        print(data.get('CLIENT_ID', ''))
+except Exception:
+    pass
+" 2>/dev/null || true)
+
+    REVERSED_CLIENT_ID=$(python3 -c "
+import plistlib
+try:
+    with open('ios/Runner/GoogleService-Info.plist', 'rb') as f:
+        data = plistlib.load(f)
+        print(data.get('REVERSED_CLIENT_ID', ''))
+except Exception:
+    pass
+" 2>/dev/null || true)
+
+    if [ -n "$GOOGLE_WEB_CLIENT_ID" ]; then
+        WEB_CLIENT_ID="$GOOGLE_WEB_CLIENT_ID"
+    fi
+
+    # Update login_page.dart if WEB_CLIENT_ID is found
+    if [ -n "$WEB_CLIENT_ID" ] && [ -f "lib/src/authentication/view/login_page.dart" ]; then
+        sed -i "" -E "s/serverClientId:[[:space:]]*'[^']*'/serverClientId: '$WEB_CLIENT_ID'/g" lib/src/authentication/view/login_page.dart
+        echo -e "${GREEN}✔ Updated serverClientId in login_page.dart -> $WEB_CLIENT_ID${NC}"
+    fi
+
+    # Update iOS Info.plist with iOS Client ID & URL Scheme
+    if [ -n "$IOS_CLIENT_ID" ] && [ -f "ios/Runner/Info.plist" ]; then
+        if grep -q "<key>GIDClientID</key>" ios/Runner/Info.plist; then
+            sed -i "" -E "s|<key>GIDClientID</key>[[:space:]]*<string>[^<]*</string>|<key>GIDClientID</key>\
+	<string>$IOS_CLIENT_ID</string>|g" ios/Runner/Info.plist
+        fi
+    fi
+
+    if [ -n "$REVERSED_CLIENT_ID" ] && [ -f "ios/Runner/Info.plist" ]; then
+        if grep -q "com.googleusercontent.apps." ios/Runner/Info.plist; then
+            sed -i "" -E "s|<string>com\.googleusercontent\.apps\.[^<]*</string>|<string>$REVERSED_CLIENT_ID</string>|g" ios/Runner/Info.plist
+        fi
+    fi
+
+    echo -e "\n${BOLD}${BLUE}╔══════════════════════════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${BOLD}${BLUE}║                     GOOGLE SIGN-IN & GCP CREDENTIALS                         ║${NC}"
+    echo -e "${BOLD}${BLUE}╠══════════════════════════════════════════════════════════════════════════════╣${NC}"
+    echo -e "  🌐 Web Client ID (serverClientId):  ${GREEN}${WEB_CLIENT_ID:-'Chưa có (Bật Google Sign-in tại Firebase Console)'}${NC}"
+    echo -e "  🤖 Android Client ID:              ${GREEN}${ANDROID_CLIENT_ID:-'Tự động nhận diện qua SHA-1'}${NC}"
+    echo -e "  🍎 iOS Client ID:                  ${GREEN}${IOS_CLIENT_ID:-'N/A'}${NC}"
+    echo -e "  🔄 Reversed iOS Client ID:         ${GREEN}${REVERSED_CLIENT_ID:-'N/A'}${NC}"
+    echo -e "  🔑 Debug SHA-1:                    ${GREEN}${DEBUG_SHA1:-'N/A'}${NC}"
+    echo -e "  🔑 Debug SHA-256:                  ${GREEN}${DEBUG_SHA256:-'N/A'}${NC}"
+    if [ -n "$FB_PROJECT" ]; then
+        echo -e "  🔗 Firebase Auth Console:          ${YELLOW}https://console.firebase.google.com/project/$FB_PROJECT/authentication/providers${NC}"
+        echo -e "  🔗 GCP Credentials Console:        ${YELLOW}https://console.cloud.google.com/apis/credentials?project=$FB_PROJECT${NC}"
+    fi
+    echo -e "${BOLD}${BLUE}╚══════════════════════════════════════════════════════════════════════════════╝${NC}\n"
 fi
 
 echo -e "\n${BOLD}🔄 Step 8: Updating Project Folder Alias...${NC}"
