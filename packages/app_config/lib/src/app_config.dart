@@ -68,8 +68,6 @@ class AppConfig {
   //------------CONFIGS AFTER THIS LINE CAN BE MODIFIED MANUALLY------------------
   static const Duration connectTimeout = Duration(milliseconds: 20000);
   static const Duration receiveTimeout = Duration(milliseconds: 10000);
-  static const String socketProduct = 'theAdvanceApp';
-  static const String socketApiToken =
-      '284ecb4533b197d2fa9bca5737'
-      'f41fa89b5a653a38c7ec1e4614425ccb4954e4';
+  static const String socketProduct = 'baseApp';
+  static const String socketApiToken = '';
 }

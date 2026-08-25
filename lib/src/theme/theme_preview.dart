@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:report_person/src/theme/theme.dart';
+import 'package:flutter_base/src/theme/theme.dart';
 
 import 'package:flutter/widget_previews.dart';
 

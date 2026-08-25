@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:report_person/src/authentication/auth.dart';
-import 'package:report_person/src/core/constants/key_local_store.dart';
-import 'package:report_person/src/core/hive_service_helper.dart';
-import 'package:report_person/src/core/params/add_user_request_body.dart';
-import 'package:report_person/src/core/params/login_request_body.dart';
-import 'package:report_person/src/core/params/refresh_token_body.dart';
-import 'package:report_person/src/core/params/register_body_params.dart';
-import 'package:report_person/src/core/params/user_request_body.dart';
-import 'package:report_person/src/data/models/data/data.dart';
-import 'package:report_person/src/data/models/error/api_error.dart';
-import 'package:report_person/src/data/models/local/user_model.dart';
-import 'package:report_person/src/domain/entities/auth_register.dart';
-import 'package:report_person/src/domain/entities/user_updated.dart';
-import 'package:report_person/src/module/injector.dart';
+import 'package:flutter_base/src/authentication/auth.dart';
+import 'package:flutter_base/src/core/constants/key_local_store.dart';
+import 'package:flutter_base/src/core/hive_service_helper.dart';
+import 'package:flutter_base/src/core/params/add_user_request_body.dart';
+import 'package:flutter_base/src/core/params/login_request_body.dart';
+import 'package:flutter_base/src/core/params/refresh_token_body.dart';
+import 'package:flutter_base/src/core/params/register_body_params.dart';
+import 'package:flutter_base/src/core/params/user_request_body.dart';
+import 'package:flutter_base/src/data/models/data/data.dart';
+import 'package:flutter_base/src/data/models/error/api_error.dart';
+import 'package:flutter_base/src/data/models/local/user_model.dart';
+import 'package:flutter_base/src/domain/entities/auth_register.dart';
+import 'package:flutter_base/src/domain/entities/user_updated.dart';
+import 'package:flutter_base/src/module/injector.dart';
 import 'package:supabase_flutter/supabase_flutter.dart' as sb;
 
 abstract class AuthRepository {
@@ -113,8 +113,10 @@ class AuthRepositoryImpl implements AuthRepository {
       if (session != null) {
         return DataSuccess(_mapSessionToAuthData(session));
       }
+      debugPrint('google login failed: ${response.user}');
       return const DataFailure(ApiError(message: 'Google login failed'));
     } on sb.AuthException catch (error) {
+      debugPrint('google login failed: ${error.message}');
       return DataFailure(
         ApiError(
           message: error.message,

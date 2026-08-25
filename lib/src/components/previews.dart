@@ -1,6 +1,6 @@
 import 'package:flutter/widget_previews.dart';
 import 'package:flutter/material.dart';
-import 'package:report_person/src/theme/theme.dart';
+import 'package:flutter_base/src/theme/theme.dart';
 
 import 'bottom_confirm.dart';
 import 'add_button_placeholder.dart';

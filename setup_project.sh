@@ -13,8 +13,7 @@
 #       --package-id "com.company.myapp" \
 #       --base-url "https://api.myapp.com" \
 #       --auth-base-url "https://api.myapp.com" \
-#       --upload-url "https://upload.myapp.com" \
-#       --firebase-project-id "my-app-firebase"
+#       --upload-url "https://upload.myapp.com"
 # ==============================================================================
 
 set -e
@@ -24,6 +23,7 @@ GREEN="\033[0;32m"
 BLUE="\033[0;34m"
 YELLOW="\033[1;33m"
 RED="\033[0;31m"
+CYAN="\033[0;36m"
 NC="\033[0m"
 
 echo -e "${BOLD}${BLUE}======================================================${NC}"
@@ -33,17 +33,14 @@ echo -e "${BOLD}${BLUE}======================================================${N
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$PROJECT_ROOT"
 
-# Ensure pub-cache bin is in PATH for flutterfire
-export PATH="$PATH:$HOME/.pub-cache/bin"
-
 OLD_DART_NAME=$(grep "^name:" pubspec.yaml | head -n 1 | awk '{print $2}' | tr -d '\r\n')
 if [ -z "$OLD_DART_NAME" ]; then
-    OLD_DART_NAME="sstrip"
+    OLD_DART_NAME="report_person"
 fi
 
 OLD_PACKAGE_ID=$(grep "namespace = " android/app/build.gradle.kts | head -n 1 | sed -E 's/.*namespace = "([^"]+)".*/\1/')
 if [ -z "$OLD_PACKAGE_ID" ]; then
-    OLD_PACKAGE_ID="com.lthung123.sstrip"
+    OLD_PACKAGE_ID="com.lthung.reportperson"
 fi
 
 APP_NAME=""
@@ -52,12 +49,8 @@ PACKAGE_ID=""
 BASE_URL=""
 BASE_AUTH_URL=""
 UPLOAD_URL=""
-SUPABASE_URL=""
-SUPABASE_ANON_KEY=""
-SETUP_FIREBASE=""
-FIREBASE_PROJECT_ID=""
-CREATE_FIREBASE_PROJECT=false
-GOOGLE_WEB_CLIENT_ID=""
+
+AUTO_CONFIRM=false
 
 while [[ "$#" -gt 0 ]]; do
     case $1 in
@@ -67,13 +60,7 @@ while [[ "$#" -gt 0 ]]; do
         --base-url) BASE_URL="$2"; shift ;;
         --auth-base-url) BASE_AUTH_URL="$2"; shift ;;
         --upload-url) UPLOAD_URL="$2"; shift ;;
-        --supabase-url) SUPABASE_URL="$2"; shift ;;
-        --supabase-anon-key) SUPABASE_ANON_KEY="$2"; shift ;;
-        --firebase-project-id) FIREBASE_PROJECT_ID="$2"; SETUP_FIREBASE="true"; shift ;;
-        --create-firebase-project) CREATE_FIREBASE_PROJECT=true; SETUP_FIREBASE="true"; shift ;;
-        --google-web-client-id) GOOGLE_WEB_CLIENT_ID="$2"; shift ;;
-        --setup-firebase) SETUP_FIREBASE="true"; shift ;;
-        --skip-firebase) SETUP_FIREBASE="false"; shift ;;
+        -y|--yes) AUTO_CONFIRM=true ;;
         -h|--help)
             echo "Usage: ./setup_project.sh [options]"
             echo "Options:"
@@ -83,16 +70,10 @@ while [[ "$#" -gt 0 ]]; do
             echo "  --base-url <url>                Backend API Base URL"
             echo "  --auth-base-url <url>           Backend Auth API Base URL"
             echo "  --upload-url <url>              Backend Upload API Base URL"
-            echo "  --supabase-url <url>            Supabase Project URL (optional)"
-            echo "  --supabase-anon-key <key>       Supabase Anon Key (optional)"
-            echo "  --firebase-project-id <id>      Firebase Project ID to link"
-            echo "  --create-firebase-project       Automatically create a new Firebase project"
-            echo "  --google-web-client-id <id>     Google Web Client ID for Google Sign-In"
-            echo "  --setup-firebase                Enable Firebase configuration step"
-            echo "  --skip-firebase                 Skip Firebase configuration step"
+            echo "  -y, --yes                       Skip confirmation prompt"
             exit 0
             ;;
-        *) echo "Unknown option: $1"; exit 1 ;;
+        *) echo -e "${RED}Unknown option: $1${NC}"; exit 1 ;;
     esac
     shift
 done
@@ -106,76 +87,58 @@ fi
 
 if [ -z "$DART_NAME" ]; then
     SUGGESTED_DART_NAME=$(echo "$APP_NAME" | tr '[:upper:]' '[:lower:]' | sed "s/[^a-z0-9]/_/g" | sed "s/__*/_/g" | sed "s/^_//;s/_$//")
-    read -p "$(echo -e "${YELLOW}👉 Enter Dart Package Name [default: $SUGGESTED_DART_NAME]: ${NC}")" DART_NAME
-    if [ -z "$DART_NAME" ]; then
+    if [ "$AUTO_CONFIRM" = true ]; then
         DART_NAME="$SUGGESTED_DART_NAME"
+    else
+        read -p "$(echo -e "${YELLOW}👉 Enter Dart Package Name [default: $SUGGESTED_DART_NAME]: ${NC}")" DART_NAME
+        if [ -z "$DART_NAME" ]; then
+            DART_NAME="$SUGGESTED_DART_NAME"
+        fi
     fi
 fi
 
 if [ -z "$PACKAGE_ID" ]; then
     SUGGESTED_PKG="com.example.$(echo "$DART_NAME" | tr "_" "")"
-    read -p "$(echo -e "${YELLOW}👉 Enter Package ID / Bundle ID [default: $SUGGESTED_PKG]: ${NC}")" PACKAGE_ID
-    if [ -z "$PACKAGE_ID" ]; then
+    if [ "$AUTO_CONFIRM" = true ]; then
         PACKAGE_ID="$SUGGESTED_PKG"
+    else
+        read -p "$(echo -e "${YELLOW}👉 Enter Package ID / Bundle ID [default: $SUGGESTED_PKG]: ${NC}")" PACKAGE_ID
+        if [ -z "$PACKAGE_ID" ]; then
+            PACKAGE_ID="$SUGGESTED_PKG"
+        fi
     fi
 fi
 
 if [ -z "$BASE_URL" ]; then
-    read -p "$(echo -e "${YELLOW}👉 Enter Backend API Base URL [default: https://api.example.com]: ${NC}")" BASE_URL
-    if [ -z "$BASE_URL" ]; then
+    if [ "$AUTO_CONFIRM" = true ]; then
         BASE_URL="https://api.example.com"
+    else
+        read -p "$(echo -e "${YELLOW}👉 Enter Backend API Base URL [default: https://api.example.com]: ${NC}")" BASE_URL
+        if [ -z "$BASE_URL" ]; then
+            BASE_URL="https://api.example.com"
+        fi
     fi
 fi
 
 if [ -z "$BASE_AUTH_URL" ]; then
-    read -p "$(echo -e "${YELLOW}👉 Enter Auth Base URL [default: $BASE_URL]: ${NC}")" BASE_AUTH_URL
-    if [ -z "$BASE_AUTH_URL" ]; then
+    if [ "$AUTO_CONFIRM" = true ]; then
         BASE_AUTH_URL="$BASE_URL"
+    else
+        read -p "$(echo -e "${YELLOW}👉 Enter Auth Base URL [default: $BASE_URL]: ${NC}")" BASE_AUTH_URL
+        if [ -z "$BASE_AUTH_URL" ]; then
+            BASE_AUTH_URL="$BASE_URL"
+        fi
     fi
 fi
 
 if [ -z "$UPLOAD_URL" ]; then
-    read -p "$(echo -e "${YELLOW}👉 Enter Upload Base URL [default: $BASE_URL]: ${NC}")" UPLOAD_URL
-    if [ -z "$UPLOAD_URL" ]; then
+    if [ "$AUTO_CONFIRM" = true ]; then
         UPLOAD_URL="$BASE_URL"
-    fi
-fi
-
-if [ -z "$SETUP_FIREBASE" ]; then
-    echo -e "\n${BOLD}${BLUE}🔥 Firebase Setup Configuration:${NC}"
-    echo "  1) Create a brand new Firebase project automatically (Recommended)"
-    echo "  2) Connect to an existing Firebase project (by Project ID)"
-    echo "  3) Run interactive flutterfire configure"
-    echo "  4) Skip Firebase setup"
-    read -p "$(echo -e "${YELLOW}👉 Choose an option [1-4, default: 1]: ${NC}")" FB_OPT
-    FB_OPT=${FB_OPT:-1}
-    case "$FB_OPT" in
-        1)
-            SETUP_FIREBASE="true"
-            CREATE_FIREBASE_PROJECT=true
-            SUGGESTED_FB_ID="$(echo "$DART_NAME" | tr '_' '-')-app"
-            read -p "$(echo -e "${YELLOW}👉 Enter new Firebase Project ID [default: $SUGGESTED_FB_ID]: ${NC}")" CUSTOM_FB_ID
-            FIREBASE_PROJECT_ID="${CUSTOM_FB_ID:-$SUGGESTED_FB_ID}"
-            ;;
-        2)
-            SETUP_FIREBASE="true"
-            read -p "$(echo -e "${YELLOW}👉 Enter existing Firebase Project ID: ${NC}")" FIREBASE_PROJECT_ID
-            ;;
-        3)
-            SETUP_FIREBASE="true"
-            FIREBASE_PROJECT_ID="interactive"
-            ;;
-        4)
-            SETUP_FIREBASE="false"
-            ;;
-        *)
-            SETUP_FIREBASE="true"
-            CREATE_FIREBASE_PROJECT=true
-            FIREBASE_PROJECT_ID="$(echo "$DART_NAME" | tr '_' '-')-app"
-            ;;
-    esac
-    if [ "$SETUP_FIREBASE" = "true" ] && [ -z "$GOOGLE_WEB_CLIENT_ID" ]; then
-        read -p "$(echo -e "${YELLOW}👉 Enter Google Web Client ID (optional, leave blank to auto-detect): ${NC}")" GOOGLE_WEB_CLIENT_ID
+    else
+        read -p "$(echo -e "${YELLOW}👉 Enter Upload Base URL [default: $BASE_URL]: ${NC}")" UPLOAD_URL
+        if [ -z "$UPLOAD_URL" ]; then
+            UPLOAD_URL="$BASE_URL"
+        fi
     fi
 fi
 
@@ -186,26 +149,14 @@ echo -e "🆔 Package / ID:     ${GREEN}$PACKAGE_ID${NC} (Previous: $OLD_PACKAGE
 echo -e "🌐 API Base URL:    ${GREEN}$BASE_URL${NC}"
 echo -e "🔐 Auth Base URL:   ${GREEN}$BASE_AUTH_URL${NC}"
 echo -e "📤 Upload Base URL: ${GREEN}$UPLOAD_URL${NC}"
-if [ -n "$GOOGLE_WEB_CLIENT_ID" ]; then
-    echo -e "🔑 Web Client ID:   ${GREEN}$GOOGLE_WEB_CLIENT_ID${NC}"
-fi
-if [ "$SETUP_FIREBASE" = "true" ]; then
-    if [ "$CREATE_FIREBASE_PROJECT" = true ]; then
-        echo -e "🔥 Firebase:        ${GREEN}Create new project ($FIREBASE_PROJECT_ID)${NC}"
-    elif [ "$FIREBASE_PROJECT_ID" = "interactive" ]; then
-        echo -e "🔥 Firebase:        ${GREEN}Interactive configuration${NC}"
-    else
-        echo -e "🔥 Firebase:        ${GREEN}Link existing project ($FIREBASE_PROJECT_ID)${NC}"
-    fi
-else
-    echo -e "🔥 Firebase:        ${YELLOW}Skipped${NC}"
-fi
 echo -e "----------------------------\n"
 
-read -p "Proceed with configuration? (y/N): " CONFIRM
-if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
-    echo "Aborted by user."
-    exit 0
+if [ "$AUTO_CONFIRM" != true ]; then
+    read -p "Proceed with configuration? (y/N): " CONFIRM
+    if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
+        echo "Aborted by user."
+        exit 0
+    fi
 fi
 
 echo -e "\n${BOLD}🔄 Step 1: Updating pubspec.yaml...${NC}"
@@ -223,7 +174,7 @@ done
 if [ -f "build.yaml" ]; then
     sed -i "" "s|$OLD_DART_NAME:|$DART_NAME:|g" build.yaml
 fi
-echo -e "${GREEN}✔ Dart imports updated to 'package:$DART_NAME/...\.${NC}"
+echo -e "${GREEN}✔ Dart imports updated to 'package:$DART_NAME/...'.${NC}"
 
 echo -e "\n${BOLD}🔄 Step 3: Updating Android configuration...${NC}"
 if [ -f "android/app/build.gradle.kts" ]; then
@@ -322,12 +273,6 @@ if [ -f "$DEV_ENV" ]; then
     sed -i "" "s|^BASE_URL=.*|BASE_URL=\x27$BASE_URL\x27|" "$DEV_ENV"
     sed -i "" "s|^BASE_AUTH_URL=.*|BASE_AUTH_URL=\x27$BASE_AUTH_URL\x27|" "$DEV_ENV"
     sed -i "" "s|^UPLOAD_URL=.*|UPLOAD_URL=\x27$UPLOAD_URL\x27|" "$DEV_ENV"
-    if [ -n "$SUPABASE_URL" ]; then
-        sed -i "" "s|^SUPABASE_URL=.*|SUPABASE_URL=\x27$SUPABASE_URL\x27|" "$DEV_ENV"
-    fi
-    if [ -n "$SUPABASE_ANON_KEY" ]; then
-        sed -i "" "s|^SUPABASE_ANON_KEY=.*|SUPABASE_ANON_KEY=\x27$SUPABASE_ANON_KEY\x27|" "$DEV_ENV"
-    fi
 fi
 
 if [ -f "$PROD_ENV" ]; then
@@ -335,14 +280,8 @@ if [ -f "$PROD_ENV" ]; then
     sed -i "" "s|^BASE_URL=.*|BASE_URL=\x27$BASE_URL\x27|" "$PROD_ENV"
     sed -i "" "s|^BASE_AUTH_URL=.*|BASE_AUTH_URL=\x27$BASE_AUTH_URL\x27|" "$PROD_ENV"
     sed -i "" "s|^UPLOAD_URL=.*|UPLOAD_URL=\x27$UPLOAD_URL\x27|" "$PROD_ENV"
-    if [ -n "$SUPABASE_URL" ]; then
-        sed -i "" "s|^SUPABASE_URL=.*|SUPABASE_URL=\x27$SUPABASE_URL\x27|" "$PROD_ENV"
-    fi
-    if [ -n "$SUPABASE_ANON_KEY" ]; then
-        sed -i "" "s|^SUPABASE_ANON_KEY=.*|SUPABASE_ANON_KEY=\x27$SUPABASE_ANON_KEY\x27|" "$PROD_ENV"
-    fi
 fi
-echo -e "${GREEN}✔ Environment dotenv files updated.${NC}"
+echo -e "${GREEN}✔ Environment dotenv files updated with App Name & Base URLs.${NC}"
 
 echo -e "\n${BOLD}🔄 Step 6: Installing Dependencies & Generating Code...${NC}"
 echo -e "🔹 Running flutter pub get..."
@@ -357,209 +296,7 @@ echo -e "🔹 Generating assets code..."
 echo -e "🔹 Running build_runner (injectable, retrofit, json_serializable, auto_mappr)..."
 flutter pub run build_runner build --delete-conflicting-outputs
 
-if [ "$SETUP_FIREBASE" = "true" ]; then
-    echo -e "\n${BOLD}🔄 Step 7: Configuring Firebase (FlutterFire & Google Services)...${NC}"
-    
-    if ! command -v firebase &> /dev/null; then
-        echo -e "${YELLOW}⚠️ 'firebase' CLI not found. Attempting to install via npm...${NC}"
-        npm install -g firebase-tools || true
-    fi
-
-    if ! command -v flutterfire &> /dev/null; then
-        echo -e "${YELLOW}⚠️ 'flutterfire' CLI not found. Activating flutterfire_cli...${NC}"
-        dart pub global activate flutterfire_cli || true
-    fi
-
-    if ! firebase login:list 2>/dev/null | grep -q "@"; then
-        echo -e "${YELLOW}🔑 Please log in to Firebase CLI:${NC}"
-        firebase login
-    fi
-
-    if [ "$CREATE_FIREBASE_PROJECT" = true ] && [ -n "$FIREBASE_PROJECT_ID" ]; then
-        echo -e "🔹 Creating Firebase project '$FIREBASE_PROJECT_ID'..."
-        firebase projects:create "$FIREBASE_PROJECT_ID" --display-name "$APP_NAME" || true
-        
-        echo -e "🔹 Registering Android app ($PACKAGE_ID)..."
-        firebase apps:create ANDROID "$APP_NAME Android" --package-name "$PACKAGE_ID" --project "$FIREBASE_PROJECT_ID" || true
-        
-        echo -e "🔹 Registering iOS app ($PACKAGE_ID)..."
-        firebase apps:create IOS "$APP_NAME iOS" --bundle-id "$PACKAGE_ID" --project "$FIREBASE_PROJECT_ID" || true
-    fi
-
-    if [ "$FIREBASE_PROJECT_ID" = "interactive" ]; then
-        echo -e "🔹 Running interactive flutterfire configure..."
-        flutterfire configure
-    elif [ -n "$FIREBASE_PROJECT_ID" ]; then
-        echo -e "🔹 Configuring FlutterFire for project '$FIREBASE_PROJECT_ID'..."
-        flutterfire configure \
-            --project="$FIREBASE_PROJECT_ID" \
-            --platforms=android,ios \
-            --android-package-name="$PACKAGE_ID" \
-            --ios-bundle-id="$PACKAGE_ID" \
-            -y -f
-    else
-        echo -e "🔹 Running flutterfire configure..."
-        flutterfire configure \
-            --platforms=android,ios \
-            --android-package-name="$PACKAGE_ID" \
-            --ios-bundle-id="$PACKAGE_ID" \
-            -y -f
-    fi
-    echo -e "${GREEN}✔ Firebase configured successfully.${NC}"
-
-    echo -e "\n${BOLD}🔑 Step 7.1: Extracting Debug Keystore SHA Fingerprints & Registering with Firebase...${NC}"
-    DEBUG_KEYSTORE="$HOME/.android/debug.keystore"
-    if [ ! -f "$DEBUG_KEYSTORE" ]; then
-        echo -e "🔹 Keystore not found at $DEBUG_KEYSTORE, generating a new debug keystore..."
-        mkdir -p "$HOME/.android"
-        keytool -genkey -v -keystore "$DEBUG_KEYSTORE" -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" >/dev/null 2>&1 || true
-    fi
-
-    DEBUG_SHA1=$(keytool -list -v -keystore "$DEBUG_KEYSTORE" -alias androiddebugkey -storepass android -keypass android 2>/dev/null | grep "SHA1:" | head -n 1 | awk '{print $2}')
-    DEBUG_SHA256=$(keytool -list -v -keystore "$DEBUG_KEYSTORE" -alias androiddebugkey -storepass android -keypass android 2>/dev/null | grep "SHA256:" | head -n 1 | awk '{print $2}')
-
-    echo -e "  📌 Debug SHA-1:   ${GREEN}${DEBUG_SHA1:-Not found}${NC}"
-    echo -e "  📌 Debug SHA-256: ${GREEN}${DEBUG_SHA256:-Not found}${NC}"
-
-    FB_PROJECT="$FIREBASE_PROJECT_ID"
-    if [ -z "$FB_PROJECT" ] || [ "$FB_PROJECT" = "interactive" ]; then
-        if [ -f "android/app/google-services.json" ]; then
-            FB_PROJECT=$(grep '"project_id"' android/app/google-services.json 2>/dev/null | head -n 1 | sed -E 's/.*"project_id": "([^"]+)".*/\1/')
-        fi
-    fi
-
-    ANDROID_APP_ID=""
-    if [ -f "android/app/google-services.json" ]; then
-        ANDROID_APP_ID=$(grep '"mobilesdk_app_id"' android/app/google-services.json 2>/dev/null | head -n 1 | sed -E 's/.*"mobilesdk_app_id": "([^"]+)".*/\1/')
-    fi
-
-    G_TOKEN=""
-    if command -v gcloud &> /dev/null; then
-        G_TOKEN=$(gcloud auth print-access-token 2>/dev/null || true)
-    fi
-
-    if [ -n "$G_TOKEN" ] && [ -n "$FB_PROJECT" ] && [ -n "$ANDROID_APP_ID" ] && [ -n "$DEBUG_SHA1" ]; then
-        echo -e "🔹 Auto-registering SHA-1 & SHA-256 to Firebase project '$FB_PROJECT'..."
-        SHA1_HEX=$(echo "$DEBUG_SHA1" | tr -d ':')
-        SHA256_HEX=$(echo "$DEBUG_SHA256" | tr -d ':')
-        
-        curl -s -X POST \
-          -H "Authorization: Bearer $G_TOKEN" \
-          -H "X-Goog-User-Project: $FB_PROJECT" \
-          -H "Content-Type: application/json" \
-          -d "{\"shaHash\": \"$SHA1_HEX\", \"certType\": \"SHA_1\"}" \
-          "https://firebase.googleapis.com/v1beta1/projects/$FB_PROJECT/androidApps/$ANDROID_APP_ID/sha" >/dev/null 2>&1 || true
-
-        curl -s -X POST \
-          -H "Authorization: Bearer $G_TOKEN" \
-          -H "X-Goog-User-Project: $FB_PROJECT" \
-          -H "Content-Type: application/json" \
-          -d "{\"shaHash\": \"$SHA256_HEX\", \"certType\": \"SHA_256\"}" \
-          "https://firebase.googleapis.com/v1beta1/projects/$FB_PROJECT/androidApps/$ANDROID_APP_ID/sha" >/dev/null 2>&1 || true
-
-        echo -e "${GREEN}✔ SHA fingerprints registered to Firebase.${NC}"
-
-        # Re-fetch latest google-services.json with new SHA config
-        if command -v firebase &> /dev/null; then
-            firebase apps:sdkconfig ANDROID "$ANDROID_APP_ID" --project="$FB_PROJECT" > android/app/google-services.json 2>/dev/null || true
-        fi
-    fi
-
-    echo -e "\n${BOLD}🔐 Step 7.2: Extracting Google OAuth 2.0 Client IDs (GCP / Firebase)...${NC}"
-    # Read Web Client ID and Android Client ID from google-services.json
-    WEB_CLIENT_ID=$(python3 -c "
-import json
-try:
-    with open('android/app/google-services.json') as f:
-        data = json.load(f)
-        for client in data.get('client', []):
-            for oauth in client.get('oauth_client', []):
-                if oauth.get('client_type') == 3:
-                    print(oauth.get('client_id'))
-                    exit(0)
-            for other in client.get('services', {}).get('appinvite_service', {}).get('other_platform_oauth_client', []):
-                if other.get('client_type') == 3:
-                    print(other.get('client_id'))
-                    exit(0)
-except Exception:
-    pass
-" 2>/dev/null || true)
-
-    ANDROID_CLIENT_ID=$(python3 -c "
-import json
-try:
-    with open('android/app/google-services.json') as f:
-        data = json.load(f)
-        for client in data.get('client', []):
-            for oauth in client.get('oauth_client', []):
-                if oauth.get('client_type') == 1:
-                    print(oauth.get('client_id'))
-                    exit(0)
-except Exception:
-    pass
-" 2>/dev/null || true)
-
-    IOS_CLIENT_ID=$(python3 -c "
-import plistlib
-try:
-    with open('ios/Runner/GoogleService-Info.plist', 'rb') as f:
-        data = plistlib.load(f)
-        print(data.get('CLIENT_ID', ''))
-except Exception:
-    pass
-" 2>/dev/null || true)
-
-    REVERSED_CLIENT_ID=$(python3 -c "
-import plistlib
-try:
-    with open('ios/Runner/GoogleService-Info.plist', 'rb') as f:
-        data = plistlib.load(f)
-        print(data.get('REVERSED_CLIENT_ID', ''))
-except Exception:
-    pass
-" 2>/dev/null || true)
-
-    if [ -n "$GOOGLE_WEB_CLIENT_ID" ]; then
-        WEB_CLIENT_ID="$GOOGLE_WEB_CLIENT_ID"
-    fi
-
-    # Update login_page.dart if WEB_CLIENT_ID is found
-    if [ -n "$WEB_CLIENT_ID" ] && [ -f "lib/src/authentication/view/login_page.dart" ]; then
-        sed -i "" -E "s/serverClientId:[[:space:]]*'[^']*'/serverClientId: '$WEB_CLIENT_ID'/g" lib/src/authentication/view/login_page.dart
-        echo -e "${GREEN}✔ Updated serverClientId in login_page.dart -> $WEB_CLIENT_ID${NC}"
-    fi
-
-    # Update iOS Info.plist with iOS Client ID & URL Scheme
-    if [ -n "$IOS_CLIENT_ID" ] && [ -f "ios/Runner/Info.plist" ]; then
-        if grep -q "<key>GIDClientID</key>" ios/Runner/Info.plist; then
-            sed -i "" -E "s|<key>GIDClientID</key>[[:space:]]*<string>[^<]*</string>|<key>GIDClientID</key>\
-	<string>$IOS_CLIENT_ID</string>|g" ios/Runner/Info.plist
-        fi
-    fi
-
-    if [ -n "$REVERSED_CLIENT_ID" ] && [ -f "ios/Runner/Info.plist" ]; then
-        if grep -q "com.googleusercontent.apps." ios/Runner/Info.plist; then
-            sed -i "" -E "s|<string>com\.googleusercontent\.apps\.[^<]*</string>|<string>$REVERSED_CLIENT_ID</string>|g" ios/Runner/Info.plist
-        fi
-    fi
-
-    echo -e "\n${BOLD}${BLUE}╔══════════════════════════════════════════════════════════════════════════════╗${NC}"
-    echo -e "${BOLD}${BLUE}║                     GOOGLE SIGN-IN & GCP CREDENTIALS                         ║${NC}"
-    echo -e "${BOLD}${BLUE}╠══════════════════════════════════════════════════════════════════════════════╣${NC}"
-    echo -e "  🌐 Web Client ID (serverClientId):  ${GREEN}${WEB_CLIENT_ID:-'Chưa có (Bật Google Sign-in tại Firebase Console)'}${NC}"
-    echo -e "  🤖 Android Client ID:              ${GREEN}${ANDROID_CLIENT_ID:-'Tự động nhận diện qua SHA-1'}${NC}"
-    echo -e "  🍎 iOS Client ID:                  ${GREEN}${IOS_CLIENT_ID:-'N/A'}${NC}"
-    echo -e "  🔄 Reversed iOS Client ID:         ${GREEN}${REVERSED_CLIENT_ID:-'N/A'}${NC}"
-    echo -e "  🔑 Debug SHA-1:                    ${GREEN}${DEBUG_SHA1:-'N/A'}${NC}"
-    echo -e "  🔑 Debug SHA-256:                  ${GREEN}${DEBUG_SHA256:-'N/A'}${NC}"
-    if [ -n "$FB_PROJECT" ]; then
-        echo -e "  🔗 Firebase Auth Console:          ${YELLOW}https://console.firebase.google.com/project/$FB_PROJECT/authentication/providers${NC}"
-        echo -e "  🔗 GCP Credentials Console:        ${YELLOW}https://console.cloud.google.com/apis/credentials?project=$FB_PROJECT${NC}"
-    fi
-    echo -e "${BOLD}${BLUE}╚══════════════════════════════════════════════════════════════════════════════╝${NC}\n"
-fi
-
-echo -e "\n${BOLD}🔄 Step 8: Updating Project Folder Alias...${NC}"
+echo -e "\n${BOLD}🔄 Step 7: Updating Project Folder Alias...${NC}"
 CURRENT_DIR_NAME=$(basename "$PROJECT_ROOT")
 if [ "$CURRENT_DIR_NAME" != "$DART_NAME" ]; then
     PARENT_DIR="$(dirname "$PROJECT_ROOT")"
@@ -570,15 +307,15 @@ if [ "$CURRENT_DIR_NAME" != "$DART_NAME" ]; then
     fi
 fi
 
-echo -e "\n${BOLD}🔍 Step 9: Running Flutter Analyze Validation...${NC}"
+echo -e "\n${BOLD}🔍 Step 8: Running Flutter Analyze Validation...${NC}"
 flutter analyze
 
 echo -e "\n${BOLD}${GREEN}======================================================${NC}"
-echo -e "${BOLD}${GREEN}   🎉 PROJECT SETUP COMPLETED SUCCESSFULLY!           ${NC}"
+echo -e "${BOLD}${GREEN}   🎉 CORE PROJECT REBRANDING & SETUP COMPLETED!       ${NC}"
 echo -e "${BOLD}${GREEN}======================================================${NC}"
 echo -e "Next steps:"
-echo -e " 1. Run Dev Flavor:   ${YELLOW}flutter run -t lib/main_dev.dart --flavor dev${NC}"
-echo -e " 2. Run Prod Flavor:  ${YELLOW}flutter run -t lib/main_prod.dart --flavor prod${NC}"
-echo -e " 3. Create Features:  ${YELLOW}./gen_file_by_construct.sh${NC}\n"
-
-
+echo -e " 1. Setup 3rd-Party Auth (Firebase, GCP, Supabase, MCP):"
+echo -e "    👉 ${CYAN}./scripts/setup_auth_services.sh${NC}"
+echo -e " 2. Run Dev Flavor:   ${YELLOW}flutter run -t lib/main_dev.dart --flavor dev${NC}"
+echo -e " 3. Run Prod Flavor:  ${YELLOW}flutter run -t lib/main_prod.dart --flavor prod${NC}"
+echo -e " 4. Create Features:  ${YELLOW}./gen_file_by_construct.sh${NC}\n"

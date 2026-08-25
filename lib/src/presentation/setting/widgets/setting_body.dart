@@ -1,11 +1,11 @@
 import 'package:app_intl/ez_intl.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:report_person/src/authentication/bloc/authentication_bloc.dart';
-import 'package:report_person/src/authentication/view/authentication_page.dart';
-import 'package:report_person/src/module/injector.dart';
-import 'package:report_person/src/presentation/app/widgets/app_settings_provider.dart';
-import 'package:report_person/src/routes/routes.dart';
+import 'package:flutter_base/src/authentication/bloc/authentication_bloc.dart';
+import 'package:flutter_base/src/authentication/view/authentication_page.dart';
+import 'package:flutter_base/src/module/injector.dart';
+import 'package:flutter_base/src/presentation/app/widgets/app_settings_provider.dart';
+import 'package:flutter_base/src/routes/routes.dart';
 
 class SettingBody extends StatelessWidget {
   final VoidCallback onOpenBilling;

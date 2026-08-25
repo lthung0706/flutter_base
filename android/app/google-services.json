@@ -12,7 +12,20 @@
           "package_name": "com.lthung.reportperson"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "181527620299-q3io4o3qkg8o5tcpap5ekr82i1jc2b0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lthung.reportperson",
+            "certificate_hash": "490dc4047ccdaeb6a80759089b9853036a24e7f3"
+          }
+        },
+        {
+          "client_id": "181527620299-q9qa1oc0pbamm60o9tqgi2jbmm97mv85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBKdWdFatkMYtd6dlchPdW2XipxqLE9Uc0"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "181527620299-q9qa1oc0pbamm60o9tqgi2jbmm97mv85.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "181527620299-afq2oc6u5f2av905jq94hv1fpbj1hrgi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lthung.reportperson"
+              }
+            }
+          ]
         }
       }
     }

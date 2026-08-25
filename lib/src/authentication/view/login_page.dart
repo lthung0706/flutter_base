@@ -8,12 +8,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
-import 'package:report_person/src/authentication/bloc/authentication_bloc.dart';
-import 'package:report_person/src/core/firebase_analytics_helper.dart';
-import 'package:report_person/src/core/firebase_performance_helper.dart';
-import 'package:report_person/src/core/params/login_request_body.dart';
-import 'package:report_person/src/module/injector.dart';
-import 'package:report_person/src/routes/routes.dart';
+import 'package:flutter_base/src/authentication/bloc/authentication_bloc.dart';
+import 'package:flutter_base/src/core/firebase_analytics_helper.dart';
+import 'package:flutter_base/src/core/firebase_performance_helper.dart';
+import 'package:flutter_base/src/core/params/login_request_body.dart';
+import 'package:flutter_base/src/module/injector.dart';
+import 'package:flutter_base/src/routes/routes.dart';
 
 import '../../core/params/user_request_body.dart';
 import '../../presentation/app/widgets/app_language_popup_button.dart';
@@ -52,8 +52,7 @@ class _LoginPageState extends State<LoginPage> {
     try {
       final googleSignIn = GoogleSignIn.instance;
       await googleSignIn.initialize(
-        serverClientId:
-            '515037032433-g6qastv2583p0bpgmrtlfgua5og793p2.apps.googleusercontent.com', // Phải dùng Web Client ID để lấy idToken.
+        serverClientId: '', // Configure via ./scripts/setup_auth_services.sh
       );
       final account = await googleSignIn.authenticate();
       final idToken = account.authentication.idToken;
@@ -113,8 +112,8 @@ class _LoginPageState extends State<LoginPage> {
         });
       },
       canPop: true,
-      child: BlocProvider(
-        create: (context) => getIt<AuthenticationBloc>(),
+      child: BlocProvider.value(
+        value: getIt<AuthenticationBloc>(),
         child: GestureDetector(
           onTap: () {
             FocusScope.of(context).unfocus();

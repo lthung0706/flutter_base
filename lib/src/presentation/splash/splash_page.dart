@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:report_person/src/presentation/app/widgets/global_app_body.dart';
+import 'package:flutter_base/src/presentation/app/widgets/global_app_body.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});

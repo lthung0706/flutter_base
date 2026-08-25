@@ -19,7 +19,7 @@ to_snake_case() {
 # Auto-detect project name from pubspec.yaml
 PROJECT_NAME=$(grep "^name:" pubspec.yaml | head -n 1 | awk "{print \$2}" | tr -d "\r\n")
 if [ -z "$PROJECT_NAME" ]; then
-    PROJECT_NAME="report_person"
+    PROJECT_NAME="flutter_base"
 fi
 
 echo "🚀 Feature & Architecture Generator (Project: $PROJECT_NAME)"

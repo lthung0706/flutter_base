@@ -2,9 +2,9 @@
 #include "Generated.xcconfig"
 
 FLUTTER_TARGET=lib/main_prod.dart
-PRODUCT_BUNDLE_IDENTIFIER=com.lthung.reportperson
+PRODUCT_BUNDLE_IDENTIFIER=com.example.flutterbase
 ASSET_PREFIX=prod
-BUNDLE_NAME=Report Person
+BUNDLE_NAME=Flutter Base
 FLAVOR=prod
 DART_OBFUSCATION=true
 SPLIT_DEBUG_INFO=$(SRCROOT)/../debug-info

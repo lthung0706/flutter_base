@@ -4,8 +4,8 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:report_person/src/authentication/view/authentication_page.dart';
-import 'package:report_person/src/core/constants/key_local_store.dart';
+import 'package:flutter_base/src/authentication/view/authentication_page.dart';
+import 'package:flutter_base/src/core/constants/key_local_store.dart';
 
 part 'global_app_event.dart';
 part 'global_app_state.dart';

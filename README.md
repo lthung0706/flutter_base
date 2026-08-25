@@ -59,11 +59,35 @@ To configure and rebrand this base project into a new app, run:
 
 The script will automatically:
 - Update `pubspec.yaml` name and description.
-- Rename all Dart imports across all files (`package:sstrip/...` ➔ `package:my_new_app/...`).
+- Rename all Dart imports across all files (`package:old_name/...` ➔ `package:my_new_app/...`).
 - Configure Android `applicationId`, `namespace`, and `app_name`.
 - Configure iOS `PRODUCT_BUNDLE_IDENTIFIER`, `CFBundleDisplayName`, and `CFBundleName`.
-- Update `.env.dev` and `.env.prod`.
+- Update `.env.dev` and `.env.prod` with base URLs.
 - Run `flutter pub get`, localizations generation, asset generation, and `build_runner`.
+
+---
+
+## 🔐 3rd-Party Setup: Firebase, GCP, Google Sign-In & Supabase
+
+To configure and synchronize all third-party services, run:
+
+```bash
+# Interactive mode:
+./scripts/setup_auth_services.sh
+
+# Or with CLI flags:
+./scripts/setup_auth_services.sh \
+  --firebase-project-id "my-firebase-app" \
+  --supabase-token "sbp_xxx" \
+  --supabase-project-id "my-supabase-ref"
+```
+
+The script will automatically:
+- Configure Firebase project & generate debug keystore SHA-1 / SHA-256.
+- Extract Google OAuth 2.0 Client IDs (Web, iOS, Android) and sync to `login_page.dart` & `Info.plist`.
+- Fetch Supabase Project URL & exact `anon` key via Supabase Management API.
+- Auto-enable Google Provider on Supabase Auth with client IDs and `skip_nonce_check: true`.
+- Configure Supabase MCP server (`.agents/mcp_config.json` and `.mcp.json`).
 
 ---
 

@@ -1,5 +1,5 @@
-name: report_person
-description: "Report Person base application"
+name: flutter_base
+description: "Flutter Base base application"
 publish_to: 'none'
 
 version: 1.0.0+1

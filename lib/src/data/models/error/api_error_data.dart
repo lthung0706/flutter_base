@@ -1,6 +1,6 @@
 // Package imports:
 import 'package:json_annotation/json_annotation.dart';
-import 'package:report_person/src/data/models/error/error_codes.dart';
+import 'package:flutter_base/src/data/models/error/error_codes.dart';
 
 // Project imports:
 

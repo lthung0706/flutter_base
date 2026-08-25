@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:report_person/src/authentication/view/authentication_page.dart';
-import 'package:report_person/src/routes/routes.dart';
+import 'package:flutter_base/src/authentication/view/authentication_page.dart';
+import 'package:flutter_base/src/routes/routes.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});

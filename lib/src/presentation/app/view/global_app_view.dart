@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:report_person/src/core/constants/key_local_store.dart';
-import 'package:report_person/src/core/services/flexible_in_app_update_service.dart';
-import 'package:report_person/src/module/injector.dart';
-import 'package:report_person/src/presentation/app/bloc/global_app_bloc.dart';
-import 'package:report_person/src/presentation/app/widgets/app_settings_provider.dart';
-import 'package:report_person/src/theme/theme.dart';
+import 'package:flutter_base/src/core/constants/key_local_store.dart';
+import 'package:flutter_base/src/core/services/flexible_in_app_update_service.dart';
+import 'package:flutter_base/src/module/injector.dart';
+import 'package:flutter_base/src/presentation/app/bloc/global_app_bloc.dart';
+import 'package:flutter_base/src/presentation/app/widgets/app_settings_provider.dart';
+import 'package:flutter_base/src/theme/theme.dart';
 
 class GlobalAppPage extends StatefulWidget {
   const GlobalAppPage({super.key});

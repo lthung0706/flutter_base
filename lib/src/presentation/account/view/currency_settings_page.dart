@@ -1,7 +1,7 @@
 import 'package:app_intl/ez_intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:report_person/src/presentation/app/bloc/global_app_bloc.dart';
+import 'package:flutter_base/src/presentation/app/bloc/global_app_bloc.dart';
 
 class CurrencySettingsPage extends StatelessWidget {
   const CurrencySettingsPage({super.key});

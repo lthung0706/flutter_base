@@ -71,7 +71,7 @@
 	
 	<!-- Google Sign-in Section -->
 	<key>GIDClientID</key>
-	<string>515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b.apps.googleusercontent.com</string>
+	<string>181527620299-afq2oc6u5f2av905jq94hv1fpbj1hrgi.apps.googleusercontent.com</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -79,7 +79,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.515037032433-eubcv54dto5qa3gu4unti42qql3cbn9b</string>
+				<string>com.googleusercontent.apps.181527620299-afq2oc6u5f2av905jq94hv1fpbj1hrgi</string>
 			</array>
 		</dict>
 	</array>

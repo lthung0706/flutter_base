@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:report_person/src/authentication/view/authentication_page.dart';
-import 'package:report_person/src/authentication/view/login_page.dart';
-import 'package:report_person/src/authentication/view/register_page.dart';
-import 'package:report_person/src/billing/view/billing_page.dart';
-import 'package:report_person/src/presentation/account/view/privacy_page.dart';
-import 'package:report_person/src/presentation/account/view/terms_page.dart';
-import 'package:report_person/src/presentation/home/view/home_page.dart';
-import 'package:report_person/src/presentation/onboarding/on_boarding_page.dart';
-import 'package:report_person/src/presentation/setting/view/setting_page.dart';
-import 'package:report_person/src/presentation/splash/splash_page.dart';
-import 'package:report_person/src/routes/routes.dart';
+import 'package:flutter_base/src/authentication/view/authentication_page.dart';
+import 'package:flutter_base/src/authentication/view/login_page.dart';
+import 'package:flutter_base/src/authentication/view/register_page.dart';
+import 'package:flutter_base/src/billing/view/billing_page.dart';
+import 'package:flutter_base/src/presentation/account/view/privacy_page.dart';
+import 'package:flutter_base/src/presentation/account/view/terms_page.dart';
+import 'package:flutter_base/src/presentation/home/view/home_page.dart';
+import 'package:flutter_base/src/presentation/onboarding/on_boarding_page.dart';
+import 'package:flutter_base/src/presentation/setting/view/setting_page.dart';
+import 'package:flutter_base/src/presentation/splash/splash_page.dart';
+import 'package:flutter_base/src/routes/routes.dart';
 
 part 'home_routes.g.dart';
 

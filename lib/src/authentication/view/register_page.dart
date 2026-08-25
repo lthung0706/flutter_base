@@ -2,11 +2,11 @@ import 'package:app_intl/ez_intl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:report_person/src/authentication/bloc/authentication_bloc.dart';
-import 'package:report_person/src/core/params/register_body_params.dart';
-import 'package:report_person/src/module/injector.dart';
-import 'package:report_person/src/presentation/app/widgets/app_language_popup_button.dart';
-import 'package:report_person/src/routes/routes.dart';
+import 'package:flutter_base/src/authentication/bloc/authentication_bloc.dart';
+import 'package:flutter_base/src/core/params/register_body_params.dart';
+import 'package:flutter_base/src/module/injector.dart';
+import 'package:flutter_base/src/presentation/app/widgets/app_language_popup_button.dart';
+import 'package:flutter_base/src/routes/routes.dart';
 
 import '../../components/app_snackbar.dart';
 import '../../core/params/user_request_body.dart';

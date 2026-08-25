@@ -1,7 +1,7 @@
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:injectable/injectable.dart';
-import 'package:report_person/src/data/models/data/data.dart';
-import 'package:report_person/src/data/models/usecase/usecase.dart';
+import 'package:flutter_base/src/data/models/data/data.dart';
+import 'package:flutter_base/src/data/models/usecase/usecase.dart';
 
 import 'billing_store_repository.dart';
 

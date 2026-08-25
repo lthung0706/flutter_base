@@ -30,4 +30,4 @@ plugins {
 }
 
 include(":app")
-rootProject.name = "report_person"
+rootProject.name = "flutter_base"

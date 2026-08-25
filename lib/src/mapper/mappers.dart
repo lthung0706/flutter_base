@@ -1,8 +1,8 @@
 import 'package:auto_mappr_annotation/auto_mappr_annotation.dart';
-import 'package:report_person/src/authentication/auth.dart';
-import 'package:report_person/src/data/models/apple_transaction_model.dart';
-import 'package:report_person/src/data/models/auth_model.dart';
-import 'package:report_person/src/domain/entities/apple_transaction.dart';
+import 'package:flutter_base/src/authentication/auth.dart';
+import 'package:flutter_base/src/data/models/apple_transaction_model.dart';
+import 'package:flutter_base/src/data/models/auth_model.dart';
+import 'package:flutter_base/src/domain/entities/apple_transaction.dart';
 
 import '../data/models/auth_register_model.dart';
 import '../data/models/billing_store_model.dart';
