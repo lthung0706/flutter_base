@@ -12,6 +12,7 @@
 import 'package:app_config/app_config.dart' as _i651;
 import 'package:firebase_analytics/firebase_analytics.dart' as _i398;
 import 'package:firebase_performance/firebase_performance.dart' as _i346;
+import 'package:flutter_base/src/authentication/auth_api_service.dart' as _i883;
 import 'package:flutter_base/src/authentication/auth_repository.dart' as _i933;
 import 'package:flutter_base/src/authentication/bloc/authentication_bloc.dart'
     as _i94;
@@ -65,7 +66,6 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:go_router/go_router.dart' as _i583;
 import 'package:in_app_purchase/in_app_purchase.dart' as _i690;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:supabase_flutter/supabase_flutter.dart' as _i454;
 
 extension GetItInjectableX on _i174.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -127,6 +127,12 @@ extension GetItInjectableX on _i174.GetIt {
         gh<String>(instanceName: 'ApiUploadBaseUrl'),
       ),
     );
+    gh.lazySingleton<_i883.AuthApiService>(
+      () => registerModule.authApiService(
+        gh<_i651.Dio>(instanceName: 'ApiDio'),
+        gh<String>(instanceName: 'ApiBaseUrl'),
+      ),
+    );
     gh.lazySingleton<_i646.BillingProductApiService>(
       () => registerModule.billingProductApiService(
         gh<_i651.Dio>(instanceName: 'ApiDio'),
@@ -134,7 +140,7 @@ extension GetItInjectableX on _i174.GetIt {
       ),
     );
     gh.lazySingleton<_i933.AuthRepository>(
-      () => _i933.AuthRepositoryImpl(gh<_i454.SupabaseClient>()),
+      () => _i933.AuthRepositoryImpl(gh<_i883.AuthApiService>()),
     );
     gh.lazySingleton<_i704.BillingStoreRepository>(
       () => _i704.BillingStoreRepositoryImpl(

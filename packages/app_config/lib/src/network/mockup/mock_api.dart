@@ -33,9 +33,16 @@ class MockApi {
 
   static Future<Map<String, dynamic>?> mock(final String? endpoint) async {
     // the way how to load assets in packages
-    final String responseStr = await rootBundle.loadString(
-      'assets/mockup/$endpoint.json',
-    );
+    String responseStr;
+    try {
+      responseStr = await rootBundle.loadString(
+        'packages/app_config/assets/mockup/$endpoint.json',
+      );
+    } catch (_) {
+      responseStr = await rootBundle.loadString(
+        'assets/mockup/$endpoint.json',
+      );
+    }
     final Map<String, dynamic>? responseJson =
         json.decode(responseStr) as Map<String, dynamic>?;
 

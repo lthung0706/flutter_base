@@ -1,20 +1,30 @@
+import 'dart:io';
+
+import 'package:app_config/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:flutter_base/src/authentication/auth.dart';
+import 'package:flutter_base/src/authentication/auth_api_service.dart';
 import 'package:flutter_base/src/core/constants/key_local_store.dart';
 import 'package:flutter_base/src/core/hive_service_helper.dart';
-import 'package:flutter_base/src/core/params/add_user_request_body.dart';
 import 'package:flutter_base/src/core/params/login_request_body.dart';
-import 'package:flutter_base/src/core/params/refresh_token_body.dart';
 import 'package:flutter_base/src/core/params/register_body_params.dart';
-import 'package:flutter_base/src/core/params/user_request_body.dart';
+import 'package:flutter_base/src/data/models/auth_model.dart';
 import 'package:flutter_base/src/data/models/data/data.dart';
 import 'package:flutter_base/src/data/models/error/api_error.dart';
+import 'package:flutter_base/src/data/models/error/error_codes.dart';
+import 'package:flutter_base/src/data/models/extensions/dio_response.dart';
 import 'package:flutter_base/src/data/models/local/user_model.dart';
 import 'package:flutter_base/src/domain/entities/auth_register.dart';
-import 'package:flutter_base/src/domain/entities/user_updated.dart';
 import 'package:flutter_base/src/module/injector.dart';
-import 'package:supabase_flutter/supabase_flutter.dart' as sb;
+
+import '../core/params/add_user_request_body.dart';
+import '../core/params/refresh_token_body.dart';
+import '../core/params/user_request_body.dart';
+import '../data/models/auth_register_model.dart';
+import '../data/models/user_updated_model.dart';
+import '../domain/entities/user_updated.dart';
+import '../mapper/mappers.dart';
 
 abstract class AuthRepository {
   Future<DataState<AuthData>> login(final LoginRequestBody body);
@@ -37,66 +47,51 @@ abstract class AuthRepository {
 
 @LazySingleton(as: AuthRepository)
 class AuthRepositoryImpl implements AuthRepository {
-  final sb.SupabaseClient _supabaseClient;
-  const AuthRepositoryImpl(this._supabaseClient);
+  static const bool isMockup = true;
 
-  AuthData _mapSessionToAuthData(final sb.Session session) {
-    final user = session.user;
-    return AuthData(
-      accessToken: session.accessToken,
-      refreshToken: session.refreshToken,
-      tokenType: session.tokenType,
-      expiresIn: session.expiresIn,
-      expiresAt: session.expiresAt,
-      user: AuthDataUser(
-        id: user.id,
-        email: user.email,
-        phone: user.phone,
-        createdAt: user.createdAt,
-        updatedAt: user.updatedAt,
-        userMetadata: AuthDataUserUserMetadata(
-          name: user.userMetadata?['name'] as String? ??
-              user.userMetadata?['full_name'] as String?,
-          email: user.email,
-          emailVerified: user.userMetadata?['email_verified'] as bool?,
-          phoneVerified: user.userMetadata?['phone_verified'] as bool?,
-          sub: user.id,
-        ),
-      ),
-    );
-  }
+  final AuthApiService authApiService;
+  const AuthRepositoryImpl(this.authApiService);
 
   @override
   Future<DataState<bool>> addUser(final AddUserRequestBody body) async {
     try {
-      return const DataSuccess(true);
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+      final httpResponse = await authApiService.addUser(body, isMockUp: false);
+      if (httpResponse.data?.success ?? false) {
+        return const DataSuccess(true);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
+      }
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
   @override
   Future<DataState<AuthData>> login(final LoginRequestBody body) async {
     try {
-      final response = await _supabaseClient.auth.signInWithPassword(
-        email: body.email ?? '',
-        password: body.password ?? '',
-      );
-      final session = response.session;
-      if (session != null) {
-        return DataSuccess(_mapSessionToAuthData(session));
+      final httpResponse = await authApiService.login(body, isMockUp: isMockup);
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
+          httpResponse.data?.data,
+        );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
       }
-      return const DataFailure(ApiError(message: 'Login failed'));
-    } on sb.AuthException catch (error) {
-      return DataFailure(
-        ApiError(
-          message: error.message,
-          code: int.tryParse(error.statusCode ?? ''),
-        ),
-      );
+    } on DioException catch (error) {
+      if (error.response?.statusCode == HttpStatus.unauthorized) {
+        return DataFailure(const ApiError(code: ErrorCodes.invalidCredential));
+      }
+      return DataFailure(error.response?.apiError);
     } catch (e) {
       debugPrint('login error: $e');
-      return DataFailure(ApiError(message: e.toString()));
+      return const DataFailure(null);
     }
   }
 
@@ -105,26 +100,24 @@ class AuthRepositoryImpl implements AuthRepository {
     final GoogleLoginRequestBody body,
   ) async {
     try {
-      final response = await _supabaseClient.auth.signInWithIdToken(
-        provider: sb.OAuthProvider.google,
-        idToken: body.token,
+      final httpResponse = await authApiService.googleLogin(
+        body,
+        isMockUp: false,
       );
-      final session = response.session;
-      if (session != null) {
-        return DataSuccess(_mapSessionToAuthData(session));
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
+          httpResponse.data?.data,
+        );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
       }
-      debugPrint('google login failed: ${response.user}');
-      return const DataFailure(ApiError(message: 'Google login failed'));
-    } on sb.AuthException catch (error) {
-      debugPrint('google login failed: ${error.message}');
-      return DataFailure(
-        ApiError(
-          message: error.message,
-          code: int.tryParse(error.statusCode ?? ''),
-        ),
-      );
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
@@ -133,36 +126,36 @@ class AuthRepositoryImpl implements AuthRepository {
     final AppleLoginRequestBody body,
   ) async {
     try {
-      final response = await _supabaseClient.auth.signInWithIdToken(
-        provider: sb.OAuthProvider.apple,
-        idToken: body.token,
+      final httpResponse = await authApiService.appleLogin(
+        body,
+        isMockUp: false,
       );
-      final session = response.session;
-      if (session != null) {
-        return DataSuccess(_mapSessionToAuthData(session));
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
+          httpResponse.data?.data,
+        );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
       }
-      return const DataFailure(ApiError(message: 'Apple login failed'));
-    } on sb.AuthException catch (error) {
-      return DataFailure(
-        ApiError(
-          message: error.message,
-          code: int.tryParse(error.statusCode ?? ''),
-        ),
-      );
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
   @override
   Future<DataState<bool>> logout() async {
     try {
-      await _supabaseClient.auth.signOut();
+      await authApiService.logout(isMockUp: false);
       return const DataSuccess(true);
-    } on sb.AuthException catch (error) {
-      return DataFailure(ApiError(message: error.message));
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
@@ -171,51 +164,27 @@ class AuthRepositoryImpl implements AuthRepository {
     final RegisterBodyParams body,
   ) async {
     try {
-      final response = await _supabaseClient.auth.signUp(
-        email: body.email ?? '',
-        password: body.password ?? '',
-        data: {
-          if (body.name != null) 'name': body.name,
-        },
-      );
-      final session = response.session;
-      final user = response.user;
-      final authRegister = AuthenRegister(
-        accessToken: session?.accessToken,
-        refreshToken: session?.refreshToken,
-        tokenType: session?.tokenType,
-        expiresIn: session?.expiresIn,
-        expiresAt: session?.expiresAt,
-        user: user != null
-            ? AuthenRegisterUser(
-                id: user.id,
-                email: user.email,
-                name: body.name ?? user.userMetadata?['name'] as String?,
-                phone: user.phone,
-                createdAt: user.createdAt,
-                updatedAt: user.updatedAt,
-              )
-            : null,
-      );
-      return DataSuccess(authRegister);
-    } on sb.AuthException catch (error) {
-      return DataFailure(
-        ApiError(
-          message: error.message,
-          code: int.tryParse(error.statusCode ?? ''),
-        ),
-      );
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+      final httpResponse = await authApiService.register(body, isMockUp: false);
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>()
+            .convert<AuthenRegisterModel, AuthenRegister>(
+              httpResponse.data?.data,
+            );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
+      }
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
   @override
   Future<bool> isLoggedIn() async {
-    final session = _supabaseClient.auth.currentSession;
-    if (session != null && !session.isExpired) {
-      return true;
-    }
     final user = await getUser();
     return user?.accessToken?.isNotEmpty ?? false;
   }
@@ -245,21 +214,24 @@ class AuthRepositoryImpl implements AuthRepository {
     final RefreshTokenRequestBody body,
   ) async {
     try {
-      final response = await _supabaseClient.auth.refreshSession(body.refreshToken);
-      final session = response.session;
-      if (session != null) {
-        return DataSuccess(_mapSessionToAuthData(session));
-      }
-      return const DataFailure(ApiError(message: 'Refresh token failed'));
-    } on sb.AuthException catch (error) {
-      return DataFailure(
-        ApiError(
-          message: error.message,
-          code: int.tryParse(error.statusCode ?? ''),
-        ),
+      final httpResponse = await authApiService.refreshToken(
+        body,
+        isMockUp: false,
       );
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
+          httpResponse.data?.data,
+        );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
+      }
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
@@ -268,30 +240,45 @@ class AuthRepositoryImpl implements AuthRepository {
     final UserRequestBody body,
   ) async {
     try {
-      final user = _supabaseClient.auth.currentUser;
-      if (user != null) {
-        return DataSuccess([
-          UserUpdated(
-            id: user.id,
-            deviceId: body.deviceId,
-            createdAt: user.createdAt,
-          ),
-        ]);
+      final httpResponse = await authApiService.updateInfoUser(
+        body,
+        isMockUp: false,
+      );
+      if (httpResponse.response.statusCode == HttpStatus.ok) {
+        final data = getIt<Mapper>().convertList<UserUpdatedModel, UserUpdated>(
+          httpResponse.data?.data ?? [],
+        );
+        return DataSuccess(data);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
       }
-      return const DataFailure(ApiError(message: 'Update user info failed'));
-    } on sb.AuthException catch (error) {
-      return DataFailure(ApiError(message: error.message));
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 
   @override
   Future<DataState<bool>> deleteUser(final String userId) async {
     try {
-      return const DataSuccess(true);
-    } catch (e) {
-      return DataFailure(ApiError(message: e.toString()));
+      final httpResponse = await authApiService.deleteUser(
+        userId: userId,
+        isMockUp: false,
+      );
+      if (httpResponse.data?.success ?? false) {
+        return const DataSuccess(true);
+      } else {
+        return DataFailure(
+          ApiError(message: httpResponse.response.statusMessage),
+        );
+      }
+    } on DioException catch (error) {
+      return DataFailure(error.response?.apiError);
+    } catch (_) {
+      return const DataFailure(null);
     }
   }
 }

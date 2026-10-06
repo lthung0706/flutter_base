@@ -8,7 +8,9 @@ final Map<String, String> mapMockApiForGetRequest = <String, String>{
   EndPoints.getSupliers: 'suplier_list',
 };
 
-final Map<String, String> mapMockApiForPostRequest = <String, String>{};
+final Map<String, String> mapMockApiForPostRequest = <String, String>{
+  EndPoints.login: 'auth_login',
+};
 
 String? getJsonNameForGetRequest(
   final String endpoint, {

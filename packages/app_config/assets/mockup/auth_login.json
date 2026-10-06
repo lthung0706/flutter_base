@@ -1,0 +1,35 @@
+{
+  "success": true,
+  "code": 200,
+  "message": "Success",
+  "data": {
+    "access_token": "mock_access_token_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "refresh_token": "mock_refresh_token_abc123",
+    "token_type": "bearer",
+    "expires_in": 3600,
+    "expires_at": 4102444800,
+    "user": {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "aud": "authenticated",
+      "role": "authenticated",
+      "email": "demo@example.com",
+      "email_confirmed_at": "2026-01-01T00:00:00.000Z",
+      "phone": "",
+      "last_sign_in_at": "2026-01-01T00:00:00.000Z",
+      "app_metadata": {
+        "provider": "email",
+        "providers": ["email"]
+      },
+      "user_metadata": {
+        "email": "demo@example.com",
+        "email_verified": true,
+        "name": "Demo User",
+        "phone_verified": false,
+        "sub": "00000000-0000-0000-0000-000000000001"
+      },
+      "created_at": "2026-01-01T00:00:00.000Z",
+      "updated_at": "2026-01-01T00:00:00.000Z",
+      "confirmed_at": "2026-01-01T00:00:00.000Z"
+    }
+  }
+}

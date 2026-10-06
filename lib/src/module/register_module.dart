@@ -4,6 +4,7 @@ import 'package:firebase_performance/firebase_performance.dart';
 import 'package:go_router/go_router.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:injectable/injectable.dart';
+import 'package:flutter_base/src/authentication/auth_api_service.dart';
 import 'package:flutter_base/src/authentication/interception_auth.dart';
 import 'package:flutter_base/src/core/session/session_guard.dart';
 import 'package:flutter_base/src/data/datasources/remote/billing_product_api_service.dart';
@@ -89,6 +90,12 @@ abstract class RegisterModule {
   @lazySingleton
   sb.SupabaseClient get supabaseClient =>
       getIt<SupabaseNetwork>().supabaseProvider.client;
+
+  @lazySingleton
+  AuthApiService authApiService(
+    @Named(kApiDio) final Dio dio,
+    @Named(kApiBaseUrl) final String url,
+  ) => AuthApiService(dio, baseUrl: url);
 
   @lazySingleton
   UploadApiService uploadApiService(
