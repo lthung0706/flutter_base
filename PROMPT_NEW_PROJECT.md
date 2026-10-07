@@ -56,11 +56,18 @@ Trả lời ngắn gọn: đường dẫn project mới, đã/ chưa rebrand, v�
 
     cd $TARGET_DIR && git init
 
-## Lưu ý về mock login (đã bật sẵn trong base)
+## Lưu ý về mock flow đi đến Home Page (đã bật sẵn trong base)
 - `AuthRepositoryImpl.isMockup = true` trong `lib/src/authentication/auth_repository.dart`
-  → login dùng dữ liệu giả từ `packages/app_config/assets/mockup/auth_login.json`
-  (đăng nhập bất kỳ email/mật khẩu nào cũng thành công).
-- Khi nối backend thật: đổi `isMockup` thành `false`.
+  → Toàn bộ luồng đi vào HomePage đã được mock:
+    + Đăng nhập email/pass (`login`) & Google/Apple (`googleLogin`, `appleLogin`)
+    + Cập nhật thông tin sau đăng nhập (`updateInfoUser` - bước quan trọng trước khi route sang Home)
+    + Đăng ký tài khoản (`register`) & cấp lại token (`refreshToken`)
+- Dữ liệu giả nằm trong `packages/app_config/assets/mockup/`:
+    + `auth_login.json`: Token & thông tin người dùng demo
+    + `update_info_user.json`: Trả về thông tin device & profile
+    + `auth_register.json`: Dữ liệu tài khoản đăng ký mới
+    + `auth_logout.json`: Kết quả true cho logout / delete / addUser
+- Khi nối backend thật: đổi `isMockup` thành `false` trong `auth_repository.dart`.
 - Thêm API mock mới: đặt file JSON vào `packages/app_config/assets/mockup/` và khai báo
   endpoint → tên file trong `packages/app_config/lib/src/network/mockup/map_mock_api.dart`.
 ```

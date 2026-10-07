@@ -55,7 +55,7 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<DataState<bool>> addUser(final AddUserRequestBody body) async {
     try {
-      final httpResponse = await authApiService.addUser(body, isMockUp: false);
+      final httpResponse = await authApiService.addUser(body, isMockUp: isMockup);
       if (httpResponse.data?.success ?? false) {
         return const DataSuccess(true);
       } else {
@@ -102,7 +102,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final httpResponse = await authApiService.googleLogin(
         body,
-        isMockUp: false,
+        isMockUp: isMockup,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
@@ -128,7 +128,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final httpResponse = await authApiService.appleLogin(
         body,
-        isMockUp: false,
+        isMockUp: isMockup,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
@@ -150,7 +150,7 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<DataState<bool>> logout() async {
     try {
-      await authApiService.logout(isMockUp: false);
+      await authApiService.logout(isMockUp: isMockup);
       return const DataSuccess(true);
     } on DioException catch (error) {
       return DataFailure(error.response?.apiError);
@@ -164,7 +164,10 @@ class AuthRepositoryImpl implements AuthRepository {
     final RegisterBodyParams body,
   ) async {
     try {
-      final httpResponse = await authApiService.register(body, isMockUp: false);
+      final httpResponse = await authApiService.register(
+        body,
+        isMockUp: isMockup,
+      );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         final data = getIt<Mapper>()
             .convert<AuthenRegisterModel, AuthenRegister>(
@@ -216,7 +219,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final httpResponse = await authApiService.refreshToken(
         body,
-        isMockUp: false,
+        isMockUp: isMockup,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         final data = getIt<Mapper>().convert<AuthDataModel, AuthData>(
@@ -242,7 +245,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final httpResponse = await authApiService.updateInfoUser(
         body,
-        isMockUp: false,
+        isMockUp: isMockup,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
         final data = getIt<Mapper>().convertList<UserUpdatedModel, UserUpdated>(
@@ -266,7 +269,7 @@ class AuthRepositoryImpl implements AuthRepository {
     try {
       final httpResponse = await authApiService.deleteUser(
         userId: userId,
-        isMockUp: false,
+        isMockUp: isMockup,
       );
       if (httpResponse.data?.success ?? false) {
         return const DataSuccess(true);

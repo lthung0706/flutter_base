@@ -10,6 +10,14 @@ final Map<String, String> mapMockApiForGetRequest = <String, String>{
 
 final Map<String, String> mapMockApiForPostRequest = <String, String>{
   EndPoints.login: 'auth_login',
+  EndPoints.googleLogin: 'auth_login',
+  EndPoints.appleLogin: 'auth_login',
+  EndPoints.refeshToken: 'auth_login',
+  EndPoints.register: 'auth_register',
+  EndPoints.updateInfoUser: 'update_info_user',
+  EndPoints.addUser: 'auth_logout',
+  EndPoints.logout: 'auth_logout',
+  EndPoints.deleteUser: 'auth_logout',
 };
 
 String? getJsonNameForGetRequest(
@@ -26,7 +34,7 @@ String? getJsonNameForGetRequest(
   }
 
   for (final String key in mapMockApiForGetRequest.keys) {
-    if (hasMatch(endpoint, key)) {
+    if (endpoint.startsWith(key) || hasMatch(endpoint, key)) {
       return mapMockApiForGetRequest[key];
     }
   }
@@ -40,7 +48,7 @@ String? getJsonNameForPostRequest(
   final Map<String, dynamic>? queryParameters,
 }) {
   for (final String key in mapMockApiForPostRequest.keys) {
-    if (hasMatch(endpoint, key)) {
+    if (endpoint.startsWith(key) || hasMatch(endpoint, key)) {
       return mapMockApiForPostRequest[key];
     }
   }

@@ -22,6 +22,9 @@ class MockUpInterceptor extends Interceptor {
     if (options.method == 'PUT' && options.headers['isMockUp'] == true) {
       return handler.resolve(await mockPostResponse(options));
     }
+    if (options.method == 'DELETE' && options.headers['isMockUp'] == true) {
+      return handler.resolve(await mockPostResponse(options));
+    }
 
     return handler.next(options);
   }

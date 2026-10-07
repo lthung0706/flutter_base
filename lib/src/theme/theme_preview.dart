@@ -5,9 +5,25 @@ import 'package:flutter/widget_previews.dart';
 
 import '../components/inputs/app_text_field.dart';
 
-PreviewThemeData themeData() => PreviewThemeData(
-  materialLight: AppTheme.lightTheme,
-  materialDark: AppTheme.darkTheme,
+final class AppPreviewThemeData extends PreviewThemeData {
+  const AppPreviewThemeData({this.light, this.dark});
+
+  final ThemeData? light;
+  final ThemeData? dark;
+
+  @override
+  Widget apply(BuildContext context, Widget child) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Theme(
+      data: (isDark ? dark : light) ?? AppTheme.lightTheme,
+      child: child,
+    );
+  }
+}
+
+PreviewThemeData themeData() => AppPreviewThemeData(
+  light: AppTheme.lightTheme,
+  dark: AppTheme.darkTheme,
 );
 
 @Preview()

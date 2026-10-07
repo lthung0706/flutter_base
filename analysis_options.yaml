@@ -45,6 +45,12 @@ analyzer:
     - "**/*.pbjson.dart"
     - "**/*.pbgrpc.dart"
     - "**/*.graphql.dart"
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
   errors:
     unused_import: warning
     deprecated_member_use: info
